@@ -1,0 +1,473 @@
+---
+layout: ext_single_wrap
+---
+
+{% comment %} assign variables {% endcomment %}
+{% if page.trailer_ex and page.trailer_ex != '' %}
+{% assign page.trailer = page.trailer_ex %}
+{% endif %}
+
+{% comment %} assign icon src based on location {% endcomment %}
+{% assign iconempty = false %}
+{% if page.icon_local %}
+    {% assign icon = "assets/images/extensions/" | append: page.icon_local | relative_url %}
+    {% elsif page.icon_ex != '' %}
+    {% assign icon = page.icon_ex %}
+    {% else %}
+    {% assign icon = "assets/images/extensions/empty.png" | relative_url %}
+    {% assign iconempty = true %}
+{% endif %}
+
+{% comment %} assign screenshot src based on location {% endcomment %}
+{% if page.screenshots_local %}
+    {% assign screenshots = page.screenshots_local |  replace: " ", "" | split: "," %} 
+    {% assign ss_type = 'local' %}
+    {% elsif page.screenshots_ex and page.screenshots_ex != '' %}
+    {% assign screenshots = page.screenshots_ex |  replace: " ", "" | split: "," %}
+    {% assign ss_type = 'external' %}
+    {% else %}
+    {% assign ss_type = 'empty' %}
+{% endif %}
+
+{% comment %} construct image node template {% endcomment %}
+{% assign imgStart = '<figure class="figure"><img ' %}
+{% assign imgMid1 = ' class="figure-img img-fluid rounded w-auto" title="Click to enlarge" data-bs-target="#' %}
+{% assign imgMid2 = '-modal" data-bs-toggle="modal"><figcaption class="figure-caption">'%}
+{% assign imgMid2a = '</figcaption></figure><div class="modal fade" id="' %}
+{% assign imgMid3 = '-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog modal-xl modal-dialog-centered"><div class="modal-content"><img ' %}
+{% assign imgEnd = ' class="img-fluid""></div></div></div>' %}
+
+{% comment %} construct video node template {% endcomment %}
+{%- assign videostart = '<div class="ratio ratio-16x9 mb-3 w-75" ><iframe controls=true class="embed-responsive-item" width="100%" src="'-%}
+{%- assign videostartsmall = '<div class="ratio ratio-16x9 mb-3 w-75" ><iframe controls=true class="embed-responsive-item" width="100%" src="'-%}
+{%- assign videoend = '?&parent=sammi.solutions" title="alt" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>'-%}
+
+{% assign overviewMd = page.overview %}
+{% if page.external == true %}
+{% capture newLine %}
+{% endcapture %}
+{% assign overviewMd = page.overview | replace: "<br>", newLine %}
+{% endif %}
+{% comment %} convert local images to local urls if local {% endcomment %}
+{% if page.developer_name == 'Christina K.' and overviewMd contains '![' %}
+  {% comment %} iterate through overview and find all images {% endcomment %}
+  {% assign ovNodes = overviewMd | split: '![' %}
+    {% for localNode in ovNodes %}
+       {% if localNode contains 'png' %}
+            {% assign localNodeInner = localNode | split: '](' %}
+            {% assign localNodeInnerInner = localNodeInner[1] | split: ')' %}
+            {% capture src %}
+            {{ '/assets/images/extensions/' | append: localNodeInnerInner[0] }}
+            {% endcapture %}
+            {% assign overviewMd = overviewMd | replace: localNodeInnerInner[0], src %}
+       {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% comment %} search for any videos marked with [video][/video] tag {% endcomment %}
+{% if overviewMd contains '[video](' %}
+   {% comment %} iterate through overview and find all videos {% endcomment %}
+   {% assign videoNodes = overviewMd | split: '[video](' %}
+      {% for localNode in videoNodes %}
+         {% if localNode contains ')[/video]' %}
+          {% assign localNodeInner = localNode | split: ')[/video]' %}
+          {% assign vidFull = videostart | append: localNodeInner[0] | append: videoend %}
+          {% assign overviewMd = overviewMd | replace: localNodeInner[0], vidFull | replace: '[video](', '' | replace: ')[/video]', '' %}
+         {% endif %}
+      {% endfor %}
+{% endif %}
+
+{% comment %} markdownify overview {% endcomment %}
+{% assign overviewMd = overviewMd | markdownify %}
+{% comment %} iterate through overview and find all images {% endcomment %}
+{% if overviewMd contains '<img' and overviewMd contains 'alt' %}
+    {% assign imgNodes = overviewMd | split:'<img' %}
+    {% for node in imgNodes %}
+        {% comment %} skip if node is not an image {% endcomment %}
+        {% if node contains 'src=' and node contains 'alt' %}
+            {% comment %} capture only inner image in the node {% endcomment %}
+            {% assign image = node | split: '>' %}
+            {% assign current = image[0] %} 
+            {% comment %} do not do anything if current node is empty {% endcomment %}
+            {% if current.size > 1 %}
+                {% comment %} get src of an image to use as ID {% endcomment %}
+                {% assign src = current | split: '"' %}
+                {% assign id = src[1] | replace: 'http://', '' | replace: 'https://', '' | replace: '.', '' | replace: '/', '' | slugify %} 
+                {% comment %} get alt of an image to use in the figcaption {% endcomment %}
+                {% assign alt = src[3] %}
+                {% comment %} imgtoreplace is the image we're going to search for to replace with our template {% endcomment %}
+                {% assign imgtoreplace = current %}
+                {% comment %} join image contents and template all together {% endcomment %}
+                {% assign imgfull = imgStart | append: current | append: imgMid1 | append: id | append: imgMid2 | append: alt | append: imgMid2a | append: id | append: imgMid3 | append: current | append: imgEnd %}
+                {% comment %} replace current image with our generated image {% endcomment %}
+                {% assign overviewMd = overviewMd | replace: imgtoreplace, imgfull | replace: '<img<figure', '<figure' | replace: 'class="img-fluid" "=""', 'class="img-fluid' | replace: '>>', '>' %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% assign setupMd = page.setup %}
+{% if setupMd and page.developer_name == 'Christina K.' and setupMd contains '![' %}
+    {% comment %} iterate through setup and find all images and convert them to local {% endcomment %}
+    {% assign setupNodes = setupMd | split: '![' %}
+    {% for localNode in setupNodes %}
+        {% if localNode contains 'png' %}
+            {% assign localNodeInner = localNode | split: '](' %}
+            {% assign localNodeInnerInner = localNodeInner[1] | split: ')' %}
+            {% capture src %}
+            {{ '/assets/images/extensions/' | append: localNodeInnerInner[0] }}
+            {% endcapture %}
+            {% assign setupMd = setupMd | replace: localNodeInnerInner[0], src %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+
+{% comment %} search for any videos marked with [video][/video] tag in setup {% endcomment %}
+{% if setupMd contains '[video](' %}
+   {% comment %} iterate through setup and find all videos {% endcomment %}
+   {% assign videoNodes = setupMd | split: '[video](' %}
+      {% for localNode in videoNodes %}
+         {% if localNode contains ')[/video]' %}
+          {% assign localNodeInner = localNode | split: ')[/video]' %}
+          {% assign vidFull = videostartsmall | append: localNodeInner[0] | append: videoend %}
+          {% assign setupMd = setupMd | replace: localNodeInner[0], vidFull | replace: '[video](', '' | replace: ')[/video]', '' %}
+         {% endif %}
+      {% endfor %}
+{% endif %}
+
+{% assign setupMd = setupMd | markdownify %}
+{% if setupMd contains '<img' %}
+    {% assign imgNodes = setupMd | split: '<img' %}
+    {% for node in imgNodes %}
+        {% if node contains 'src=' and node contains 'alt' %}
+            {% assign image = node | split: '>' %}
+            {% assign current = image[0] %} 
+            {% assign src = current | split: '"' %}
+            {% assign id = src[1] | replace: 'http://', '' | replace: 'https://', '' | replace: '.', '' | replace: '/', '' | slugify %} 
+            {% assign alt = src[3] %}
+            {% assign imgtoreplace = current %}
+            {% assign imgfull = imgStart | append: current | append: imgMid1 | append: id | append: imgMid2 | append: alt | append: imgMid2a | append: id | append: imgMid3 | append: current | append: imgEnd %}
+            {% if current.size > 5 %}
+                {% assign setupMd = setupMd | replace: imgtoreplace, imgfull | replace: '<img<figure', '<figure' | replace: 'class="img-fluid" "=""', 'class="img-fluid' | replace: '>>', '>' %}
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+{% endif %}
+<div class="container-xl ext-single" id="extension_single">
+
+<div class="row row-cols-2">
+
+<div class="col col-8">
+  <div class="row">
+    <h3>{{ page.title }}</h3>
+  </div>
+<div class="row">
+  <div class="col col-auto"> Developed by:</div>
+  <div class="col col-auto px-0"> <b>{% if page.developer_url != ''%} <a href="{{ page.developer_url }}"> {% endif %}{{ page.developer_name }}{% if page.developer_url != ''%}</a>{% endif %}</b></div>
+ </div>
+<div class="row">
+  <div class="col">
+    <span class="rating" title="Averate rating">Rating</span>
+    <span class="ms-2">|</span>
+    <span class="ms-2" title="Category"><b><a href='{{"/extensions/" | append: page.category | relative_url }}'>{{ page.category | capitalize }}</a></b></span>
+    <span class="ms-2">|</span>
+    <span class="ms-2" title="Total views">
+      <span><i class="fas fa-user me-1 fa-sm"></i></span>     
+      <span id="ext_views"></span>
+      <span> views</span>
+    </span>
+</div>
+</div>
+
+
+</div>
+<div class="col col-4 d-flex justify-content-end pe-3"><a href="{{ page.download_url }}"><button type="button" class="btn btn-primary">Download</button></a>
+
+</div>
+
+
+
+</div>
+<hr>
+<div class="row">
+  <ul class="nav nav-pills mb-3 ms-2 d-flex justify-content-center" id="pills-tab" role="tablist">
+    <li class="nav-item pe-xxl-5 pe-lg-3 pe-md-1" role="presentation">
+      <button class="nav-link active" id="pills-overview-tab" data-bs-toggle="pill" data-bs-target="#pills-overview" type="button" role="tab" aria-controls="pills-overview" aria-selected="true">Overview</button>
+    </li>
+    <li class="nav-item pe-xxl-5 pe-lg-3 pe-md-1" role="presentation">
+      <button class="nav-link" id="pills-setup-tab" data-bs-toggle="pill" data-bs-target="#pills-setup" type="button" role="tab" aria-controls="pills-setup" aria-selected="false">Setup</button>
+    </li>
+    <li class="nav-item pe-xxl-5 pe-lg-3 pe-md-1" role="presentation">
+      <button class="nav-link" id="pills-policy-tab" data-bs-toggle="pill" data-bs-target="#pills-policy" type="button" role="tab" aria-controls="pills-policy" aria-selected="false">Privacy Policy</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="pills-reviews-tab" data-bs-toggle="pill" data-bs-target="#pills-reviews" type="button" role="tab" aria-controls="pills-reviews" aria-selected="false">Reviews</button>
+    </li>
+  </ul>
+  <div class="tab-content mt-3" id="pills-tabContent">
+    <div class="tab-pane fade show active" id="pills-overview" role="tabpanel" aria-labelledby="pills-overview-tab">
+      <!-- OVERVIEW -->
+      {% if ss_type != 'empty' %}
+      <div class="container-fluid d-flex justify-content-center ext_carousel-container mt-3 mb-5">
+      <div class="row ext_carousel-row">
+      <div id="ext_carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner col-10 mx-auto">
+          {% if page.trailer or page.trailer and page.trailer_ex != '' %}
+          <div class="carousel-item active">
+            <div class="d-flex imgwrapper">
+            <div class="embed-responsive">
+            <iframe id="ext_trailer" class="embed-responsive-item" src="{{- page.trailer -}}{%- if page.trailer contains 'youtube' -%}?enablejsapi=1{%- endif -%}{%- if page.trailer contains 'twitch' -%}&parent=sammi.solutions{%- endif -%}" allowfullscreen></iframe>
+            </div></div>
+          </div>
+          {% endif %}
+          {% if page.screenshots_local %}
+          {% assign screenshots = page.screenshots_local |  replace: " ", "" | split: "," %} 
+          {% for screenshot in screenshots %}
+          <div class="carousel-item {% if screenshot == screenshots[0] and page.trailer == nil %}active{% endif %}">
+            <div class="d-flex imgwrapper">
+              {% assign id = screenshot | strip | split: '.' %} <figure class="figure"><img src='{{"assets/images/extensions/" | append: screenshot | relative_url}}' class="figure-img img-fluid rounded" alt="{{ page.title}} screenshot" title="Click to enlarge" data-bs-target="#{{ id }}-modal" data-bs-toggle="modal"></figure>
+              <div class="modal fade ext-modal" id="{{ id }}-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"><div class="modal-dialog modal-xl modal-dialog-centered"><div class="modal-content"><img src='{{"assets/images/extensions/" | append: screenshot | relative_url}}' class="img-fluid" alt="{{ page.title}} screenshot"></div></div></div>
+
+          </div>
+          </div>
+          {% endfor %}
+          {% elsif page.screenshots_ex %}
+          {% assign screenshots = page.screenshots_ex |  replace: " ", "" | split: "," %}
+          {% for screenshot in screenshots %}
+          <div class="carousel-item {% if screenshot == screenshots[0] and page.trailer == nil %}active{% endif %}">
+            <div class="d-flex imgwrapper">
+            <img src='{{ screenshot }}' class="d-block w-100" alt="{{ page.title}} screenshot">
+            </div>
+          </div>
+          {% endfor %}
+          {% endif %}
+        </div>
+        {% if screenshots.size > 1 %}
+        <button class="carousel-control-prev" type="button" data-bs-target="#ext_carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#ext_carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        {% elsif screenshots.size == 1 and page.trailer %}
+        <button class="carousel-control-prev" type="button" data-bs-target="#ext_carousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#ext_carousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+        {% endif %}
+      </div>
+      </div>
+    </div>
+      {% endif %}
+      <div class="row mt-2">
+      <div class="col col-lg-8 col-sm-12 ext-leftpanel pe-5">
+      <h5 class="mb-2">Overview</h5>
+      {{ overviewMd }}
+      {% if page.developer_name == 'Christina K.'%}
+      {% include extension_personal.html testers = page.testers %}
+      {% endif %}
+      </div>
+      <hr class="d-lg-none">
+      <div class="col col-lg-4 col-sm-12 mt-sm-1 mb-5 ps-4">
+      <h5 class="mb-2">Additional Information</h5>
+      <div class="row">
+        <span class="col col-xl-6 col-lg-12">
+          {% if page.developer_url != ''%}
+          <a href="{{ page.developer_url }}" title="Visit developer website">{% endif %}<i class="fas fa-home"></i><b class="ms-1">Website</b></a>
+        </span>
+        <span class="col col-xl-6 col-lg-12">
+          <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;%68%65%6C%70%40%73%61%6D%6D%69%2E%73%6F%6C%75%74%69%6F%6E%73" title="Report issue"><i class="fas fa-flag"></i><b class="ms-1">Report</b></a>
+        </span>
+      </div>
+      <div class="row mt-2">
+      <span><b>Version</b></span>
+      <span class="mb-2">{{ page.version }}</span>
+      <span><b>Requires SAMMI</b></span>
+      <span class="mb-2">{{ page.sammi_version }}^</span>
+      <span><b>Stream Platform</b></span>
+      <span class="mb-2">{{ page.platform }}</span>
+      <span><b>Updated</b></span>
+      <span class="mb-2">{{ page.date | date: "%B %d, %Y" }}</span>
+      </div>
+      </div>
+      </div>
+    </div>
+    <div class="tab-pane fade" id="pills-setup" role="tabpanel" aria-labelledby="pills-setup-tab">
+      <!-- SETUP -->
+      <div class="col mt-2">
+      <h5>Setup</h5>
+      {% if page.setup and page.setup != '' %}
+      {{ setupMd }}
+      {% elsif page.setup_url and page.setup_url != '' %}
+      <div>You can find the setup guide at <a href="{{ page.setup_url }}">{{ page.setup_url }}</a>.</div>
+      {% else %}
+      <div>The developer has not provided any setup guide.</div>
+      {% endif %}
+        </div>
+    </div>
+    <div class="tab-pane fade" id="pills-policy" role="tabpanel" aria-labelledby="pills-policy-tab">
+       <!-- PRIVACY POLICY -->
+       <div class="row mt-2">
+      <div class="col col-lg-8 col-sm-12 ext-leftpanel pe-5">
+        <div class="mb-3">
+        <h5 class="mb-2">Privacy Policy</h5>
+        {% if page.privacy_collect != "on" or page.privacy_collect == false %}
+        <div class="mt-2 mb-2">This developer has disclosed that it will not collect or use your data.</div>
+        {% else %}
+        <p>{{ page.title }} extension (by {{ page.developer_name }}) has disclosed the following information regarding the collection and usage of your data.</p>
+
+        <p><b>The extension collects the following:</b></p>
+        <!--Privacy Policy accordion -->
+        <div class="mt-3 mb-3">
+          <div class="accordion" id="PrivacyPolicyAccordion">
+            {% if page.privacy_personal == true or page.privacy_personal == "on"  %}
+            <!--Personal information -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="privacy_personal">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#privacy_personal_collapse" aria-expanded="false" aria-controls="privacy_personal_collapse">
+                 Personally identifiable information
+                </button>
+              </h2>
+              <div id="privacy_personal_collapse" class="accordion-collapse collapse" aria-labelledby="privacy_personal" data-bs-parent="#PrivacyPolicyAccordion">
+                <div class="accordion-body">
+               <p>For example: name, channel name, address, email address, age, or identification number</p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% if page.privacy_financial == true or page.privacy_financial == "on" %}
+           <!--Financial information -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="financial">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#financial_collapse" aria-expanded="false" aria-controls="financial_collapse">
+                 Financial and payment information
+                </button>
+              </h2>
+              <div id="financial_collapse" class="accordion-collapse collapse" aria-labelledby="financial" data-bs-parent="#PrivacyPolicyAccordion">
+                <div class="accordion-body">
+                  <p>For example: transactions, credit card numbers, credit ratings, financial statements, or payment history</p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% if page.privacy_auth == true  or page.privacy_auth == "on" %}
+            <!--Auth information -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="authentication">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#authentication_collapse" aria-expanded="false" aria-controls="authentication_collapse">
+                 Authentication information
+                </button>
+              </h2>
+              <div id="authentication_collapse" class="accordion-collapse collapse" aria-labelledby="authentication" data-bs-parent="#PrivacyPolicyAccordion">
+                <div class="accordion-body">
+                  <p>For example: passwords, credentials (such as refresh and access tokens for API services), security questions, or personal identification number (PIN)</p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% if page.privacy_communication == true  or page.privacy_communication == "on" %}
+            <!--Communication information -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="communications">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#communications_collapse" aria-expanded="false" aria-controls="communications_collapse">
+                  Personal communications
+                </button>
+              </h2>
+              <div id="communications_collapse" class="accordion-collapse collapse" aria-labelledby="communications" data-bs-parent="#PrivacyPolicyAccordion">
+                <div class="accordion-body">
+                  <p>For example: emails, text or chat messages, social media posts, or conference calls</p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% if page.privacy_location == true  or page.privacy_location == "on" %}
+            <!--Location information -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="location">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#location_collapse" aria-expanded="false" aria-controls="location_collapse">
+                  Location
+                </button>
+              </h2>
+              <div id="location_collapse" class="accordion-collapse collapse" aria-labelledby="location" data-bs-parent="#PrivacyPolicyAccordion">
+                <div class="accordion-body">
+                  <p>For example: region, IP address, GPS coordinates, or information about things near the user's device</p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% if page.privacy_useractivity == true or page.privacy_useractivity == "on"%}
+            <!--Activity information -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="activity">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#activity_collapse" aria-expanded="false" aria-controls="activity_collapse">
+                  User activity
+                </button>
+              </h2>
+              <div id="activity_collapse" class="accordion-collapse collapse" aria-labelledby="activity" data-bs-parent="#PrivacyPolicyAccordion">
+                <div class="accordion-body">
+                  <p>For example: network monitoring, clicks, mouse position, scroll, or keystroke logging</p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% if page.privacy_website == true or page.privacy_website == "on" %}
+            <!--Website content information -->
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="websitecontent">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#websitecontent_collapse" aria-expanded="false" aria-controls="websitecontent_collapse">
+                 Website content
+                </button>
+              </h2>
+              <div id="websitecontent_collapse" class="accordion-collapse collapse" aria-labelledby="websitecontent" data-bs-parent="#PrivacyPolicyAccordion">
+                <div class="accordion-body">
+                  <p>For example: text, images, sounds, videos, or hyperlinks</p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </div>
+        {% endif %}
+        {% if page.privacy_policy and page.privacy_policy != '' %}
+        <b>Additional information provided by the developer </b>
+        {{ page.privacy_policy | markdownify }}
+        {% endif %}
+        </div>
+        </div>
+        <hr class="d-lg-none">
+        <div class="col col-lg-4 col-sm-12 mt-sm-1 mb-5 ps-4">
+          <div class="row">
+            <div>
+              <p>
+                <!-- Privacy Policy declaration -->
+          <b>This developer declares that your data is:</b> 
+          <ul>
+            <li class="mb-2">Not being sold to third parties.</li>
+            <li class="mb-2">Not being used or transferred for purposes that are unrelated to the extension's core functionality</li>
+            <li class="mb-2">Not being used or transferred to determine creditworthiness or for lending purposes</li>
+          </ul>
+          </p>
+          </div>
+          </div>
+          </div>
+    </div>
+  </div>
+    <div class="tab-pane fade" id="pills-reviews" role="tabpanel" aria-labelledby="pills-reviews-tab">
+      <div class="container mt-2">
+       <!-- REVIEWS -->
+       <div class="col mt-2">
+      <h5>Reviews</h5>
+      <p> Coming soon!</p>
+     </div>
+    </div>
+    </div>
+    </div>
+  </div>
+  </div>
+</div>

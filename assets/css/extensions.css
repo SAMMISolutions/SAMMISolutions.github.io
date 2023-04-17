@@ -1,0 +1,9 @@
+.lb-extmenu > nav-link .active  {
+background-color: #bc5d02 !important;
+}
+
+.lb-extbutton .nav-link:hover,
+.lb-extbutton .nav-link:focus {
+    background: #4a6486;
+    color: white !important;
+}

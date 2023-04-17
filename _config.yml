@@ -1,0 +1,45 @@
+title: SAMMI Stream Deck
+tagline: SAMMI | Free and powerful Stream Deck for your Twitch and YouTube | Works with OBS
+description: Transform your ordinary stream into interactive experience for your viewers with SAMMI
+name: SAMMI • Free Stream Deck 
+url: "https://sammi.solutions"
+author:
+  twitter: christina_kral
+repository: https://github.com/SAMMISolutions/SAMMISolutions.github.io
+logo: "/assets/favicon/favicon-32x32.png"
+social:
+  name: SAMMI
+  links:
+    - https://twitter.com/sammisolutions
+timezone: US/Pacific
+google_analytics: G-H8RP3ZJVZ3
+google_site_verification: XXX
+twitter:
+    username: sammisolutions
+    card: summary
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-toc
+  - jekyll-mentions
+sass:
+    style: compressed
+relative_links:
+  enabled:     true
+  collections: true
+kramdown:
+  auto_ids: false
+collections_dir: collections
+collections:
+  extensions:
+      output: true
+defaults:
+- scope:
+    path: extensions
+  values:
+    css: extensions.css
+    nav: Extensions
+algolia:
+  application_id: 'T1W4YLUXZS'
+  index_name:  main

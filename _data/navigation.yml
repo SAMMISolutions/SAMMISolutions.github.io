@@ -1,0 +1,19 @@
+ext-menu:
+- name: Alerts
+  link: /extensions/alerts
+- name: Games
+  link: /extensions/games
+- name: Twitch
+  link: /extensions/twitch
+- name: YouTube
+  link: /extensions/youtube
+- name: Social & Communication
+  link: /extensions/social
+- name: Music & Audio
+  link: /extensions/audio
+- name: Productivity
+  link: /extensions/productivity
+- name: Utilities
+  link: /extensions/utilities
+- name: Miscellaneous
+  link: /extensions/miscellaneous

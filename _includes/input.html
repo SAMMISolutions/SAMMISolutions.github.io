@@ -1,0 +1,3 @@
+{% if include.info %} <div class="mx-2 mt-0 pt-0 mb-2">{{ include.info }}</div> {% endif %} <div class="input-group"><input type="{{ include.type }}" name="fields[{{ include.name }}]" class="form-control mx-2 mb-2 w-100" placeholder="{{ include.desc }}" id="{{ include.name }}" {% if include.required %} required {% endif %}>
+</div>
+

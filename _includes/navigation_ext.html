@@ -1,0 +1,11 @@
+        {% for item in site.data.navigation.ext-menu %}
+        {% assign pagecategory = page.category | capitalize %}
+        <li class="lb-extbutton nav-item">
+          <a href="{{ item.link }}" class="nav-link  {% if item.name == page.title or item.name == pagecategory %} active {% endif %}">
+             {{ item.name }} 
+          </a>
+        </li>
+        {% endfor %}
+        
+        
+

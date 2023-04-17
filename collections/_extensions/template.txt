@@ -1,0 +1,62 @@
+layout: ext_single
+title: 
+desc:  
+category: 
+date: 
+permalink: extensions/XXX/:slug
+download_url: 
+setup_url: 
+developer_name: Christina K.
+developer_url: https://christinak.itch.io
+icon_local: 
+icon_ex:
+trailer: 
+screenshots_local:
+screenshots_ex:
+version: 1.0
+sammi_version: 1.42 
+platform: 
+overview: |
+setup: |
+Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
+testers:
+privacy_collect: false
+privacy_policy: 
+privacy_personal: 
+privacy_financial: 
+privacy_auth:
+privacy_communication: 
+privacy_location: 
+privacy_useractivity: 
+privacy_website: 
+---
+
+
+Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
+
+If you would like to support me in creating more extensions for SAMMI, you can navigate to the [Donate section](https://sammi.solutions/donate). 
+
+*Feel free to edit the extension for your own use. You may not distribute, sell or publish it without the author's permission.*
+
+
+
+
+Title: {{ page.title }}
+Icon: {{ page.icon_local }}
+Description: {{ page.desc }}
+Updated: {{ page.date | date: "%B %d, %Y" }}
+Download: {{ page.download_url }}
+Setup url: {{ page.setup_url }}
+Developer: {{ page.developer_url }}
+Version: {{ page.version }}
+SAMMI Version: {{ page.sammi_version }}
+Overview: {{ page.overview }}
+Setup: {{ page.setup }}
+Overview: {{ page.overview }}
+Privacy Policy: {{ page.privacy_policy }}
+
+![image](img.png)
+[video](https://www.youtube.com/embed/XXX)[/video]
+
+
+

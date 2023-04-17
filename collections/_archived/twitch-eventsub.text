@@ -1,0 +1,52 @@
+---
+layout: ext_single
+title: EventSub Triggers
+desc: Followers, Polls, Predictions and Hype Train triggers for your board!
+category: twitch
+date: '2021-07-28T00:00:00-05:00'
+permalink: extensions/twitch/:slug
+download_url: https://christinak.itch.io/lb-eventsub-webhook
+developer_name: Christina K.
+developer_url: https://christinak.itch.io
+icon_local: eventsub.png
+trailer: https://clips.twitch.tv/embed?clip=MoralEntertainingHippoGOWSkull-WDNHwfVhJ1Bq9zr_&parent=sammi.solutions
+screenshots_local: eventsub_ss.png, eventsub_ss2.png
+version: 1.1
+sammi_version: 1.42 
+platform: Twitch
+overview: |
+    **Receive Twitch EventSub triggers in your SAMMI!**
+
+    ##### Features
+    **Twitch Triggers**  
+    The extension delivers Twitch triggers for **Followers, Hype Train, Polls and Predictions** straight to your SAMMI as they happen in your stream, including all the information Twitch sends.  
+
+    <div class="alert alert-info" role="alert">I might add other triggers in the future if they are not available for PubSub.</div>
+
+    It works similar to PubSub, but covers all events that PubSub doesn't support.  
+
+    There is a premade deck with buttons for each event, showing how to retrieve all the values. I've included some chat message examples as well (feel free to modify them for your own needs!).
+
+    **Test Triggers**  
+    You can send test triggers and replay any recent events from your Bridge.
+
+    **Who is it for?**  
+    This extension expects you to have some basic to advanced SAMMI knowledge.\
+    It sends triggers to SAMMI for all the events you subscribe to and it is up to you to do whatever you want with it.\
+
+    There is a LOT of information that comes with each event, the basic values are retrieved via Math: Trigger Pull command and some more detailed information is stored in stacks. 
+
+    **How does it work?**  
+    SAMMI does not natively support EventSub because the events are delivered via webhooks, and you need to have a public server running to receive them. I have created a relay that listens to these events and forwards them to a websocket, which SAMMI can connect and listen to.\
+    The server to relay EventSub triggers to your SAMMI is hosted on a professional paid service platform running 24/7.
+
+    **But I heard websockets for Eventsub are coming!**  
+    Twitch has announced they might be adding websockets to Eventsub, eliminating the need for this particular relay. However, it's been several months since the announcement with radio silence, it's safe to say it's not going to be out anytime soon.
+setup: |
+    1. Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
+    2. Follow the [Eventsub Setup guide](https://christinna9031.github.io/LBDocumentation/twitchext.html#eventsub).
+testers: Melonax and wellzish 
+privacy_collect: true
+privacy_policy: The extension briefly stores your authorization code (which is a one time use) to call a custom AWS secure API to set up your Twitch webhook. All triggers are then relayed to a custom websocket for you to receive in SAMMI. It does not store any of your credentials.
+privacy_auth: true
+---

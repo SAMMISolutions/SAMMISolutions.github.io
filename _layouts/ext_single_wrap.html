@@ -1,0 +1,84 @@
+---
+layout: barebone
+---
+
+<nav class="lb-subnavbar py-2" aria-label="Secondary navigation">
+  <div class="container-xxl d-flex align-items-center justify-content-center mb-1">
+    <button class="btn lb-sidebar-toggle d-md-none px-1 me-auto  collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#lb-ext-nav" aria-controls="lb-ext-nav" aria-expanded="false" aria-label="Toggle extension navigation">
+      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" class="bi" fill="currentColor" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"></path>
+       </svg>
+    </button>
+  </div>
+</nav>
+
+<header class="pt-5">
+    <div class="container pt-md-1 pb-md-4 border-bottom">
+      <div class="row">
+        <div class="col-xl-8">
+          <h1 class="lb-title mt-0 display-4">Extensions</h1>
+          <p class="lb-lead">Extend SAMMI's functionality with our community made extensions. </p>
+          {% include alert.html text="This part of the site is still work in progress. Find the complete list of all extensions in our official Discord channel." type="info" %} 
+        </div>
+        <div class="col-xl-4 d-lg-flex justify-content-xl-end">
+        </div>
+      </div>
+    </div>
+  </header>
+
+<!-- main container start my-md-4 mx-1 -->
+<div class="container-xxl lb-layout my-md-4">
+    
+
+<!-- sidebar start -->
+<aside class="lb-sidebar mb-2 me-4 mb-4" >
+
+    <div class="lb-extbar collapse p-3 text-white" id="lb-ext-nav" style="width: 280px;">
+        <!-- search start -->
+        <div class="justify-content-center">
+            <form class="lb-search position-relative">
+              <span class="algolia-autocomplete" style="position: relative; display: inline-block; direction: ltr;"><input type="search" class="form-control ds-input" id="search-input" placeholder="Coming soon..." aria-label="Search docs for..." autocomplete="off" data-lb-docs-version="5.0" spellcheck="false" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-owns="algolia-autocomplete-listbox-0" dir="auto" style="position: relative; vertical-align: top;"><pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: system-ui, -apple-system, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, &quot;Liberation Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: normal; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre><span class="ds-dropdown-menu" role="listbox" id="algolia-autocomplete-listbox-0" style="position: absolute; top: 100%; z-index: 100; left: 0px; right: auto; display: none;"><div class="ds-dataset-1"></div></span></span>
+            </form>
+          </div>
+          <!-- search end -->
+        <hr>
+        <ul class="lb-extmenu nav nav-pills flex-column mb-auto">
+          {% include navigation_ext.html %}
+        </ul>
+        <hr>
+        <div>
+            <ul class="lb-extmenu nav nav-pills flex-column mb-auto">
+                <li class="lb-extbutton nav-item">
+                    <a href="{{ 'extensions/install' | relative_url }}" class="nav-link text-white {% if page.title == 'Install Guide' %} active {% endif %}">
+                      <i class="fas fa-info-circle pe-2"></i>
+                      Install Guide
+                    </a>
+                  </li>
+                <li class="lb-extbutton nav-item">
+                    <a href="{{ 'extensions/submit' | relative_url }}" class="nav-link text-white {% if page.title == 'Submit Extension' %} active {% endif %}">
+                      <i class="fas fa-edit pe-2"></i>
+                      Submit Extension
+                    </a>
+                  </li>
+
+            </ul>
+        </div>
+      </div>
+
+</aside>
+<!-- sidebar end -->
+
+<!-- main content start -->
+<main class="lb-main-ext">
+
+  <div class="lb-content ps-lg-4 mt-3" tabindex="0">
+    <div>
+      {{ content }}
+    </div>
+
+  </div>
+</main>
+<!-- main content end -->
+
+</div>
+<!-- main container end -->
