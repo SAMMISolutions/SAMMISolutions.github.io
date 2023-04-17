@@ -9,7 +9,6 @@ permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/ai-image-generator
 developer_name: Christina K.
 developer_url: https://christinak.itch.io
-icon_local: image_generator_ico.png
 trailer: https://www.youtube.com/embed/7XYyDKLiqA8
 screenshots_local: image_generator_deck.png
 version: 1.0
