@@ -8,7 +8,7 @@ permalink: /extensions/submit
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
 <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
 
-<div class="alert alert-warning mt-2" role="alert">Extension submission is temporarily down. Please reach out SAMMI Dev Team on Discord to manually add an entry for you.</div>
+<div class="alert alert-warning mt-2" role="alert">Extension submission is temporarily down. Please reach out to SAMMI Dev Team on Discord to manually add an entry for you.</div>
 
 #### Create an extension
 SAMMI communicates with all its extensions via Bridge.html and its own websocket.\
