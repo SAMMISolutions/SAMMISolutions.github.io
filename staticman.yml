@@ -3,10 +3,8 @@
 # For example, you can have one property to handle comment submission and
 # another one to handle posts.
 comments:
-  allowedOrigins: ["localhost", "lioranboard.ca", "sammi.solutions"]
+  allowedOrigins: ["localhost", "sammi.solutions"]
   allowedFields: ["title", "desc", "overview", "developer_email", "ext_src", "url", "category", "name", "username", "channel", "email", "ex_url", "discord", "userLevel", "timeframe", "version", "expectedBeh", "currentBeh", "stepsRep", "workaround", "note", "type", "message", "password", "download_url", "setup_url", "discord_username", "developer_name", "developer_url", "icon_ex", "trailer_ex", "screenshots_ex", "sammi_version", "platform", "setup", "privacy_collect","privacy_policy","privacy_personal","privacy_financial","privacy_auth", "privacy_communication", "privacy_location", "privacy_useractivity", "privacy_website", "policy_declare", "permalink"]
-  # commission submission fields: name, email, discord, description, level of LB knowledge, timeframe
-  # bug submission fields: name, email?, discord, LB/OBS/OBSWS version, expected behavior, current behavior, steps to reproduce, workaround, note
   branch: "main"
   commitMessage: "New extension submit request"
   moderation: true
