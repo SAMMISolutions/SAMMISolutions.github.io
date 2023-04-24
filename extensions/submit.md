@@ -8,6 +8,8 @@ permalink: /extensions/submit
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
 <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
 
+<div class="alert alert-warning mt-2" role="alert">Extension submission is temporarily down. Please reach out SAMMI Dev Team on Discord to manually add an entry for you.</div>
+
 #### Create an extension
 SAMMI communicates with all its extensions via Bridge.html and its own websocket.\
 Information about how to make your own extension can be found in `SAMMI/Bridge/how to make an extension.txt` file.\
@@ -52,6 +54,8 @@ Bridge for 5+ hours without refreshing it.*
 - leave comments where needed
 8. **We reserve the right to reject or delete an existing extension for any reason or no reason, and without notice to
 you.**
+
+<!-- 
 
 <div class="mt-2 mb-3">
   <h3>Submission Form</h3>
@@ -168,7 +172,7 @@ you.**
 <div id='recaptcha' data-callback="onSubmit" data-sitekey="6LfngIchAAAAACHlqsIJfug4hklCbQ-xVtj-cYgr" class="g-recaptcha" data-size="invisible"></div>
 <button id="submit-ext"  class="btn btn-primary mt-2 mx-2 mb-5" type="submit">Submit for review</button>
 </form>
-
+-->
 
 <script>
 

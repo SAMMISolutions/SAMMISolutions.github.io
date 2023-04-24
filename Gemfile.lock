@@ -297,7 +297,7 @@ PLATFORMS
   x64-mingw32
 
 DEPENDENCIES
-  github-pages (~> 215)
+  github-pages
   jekyll
   jekyll-algolia
   jekyll-feed
