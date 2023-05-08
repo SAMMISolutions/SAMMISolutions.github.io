@@ -1,0 +1,80 @@
+
+
+.bg-blue {
+	background-color: #142e50;
+}
+
+.text-white {
+  color:#f6f5f5
+}
+
+.cta-section .btn-primary {
+  background-color: #009cea;
+}
+
+section {
+  padding: 60px 0;
+  overflow: hidden; }
+
+.section-bg {
+  background-color: #142e50; }
+
+.section-title {
+  text-align: center;
+  padding-bottom: 30px; }
+  .section-title h2 {
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    font-family: "Poppins", sans-serif;
+    color: #f6f5f5; }
+  .section-title p {
+    margin-bottom: 0; }
+
+
+/*--------------------------------------------------------------
+# Testimonials
+--------------------------------------------------------------*/
+.testimonials .testimonials-carousel, .testimonials .testimonials-slider {
+  color:#f6f5f5;
+  overflow: hidden; }
+.testimonials .testimonial-item {
+  box-sizing: content-box;
+  min-height: 320px;
+   }
+  .testimonials .testimonial-item .testimonial-img {
+    width: 90px;
+    border-radius: 50%;
+    margin: -40px 0 0 40px;
+    position: relative;
+    z-index: 2;
+    border: 6px solid #f6f5f5; }
+  .testimonials .testimonial-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0 5px 45px;
+    }
+  .testimonials .testimonial-item h4 {
+    font-size: 14px;
+    margin: 0 0 0 45px; }
+  .testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+    font-size: 26px; }
+  .testimonials .testimonial-item .quote-icon-left {
+    display: inline-block;
+    left: -5px;
+    position: relative; }
+  .testimonials .testimonial-item .quote-icon-right {
+    display: inline-block;
+    right: -5px;
+    position: relative;
+    top: 10px; }
+  .testimonials .testimonial-item p {
+    font-style: italic;
+    margin: 0 15px 0 15px;
+    padding: 20px 20px 60px 20px;
+    background: #009cea;
+    position: relative;
+    border-radius: 6px;
+    position: relative;
+    z-index: 1; }
