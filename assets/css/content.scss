@@ -300,6 +300,10 @@ height:1px;
 .ext_carousel-container {
 		background: #b3b3b314;
 		padding: 0.9rem;
+
+	.imgwrapper, .imgwrapper .figure, .imgwrapper .figure-img, .carousel, .carousel-inner, .carousel-item {
+	max-height: 500px; /* Adjust this value as needed */
+	}
 }
 
 
