@@ -16,8 +16,7 @@ version: 1.0
 sammi_version: '2023.1.1^'
 platform: Any
 overview: |
-    <div class="alert alert-info" role="alert">This extension is currently exclusively available to my <a href="https://patreon.com/Christinna">Patrons</a> as an early access perk.</div>
-    
+   
     Allows you to talk to ChatGPT directly in SAMMI, including remembering multiple different conversations. 
 
     ##### Features
