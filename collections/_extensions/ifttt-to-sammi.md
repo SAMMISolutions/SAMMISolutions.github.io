@@ -9,7 +9,7 @@ permalink: extensions/productivity/:slug
 download_url: https://christinak.itch.io/ifttt-to-sammi
 developer_name: Christina K.
 developer_url: https://christinak.itch.io
-icon_local: ifttt_lb_icon.png
+icon_local: ifttt_sammi_icon.png
 screenshots_local: ifttt_lb.png
 trailer: https://www.youtube.com/embed/1gwlV_PxA9s
 version: 1.0
