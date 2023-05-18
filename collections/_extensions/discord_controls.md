@@ -11,46 +11,106 @@ developer_name: Christina K.
 developer_url: https://christinak.itch.io
 icon_local: discord_controls.png
 screenshots_local: discord_controls_ss.png
-version: 1.0
-sammi_version: 2022.5.1 and up
+version: 1.1
+sammi_version: 2023.2.1 and up
 platform: Any
 overview: |
-    Discord Controls is an extension that allows you and your viewers to control your Discord server straight from SAMMI. 
+    Discord Controls is an extension that gives you and your viewers a super easy way to run your Discord server right from SAMMI.
 
-    ##### Features
-    - Get **Channels**, **Members** and **Emojis** in your server
-    - **Search for members** and retrieve their information
-    - Get, Create, Edit and Delete **channel messages** 
-    - Get, Create and Delete **messages reactions**
-    - Send **Direct Messages** to server members
-    - Get, Add and Remove **member roles** 
-    - Change member **nicknames**
-    - Mute, deafen, move and **timeout members**
+    **Key Features**:
+    - See Everything - Access a list of all channels, members, and emojis in your server.
+    - Find Anyone - Easily search for members and see their information.
+    - Manage Messages - View, make, change, or delete messages in your channel.
+    - Handle Reactions - Get, create, and remove reactions to messages.
+    - Send Direct Messages - Shoot private messages to members of your server.
+    - Take Care of Roles - View, add or remove member roles - it's never been easier!
+    - Change Nicknames - Quickly change any member's nickname.
+    - Control Members - Mute, deafen, move, or time-out members to keep your server friendly and fun.
+    - Update Server - Change your server details, including its name and icon. You can even - show when you're live with a simple 'live' overlay on your server icon!
+    - Rename Channels - Change any channel name whenever you want.
 
+    With Discord Controls, running your Discord server is a breeze!
 setup: |
-    1. Make sure you're on the latest version of SAMMI and install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
-    2. Go to the Discord Controls premade deck and edit the **INIT SETTINGS** button: 
-        - **Discord Bot Token:** *If you don't see this box, you need to update SAMMI to the latest version*)*
-            1. Create a new application at [https://discord.com/developers/applications](https://discord.com/developers/applications)
-            2. Under Bot menu, press 'Add Bot' button (rename the application if you get an error)
-            4. Still Under Bot menu, press Reset Token and fill out the Discord Bot Token box in SAMMI
-            3. Still Under Bot menu, the following intents are required: `SERVER MEMBERS INTENT`, `MESSAGE CONTENT INTENT`                
-            5. Under OAUth2 - URL Generator menu, check 'Bot' scope: 
-                - The following Bot permissions are required for all extension commands: 
-                    `Manage Roles, Manage Nicknames, Moderate Members, Send Messages, Manage Messages 
-                    Read Message History, Mute Members, Deafen Members, Move Members`
-            6. Click on Copy, paste the URL in your browser and invite the Bot to your Discord server
-            7. If you wish to do stuff like adding and removing roles, your Bot's role must be **above** these roles in Discord Server Settings
-        - **Default Discord Server ID** - your default Discord server ID that you wish to control with this extension
-            1. In your Discord, enable Developer Mode by going to User Settings (cogwheel in the bottom left corner) -> Advanced tab 
-            2. Right click on your Server name - Copy ID   
-          If you don't fill out server ID in your other DisCon commands, it will assume the default one you set up here.
-        - **Amount of members to retrieve** - how many Discord members you want to retrieve to place inside User ID dropdowns in DisCon commands. This is just something to make it easier for you to select a member without having to copy their ID.  
-    3. Save the INIT Settings button you just edited. Save the whole deck. Reload your Bridge to initiate the extension. Once initiated, all DisCon commands will have dropdowns for channel, role, emoji and member IDs. If you want to use a different server in your commands than your default one, you will need to manually input these. 
+    1. First, check that you're using the most recent version of SAMMI and install the extension. If you're not sure how to do this, there's a handy [Extension Install Guide](https://sammi.solutions/extensions/install) that can help.
+
+    2. Next, you're going to edit the **INIT SETTINGS** button in the Discord Controls premade deck. Here's what you'll need to do:
+
+        - `Discord Bot Token:`
+            1. Create a new application over at [https://discord.com/developers/applications](https://discord.com/developers/applications)
+            2. Click on the 'Bot' menu and hit 'Add Bot' (if you get an error, try renaming the application)
+            4. Enable the 'SERVER MEMBERS INTENT' and 'MESSAGE CONTENT INTENT' options (these are important for using the Get Members and Get Messages commands)
+            3. Still in the 'Bot' menu, hit 'Reset Token' and copy this into the Discord Bot Token box in SAMMI
+            5. In the 'OAUth2 - URL Generator' menu, check the 'Bot' scope. You'll need to give the bot some specific permissions so it can do certain things from SAMMI.   
+            
+            Here's a list of what permissions are needed for each command: 
+
+                | Command | Permission Required|
+                |-------|--------|--------
+                Get Messages | Read Message History |
+                Create Message| Send Messages|
+                Delete Message | Manage Messages|
+                Send DM |  Send Messages|
+                Create Reaction | Read Message History, Add Reactions|
+                Add Role| Manage Roles |
+                Remove Role| Manage Roles |
+                Change Nickname | Manage Nicknames|
+                Mute | Mute Members|
+                Deafen | Deafen Members|
+                Move | Move Members|
+                Timeout | Moderate Members|
+                Create Event | Create Events | 
+                Delete Event | Manage Events | 
+                Modify Channel | Manage Channels|
+                Modify Server | Manage Server |
+                {:class='table table-secondary w-auto table-hover text-break' }
+
+
+            6. Hit 'Copy' to get the URL, paste this into your browser and invite the bot to your Discord server
+            7. If you want to give or take away roles from members, you need to make sure your bot's role is higher than these roles in your Discord Server Settings
+
+        - `Default Discord Server ID` - This is the ID of the Discord server that you want to control with the extension. Here's how to get it:
+            1. In Discord, turn on Developer Mode. You can find this in User Settings (click the cog in the bottom left corner) in the Advanced tab
+            2. Right-click your Server name and click 'Copy ID'
+
+        - `Amount of members to retrieve` - Choose how many members you want to pull up in the User ID dropdowns in DisCon commands. This just makes it a bit easier to pick a member without having to find their ID. 
+
+
+    3. Save the changes you made to the **INIT Settings** button. Then save the whole deck. Reload your Bridge to get the extension going.  
+
+    Once it's up and running, all DisCon commands will show dropdowns for channel, role, emoji and member IDs. If you want to use a different server in your commands than your default one, you will need to manually input these. 
 
     ##### Available Commands
 
-    **Get Channels**      
+    <a name="available-commands"></a>
+    1. [Get Channels](#get-channels)
+    2. [Get Members](#get-members)
+    3. [Get Roles](#get-roles)
+    4. [Get Emojis](#get-emojis)
+    5. [Get User](#get-user)
+    6. [Get Messages](#get-messages)
+    7. [Create Message](#create-message)
+    8. [Edit Message](#edit-message)
+    9. [Delete Message](#delete-message)
+    10. [Send DM](#send-dm)
+    11. [Get Reactions](#get-reactions)
+    12. [Create Reaction](#create-reaction)
+    13. [Delete Reaction](#delete-reaction)
+    14. [Add Role](#add-role)
+    15. [Remove Role](#remove-role)
+    16. [Change Nickname](#change-nickname)
+    17. [Mute](#mute-member)
+    18. [Deafen](#deafen-member)
+    19. [Move Channel](#move-channel)
+    20. [Timeout](#timeout-member)
+    21. [Search Member](#search-member)
+    22. [Get Events](#get-events)
+    23. [Create Event](#create-event)
+    24. [Delete Event](#delete-event)
+    25. [Modify Channel](#modify-channel)
+    26. [Modify Server](#modify-server)   
+
+    <a name="get-channels"></a>
+    **Get Channels** [*[Back to Top]*](#available-commands)             
     Retrieves an array containing all channels in the server. Each channel is an object. 
 
     | Box Name | Explanation | 
@@ -95,7 +155,8 @@ setup: |
     }
     ```
 
-    **Get Members**        
+     <a name="get-members"></a>
+    **Get Members** [*[Back to Top]*](#available-commands)               
     Retrieves an array of current server members. Each member is an object.
 
     | Box Name | Explanation | 
@@ -134,7 +195,8 @@ setup: |
     } 
     ```
 
-    **Get Roles**        
+    <a name="get-roles"></a>
+    **Get Roles** [*[Back to Top]*](#available-commands)               
     Retrieves an array of all current server roles. Each role is an object.
 
     | Box Name | Explanation | 
@@ -163,7 +225,8 @@ setup: |
     }
     ```
 
-    **Get Emojis**        
+    <a name="get-emojis"></a>
+    **Get Emojis** [*[Back to Top]*](#available-commands)               
     Retrieves an array of current server emojis. Each emoji is an object.
 
     | Box Name | Explanation | 
@@ -186,7 +249,8 @@ setup: |
     }   
     ```    
 
-    **Get User**        
+    <a name="get-user"></a>
+    **Get User** [*[Back to Top]*](#available-commands)               
     Retrieves a single user object. 
 
     | Box Name | Explanation | 
@@ -214,7 +278,8 @@ setup: |
     }
     ```   
 
-    **Get Messages**        
+    <a name="get-messages"></a>
+    **Get Messages** [*[Back to Top]*](#available-commands)               
     Retrieves an array of channel messages. Each message is an object.\
     Your Discord Bot must have `READ_MESSAGE_HISTORY` permission.
 
@@ -256,7 +321,8 @@ setup: |
     }
     ```
 
-    **Create Message**        
+    <a name="create-message"></a>
+    **Create Message** [*[Back to Top]*](#available-commands)        
     Creates a new message and returns a message object. 
     Your Discord Bot must have `SEND_MESSAGES` permission.
 
@@ -301,7 +367,8 @@ setup: |
     }
     ```    
 
-    **Edit Mesage**        
+    <a name="edit-message"></a>
+    **Edit Mesage** [*[Back to Top]*](#available-commands)        
     Edits a previously sent message. Must have been sent by the same Discord bot. Returns a message object. 
 
     | Box Name | Explanation | 
@@ -344,8 +411,8 @@ setup: |
         "mention_everyone": 0.0
     }
     ```  
-    
-    **Delete Message**        
+    <a name="delete-message"></a>
+    **Delete Message** [*[Back to Top]*](#available-commands)               
     Deletes a single message.    
     Your Discord Bot must have `MANAGE_MESSAGES` permission. 
 
@@ -357,7 +424,8 @@ setup: |
     {:class='table table-secondary w-auto table-hover text-break'}
 
 
-    **Send DM**        
+    <a name="send-dm"></a>
+    **Send DM** [*[Back to Top]*](#available-commands)               
     Sends a new DM message.    
     Your Discord Bot must have `SEND_MESSAGES` permission.
 
@@ -372,11 +440,9 @@ setup: |
     Save Variable | Variable name to save the result into
     {:class='table table-secondary w-auto table-hover text-break'}
 
-    
-    ```json
-    ```    
 
-    **Get Reactions**        
+    <a name="get-reactions"></a>
+    **Get Reactions** [*[Back to Top]*](#available-commands)               
     Retrieves an array of users who reacted to the specified message with the specified emoji. Each user is an object.
 
     | Box Name | Explanation | 
@@ -400,8 +466,8 @@ setup: |
         "avatar": "76465f81d94b50023f2d51b63e6e57bd"
     }
     ```  
-    
-    **Create Reaction**        
+    <a name="create-message"></a>
+    **Create Reaction** [*[Back to Top]*](#available-commands)               
     Creates a reaction to the specified message with the specified emoji.    
     Your Discord Bot must have `READ_MESSAGE_HISTORY`, `ADD_REACTIONS` permissions.
 
@@ -413,7 +479,8 @@ setup: |
     Emoji | Emoji to react with <br/>- For a custom emoji you can select it from the dropdown <br/>- For a regular Discord emoji, just copy paste the emoji (not the code, the emoji itself) <br/>- for example a Thumbs Up emojis would be: 👍 <br/>- for example a Blue Heart emoji would be: 💙 <br/>- SAMMI will display emojis as small rectangle symbols, however it will correctly send them to Discord 
     {:class='table table-secondary w-auto table-hover text-break'}
 
-    **Delete Reaction**        
+    <a name="delete-reaction"></a>
+    **Delete Reaction** [*[Back to Top]*](#available-commands)               
     Deletes your own Discord bot's reaction to the specified message with the specified emoji.
 
     | Box Name | Explanation | 
@@ -424,8 +491,8 @@ setup: |
     Emoji | Emoji reaction to delete <br/>- For a custom emoji you can select it from the dropdown <br/>- For a regular Discord emoji, just copy paste the emoji (not the code, the emoji itself) <br/>- for example a Thumbs Up emojis would be: 👍 <br/>- for example a Blue Heart emoji would be: 💙 <br/>- SAMMI will display emojis as small rectangle symbols, however it will correctly send them to Discord 
     {:class='table table-secondary w-auto table-hover text-break'}
  
-
-    **Add Role**        
+    <a name="add-role"></a>
+    **Add Role** [*[Back to Top]*](#available-commands)               
     Adds a specific role to the specified user.  
     Your Discord Bot must have `MANAGE_ROLES` permissions and its own role must be ABOVE the role you're adding in Server Settings.
 
@@ -436,6 +503,7 @@ setup: |
     Role ID | Role ID to remove from the user. You can select it from the dropdown or input it manually.
     {:class='table table-secondary w-auto table-hover text-break'}
 
+    <a name="remove-role"></a>
     **Remove Role**        
     Removes a specific role from the specified user.   
     Your Discord Bot must have  `MANAGE_ROLES` permissions and its own role must be ABOVE the role you're removing in Server Settings.
@@ -446,11 +514,8 @@ setup: |
     Save Variable | Variable name to save the result into
     {:class='table table-secondary w-auto table-hover text-break'}
 
-    
-    ```json
-    ```
-
-    **Change Nickname**        
+    <a name="change-nickname"></a>
+    **Change Nickname** [*[Back to Top]*](#available-commands)               
     Changes a user's nickname in the server.   
     Your Discord Bot must have `MANAGE_NICKNAMES` permission. 
 
@@ -461,12 +526,9 @@ setup: |
     User ID | User ID of the user to remove the role from. You can select it from the dropdown or input it manually.
     New Nickname | Member's new nickname
     {:class='table table-secondary w-auto table-hover text-break'}
-
-    
-    ```json
-    ```    
-
-    **Mute**        
+ 
+    <a name="mute-member"></a>
+    **Mute** [*[Back to Top]*](#available-commands)               
     Mutes a user in a voice channel.   
     Bot must have `MUTE_MEMBERS` permission. 
 
@@ -477,7 +539,8 @@ setup: |
     Mute | Check to mute or uncheck to unmute the user
     {:class='table table-secondary w-auto table-hover text-break'}
 
-    **Deafen**        
+    <a name="deafen-member"></a>
+    **Deafen** [*[Back to Top]*](#available-commands)               
     Deafens a user in a voice channel.
     Bot must have 'DEAFEN_MEMBERS' permission. 
 
@@ -488,9 +551,8 @@ setup: |
     Deafen | Check to deafen or uncheck to Un-Deafen a user
     {:class='table table-secondary w-auto table-hover text-break'}
 
-
-
-    **Move Channel**        
+     <a name="move-channel"></a>
+    **Move Channel** [*[Back to Top]*](#available-commands)               
     Moves a user in a voice channel to a different voice channel.   
     Bot must have `MOVE_MEMBERS` permission.    
 
@@ -501,8 +563,8 @@ setup: |
     Channel ID | New channel ID to move the user to (must be a voice channel)
     {:class='table table-secondary w-auto table-hover text-break'}
  
-
-    **Timeout**        
+     <a name="timeout-member"></a>
+    **Timeout** [*[Back to Top]*](#available-commands)               
     Times out a user in a server and prevents them from sending messages for X amount of time.   
     Bot must have `MODERATE_MEMBERS` permission. 
 
@@ -516,8 +578,8 @@ setup: |
 
     If you wish to un-timeout a user, simply put `0` in the Timeout For box and execute the command again.
 
-
-    **Search Member**        
+     <a name="search-member"></a>
+    **Search Member** [*[Back to Top]*](#available-commands)               
     Searches for a specific member in your server by their nickname. Returns an array of all users matching the search query (can be more than one). 
 
     | Box Name | Explanation | 
@@ -554,5 +616,108 @@ setup: |
         "deaf": 0.0
     }
     ``` 
+
+     <a name="get-events"></a>
+    **Get Events** [*[Back to Top]*](#available-commands)               
+    Retrieves an array of all scheduled server events. Each event is an object. 
+
+    | Box Name | Explanation | 
+    |-------|--------|
+    Discord Server ID | Your Discord server ID. Leave empty or at `0` to use your default one from INIT Settings button.
+    Save Variable |  Variable name to save the result into
+    {:class='table table-secondary w-auto table-hover text-break'}
+
+    Example payload for a single event called Test event: 
+    ``` 
+    {
+        "guild_id": "807277614154252318",
+        "scheduled_end_time": "2023-05-17T07:00:00.133000+00:00",
+        "channel_id": null,
+        "creator_id": "452058585715834890",
+        "sku_ids": [],
+        "privacy_level": 2.0,
+        "creator": {
+            "avatar_decoration": null,
+            "public_flags": 0.0,
+            "discriminator": "9031",
+            "username": "Christinna",
+            "global_name": null,
+            "id": "452058585715834890",
+            "avatar": "76465f81d94b50023f2d51b63e6e57bd"
+        },
+        "image": null,
+        "entity_id": null,
+        "entity_metadata": {
+            "location": "Earth"
+        },
+        "id": "1108246104262316114",
+        "scheduled_start_time": "2023-05-17T05:00:00.133000+00:00",
+        "description": "Hello description",
+        "status": 1.0,
+        "name": "Test event",
+        "entity_type": 3.0
+    }
+    ```
+
+    <a name="create-event"></a>
+    **Create Event** [*[Back to Top]*](#available-commands)               
+    Creates a new event.  
+    Bot must have 'CREATE_EVENTS' permission. 
+
+    | Box Name | Explanation | 
+    |-------|--------|
+    Server ID | Discord server ID. Leave empty or at 0 to use your default one from INIT Settings button.
+    Type | even Type to create
+    Name | Name of the event
+    Channel ID | if the event Type is voice, select Channel ID
+    Location | if the event Type is External, fill it out with location, i.e. city 
+    Description | Event description
+    Start Time | Start time of the event. Must be in ISO8601 format. </br> - You can use Date/Time Math command to convert it.
+    End Time | End time of the event. Must  be in ISO8601 format. </br> - You can use Date/Time Math command to convert it.
+    Save Variable | Variable name to save the response (optional). Will contain the whole event object you just created. 
+    {:class='table table-secondary w-auto table-hover text-break'}
+
+
+     <a name="delete-event"></a>
+    **Delete Event** [*[Back to Top]*](#available-commands)               
+    Deletes an existing scheduled event.   
+    Bot must have 'MANAGE_EVENTS' permission.  
+
+    | Box Name | Explanation | 
+    |-------|--------|
+    Server ID | Discord server ID. Leave empty or at 0 to use your default one from INIT Settings button.
+    Event ID | Event ID to delete. Returned in Get Events or Create Event command. 
+    Save Variable | Variable name to save the response (optional).  Will be set to 'ok' if the event was succesfully deleted.
+    {:class='table table-secondary w-auto table-hover text-break'}
+
+     <a name="modify-channel"></a>
+    **Modify Channel** [*[Back to Top]*](#available-commands)               
+    Modifies specified channel. Leave empty to leave unchanged.
+    Bot must have 'MANAGE_CHANNELS' permission. 
+
+    | Box Name | Explanation | 
+    |-------|--------|
+    Server ID | Discord server ID. Leave empty or at 0 to use your default one from INIT Settings button.
+    Channel ID | Channel ID to modify. You can select it from the dropdown or input it manually.
+    Name | New name for the channel
+    Topic | New topic for the channel
+    NSFW | whether the channel should be marked as NSFW
+    Save Variable | Variable name to save the response (optional). Will contain the whole updated channel object
+    {:class='table table-secondary w-auto table-hover text-break'}
+    
+    <a name="modify-server"></a>
+    **Modify Server** [*[Back to Top]*](#available-commands)               
+    Modifies a server. Leave boxes empty to leave the current values unchanged.
+    Bot must have 'MANAGE_GUILD' permission. 
+
+    | Box Name | Explanation | 
+    |-------|--------|
+    Server ID | Discord server ID to modify. Leave empty to use your default one from INIT Settings button.
+    Name |New name for the server
+    Description | New description for the server
+    Icon | New icon from the server - 1024x1024 recommended, png/jpeg/gif
+    Save Variable | Variable name to save the response (optional). Will contain the whole updated server object
+    {:class='table table-secondary w-auto table-hover text-break'}    
+
 privacy_collect: false
 ---
