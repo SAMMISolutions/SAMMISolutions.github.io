@@ -60,7 +60,7 @@ setup: |
         <div class="alert alert-warning mt-2" role="alert">Please note that this extension requires OBS Websocket 5.</div>
     2. Ensure the following OBS plugins are installed: 
         - OBS Shader Filter: version 1.21^ [Download](https://github.com/exeldro/obs-shaderfilter/releases)
-        - Source Copy: version 0.2.2^ [Download](https://obsproject.com/forum/resources/source-copy.1261/)
+        - Source Clone: version 0.1.3^ [Download](https://obsproject.com/forum/resources/source-clone.1632/)
         - Move Transition: version 2.4.4^ [Download](https://obsproject.com/forum/resources/move-transition.913/)
     3. Install the extension. Follow the [Extension Install Guide](https://sammi.solutions/extensions/install) for help.
     4. In the Puzzle Game premade deck (added after extension installation), modify the red INIT button:
