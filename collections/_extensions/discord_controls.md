@@ -41,11 +41,10 @@ setup: |
             4. Enable the 'SERVER MEMBERS INTENT' and 'MESSAGE CONTENT INTENT' options (these are important for using the Get Members and Get Messages commands)
             3. Still in the 'Bot' menu, hit 'Reset Token' and copy this into the Discord Bot Token box in SAMMI
             5. In the 'OAUth2 - URL Generator' menu, check the 'Bot' scope. You'll need to give the bot some specific permissions so it can do certain things from SAMMI.   
-            
             Here's a list of what permissions are needed for each command: 
 
                 | Command | Permission Required|
-                |-------|--------|--------
+                |-------|--------|
                 Get Messages | Read Message History |
                 Create Message| Send Messages|
                 Delete Message | Manage Messages|
@@ -62,9 +61,9 @@ setup: |
                 Delete Event | Manage Events | 
                 Modify Channel | Manage Channels|
                 Modify Server | Manage Server |
-                {:class='table table-secondary w-auto table-hover text-break' }
+                {:class='table table-secondary w-auto table-hover text-break mt-2' }
 
-
+            {:start="6"}
             6. Hit 'Copy' to get the URL, paste this into your browser and invite the bot to your Discord server
             7. If you want to give or take away roles from members, you need to make sure your bot's role is higher than these roles in your Discord Server Settings
 
