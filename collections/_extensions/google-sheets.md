@@ -152,13 +152,15 @@ setup: |
     3. The extension will queue up the requests and wait for the last request to send them all at once. If you fail to supply all requests within the next 10 seconds, the queue will be deleted and resetted. Simply said, either all requests are sent or none.  
 
     **Get Data**  
-    Retrieves data based on the range and dimension, and saves them into an array.
+    Retrieves data based on the range and dimension, and saves them into an object.
+
+    {% include alert.html text="Please note the returned data is indeed an object with 1,2,3 etc. keys, and not an array." type="warning" %} 
 
     | Input box | Description |
     |-------|--------|
     | Render | How values should be represented in the output. Default is [formatted value](https://developers.google.com/sheets/api/reference/rest/v4/ValueRenderOption). |
     |Delete Empty | Whether to delete empty values before putting them into the stack.|
-    |saveVariable| Name of the array for the retrieved data. 
+    |saveVariable| Name of the object for the retrieved data. 
     {:class='table table-secondary table-hover'}
 
     **Find Data**  
