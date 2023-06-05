@@ -154,7 +154,7 @@ setup: |
     **Get Data**  
     Retrieves data based on the range and dimension, and saves them into an object.
 
-    {% include alert.html text="Please note the returned data is indeed an object with 1,2,3 etc. keys, and not an array." type="warning" %} 
+    <div class="alert alert-warning mt-2" role="alert">Please note the returned data is indeed an object with 1, 2, 3 etc. keys, and not an array.</div>
 
     | Input box | Description |
     |-------|--------|
