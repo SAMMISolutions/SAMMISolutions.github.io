@@ -21,7 +21,7 @@ overview: >-
   a matter of seconds you'll have the text synthesized into audio and can play
   it back<br><br>### Features<br>- Synthesize speech with any Uberduck.ai voice
   model.<br>- Full support for Extension Triggers and [Wait Until Variable
-  Exists](https://lioranboard.ca/docs2/commands/wait#waituntilvariableexists).<br>-
+  Exists](https://sammi.solutions/docs/commands/wait#waituntilvariableexists).<br>-
   Multiple Triggers for asynchronous ordered & unordered processing.
 setup: ''
 privacy_collect: 'on'

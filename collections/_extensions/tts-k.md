@@ -58,7 +58,7 @@ overview: |
     *Queue for Polly and Amazon TTS is combined, while Web Speech API has its own separate queue.*
 setup: |
     0. Please make sure your OBS is updated to the latest version.
-    1. Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/docs2/faq/general#installanextension).
+    1. Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/docs/faq/general#installanextension).
 
         <div class="alert alert-info mt-2" role="alert">The TTS sound comes from your Bridge. You might need to adjust OBS Browser Page audio routing to capture the TTS audio.</div>
 
