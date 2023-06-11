@@ -12,7 +12,7 @@ screenshots_local: twitter_deck.png
 developer_name: Christina K. 
 developer_url: https://christinak.itch.io
 version: 2.0
-sammi_version: Any
+sammi_version: 2023.2.1
 platform: Any
 overview: |
 
