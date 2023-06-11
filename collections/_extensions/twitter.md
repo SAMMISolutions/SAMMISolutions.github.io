@@ -28,7 +28,7 @@ overview: |
 
 setup: |
 
-    {% include alert.html text="Updating from a previous 1.X Twitter version? Please completely uninstall the current Twitter extension by navigating to SAMMI Core-Bridge-Uninstall extension, and delete the premade Twitter deck before proceeding. The commands names have changed, none of your existing commands will work anymore." type="warning" %} 
+    <div class="alert alert-warning" role="alert">    {% include alert.html text="Updating from a previous 1.X Twitter version? Please completely uninstall the current Twitter extension by navigating to SAMMI Core-Bridge-Uninstall extension, and delete the premade Twitter deck before proceeding. The commands names have changed, none of your existing commands will work anymore." type="warning" %} </div>
 
     1. Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
     2. Log into Twitter
