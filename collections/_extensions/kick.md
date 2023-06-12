@@ -16,17 +16,17 @@ sammi_version: 2023.2.1
 platform: Kick
 overview: |
 
-   <div class="alert alert-info" role="alert">Currently available to my <a href="https://patreon.com/Christinna">Patrons</a> as an early access perk and selected beta testers.</div>
+   <div class="alert alert-info" role="alert">The extension uses unofficial Kick API and might not be fully functional at times. By purchasing it you're supporting its future development.</div>
 
-   This extension allows you to control and interact with Kick through SAMMI commands and triggers. It greatly enhances chat and stream moderation, viewer engagement, and automates various streaming events. 
+   This extension allows you to control and interact with Kick through SAMMI commands and triggers.
 
    ##### Features
    
    **Viewer Engagement**
-   - Triggers events based on new followers, subscribers, gift subscribers, and hosts
+   - Trigger events based on new followers, subscribers, gift subscribers, and hosts
 
    **Chat Messages**
-   - Listens for messages from specific roles, including broadcaster, mods, subscribers, and founders
+   - Listen for messages from specific roles, including broadcaster, mods, subscribers, and founders
    - Wildcard functionality to trigger for all messages or specific ones
 
    **User Interaction**
@@ -38,7 +38,7 @@ overview: |
    - Monitor and manage user bans and unbans
 
    **Poll Management**
-   - Create and deletes polls, and listen to poll update events to retrieve the current poll information, such as amount of votes
+   - Create and delete polls, and listen to poll update events to retrieve the current poll information, such as amount of votes
 
    **User and Channel Data Retrieval**
    - Get information about channels, such as the amount of followers
