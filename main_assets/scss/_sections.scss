@@ -138,9 +138,9 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Services
+# Integrations
 --------------------------------------------------------------*/
-.services {
+.integrations {
 	background: $bgSecondary;
 
   .icon-box {
@@ -184,61 +184,64 @@ section {
     margin-bottom: 0;
   }
 
-  .icon-box-pink {
+  .icon-box-obs {
 
     .icon {
+      height: 50px;
       i {
         color: $primary;
       }
     }
 
     &:hover {
-      border-color: #ff689b;
+      border-color: #68beff;
     }
 
   }
 
-  .icon-box-cyan {
+  .icon-box-twitch {
 
     .icon {
+      height: 50px;
       i {
-        color: #3fcdc7;
+        color: #864ff9;
       }
     }
 
     &:hover {
-      border-color: #3fcdc7;
+      border-color: #864ff9;
     }
 
   }
 
-  .icon-box-green {
-
+  .icon-box-youtube {
     .icon {
-      i {
-        color: #41cf2e;
-      }
+      height: 50px;
+        img {
+            width: 64px;
+            height: 45px;
+        }
     }
 
     &:hover {
-      border-color: #41cf2e;
+        border-color: #e93e1d;
     }
+}
 
-  }
-
-  .icon-box-blue {
-
+  .icon-box-crowd {
     .icon {
-      i {
-        color: #2282ff;
-      }
+      height: 50px;
+        img {
+            width: 50px;
+            height: 50px;
+        }
     }
 
     &:hover {
-      border-color: #2282ff;
+        border-color: #fcec56;
     }
+}
 
-  }
 
 }
 

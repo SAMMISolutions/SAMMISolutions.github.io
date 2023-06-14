@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-Run sass --watch assets/scss/style.scss:assets/css/style.css to generate css 
+Run sass --watch main_assets/scss/style.scss:main_assets/css/style.css to generate css 
 # General 
 --------------------------------------------------------------*/
 body {
@@ -394,11 +394,11 @@ section {
   100% {
     opacity: 1; } }
 /*--------------------------------------------------------------
-# Services
+# Integrations
 --------------------------------------------------------------*/
-.services {
+.integrations {
   background: #142e50; }
-  .services .icon-box {
+  .integrations .icon-box {
     padding: 30px;
     position: relative;
     overflow: hidden;
@@ -409,40 +409,50 @@ section {
     border-radius: 4px;
     text-align: center;
     border-bottom: 3px solid #fff; }
-    .services .icon-box:hover {
+    .integrations .icon-box:hover {
       transform: translateY(-5px); }
-  .services .icon {
+  .integrations .icon {
     margin-bottom: 15px; }
-    .services .icon i {
+    .integrations .icon i {
       font-size: 48px;
       line-height: 1;
       margin-bottom: 15px; }
-  .services .title {
+  .integrations .title {
     font-weight: 700;
     margin-bottom: 15px;
     font-size: 18px; }
-    .services .title a {
+    .integrations .title a {
       color: #f6f5f5; }
-  .services .description {
+  .integrations .description {
     font-size: 15px;
     line-height: 28px;
     margin-bottom: 0; }
-  .services .icon-box-pink .icon i {
-    color: #f6f5f5; }
-  .services .icon-box-pink:hover {
-    border-color: #ff689b; }
-  .services .icon-box-cyan .icon i {
-    color: #3fcdc7; }
-  .services .icon-box-cyan:hover {
-    border-color: #3fcdc7; }
-  .services .icon-box-green .icon i {
-    color: #41cf2e; }
-  .services .icon-box-green:hover {
-    border-color: #41cf2e; }
-  .services .icon-box-blue .icon i {
-    color: #2282ff; }
-  .services .icon-box-blue:hover {
-    border-color: #2282ff; }
+  .integrations .icon-box-obs .icon {
+    height: 50px; }
+    .integrations .icon-box-obs .icon i {
+      color: #f6f5f5; }
+  .integrations .icon-box-obs:hover {
+    border-color: #68beff; }
+  .integrations .icon-box-twitch .icon {
+    height: 50px; }
+    .integrations .icon-box-twitch .icon i {
+      color: #864ff9; }
+  .integrations .icon-box-twitch:hover {
+    border-color: #864ff9; }
+  .integrations .icon-box-youtube .icon {
+    height: 50px; }
+    .integrations .icon-box-youtube .icon img {
+      width: 64px;
+      height: 45px; }
+  .integrations .icon-box-youtube:hover {
+    border-color: #e93e1d; }
+  .integrations .icon-box-crowd .icon {
+    height: 50px; }
+    .integrations .icon-box-crowd .icon img {
+      width: 50px;
+      height: 50px; }
+  .integrations .icon-box-crowd:hover {
+    border-color: #fcec56; }
 
 /*--------------------------------------------------------------
 # Portfolio
