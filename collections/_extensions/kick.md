@@ -51,6 +51,9 @@ overview: |
 setup: |
    1. **Install the extension.**
    2. **Set up your INIT button.**
+
+      <div class="alert alert-warning" role="alert">Kick modifies user names containing underscores, such as "_" becomes "-". For example, 'christina_k' becomes 'christina-k'. You can verify your exact username by navigating to your Kick channel (https://kick.com/yourName).</div>
+
       - `Broadcaster Channel Name`:
          1. This is the channel name you utilize for streaming.
       - `Bot Email`:
