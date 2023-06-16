@@ -43,7 +43,7 @@ setup: |
         1. Wait until the next day to post more tweets (recommended)
         2. While I don't officially support or suggest this option, the code is open and can be modified. Because it runs on your own computer, you could adjust it to use your own credentials if you need to tweet beyond the default limit. But remember:
             <div class="alert alert-warning mt-2" role="alert">If you decide to use your own Twitter App and API keys to get past the standard limit, it's entirely on you. For more info, take a look at <a href="https://twittercommunity.com/t/policy-clarification-multiple-applications-for-the-same-use-case/92080">this article</a>.</div>
-            - Only make these changes if you're okay with the risks, and make sure to use a secondary or throwaway Twitter account, not your main one.
+            - Only make these changes if you're okay with the risks, and make sure to use a secondary or throwaway Twitter account, not your main one. Mention the project and app you're creating is for your own personal project. 
             - Watch the step-by-step guide video here:   
 
              [video](https://www.youtube.com/embed/xM6rdzYcEd8)[/video] 
