@@ -46,7 +46,7 @@ setup: |
             - Only make these changes if you're okay with the risks, and make sure to use a secondary or throwaway Twitter account, not your main one. Mention the project and app you're creating is for your own personal project. 
             - Watch the step-by-step guide video here:   
 
-             [video](https://www.youtube.com/embed/xM6rdzYcEd8)[/video] 
+             [video](https://www.youtube.com/embed/OCiZGfOZ-jo)[/video] 
     Please remember, even though you can change the code, it's best to stick to the Twitter API's rules for things to run smoothly.
     4. Now you can send Tweets directly from your SAMMI. Open the premade deck and follow the instructions in the comments of each button.
 privacy_collect: false
