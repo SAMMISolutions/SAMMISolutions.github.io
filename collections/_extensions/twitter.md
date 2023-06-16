@@ -38,7 +38,7 @@ setup: |
         - Click on Login, select Open or Copy Twitter URL (and open it).
         - Copy the provided PIN
         - Fill out the "Enter PIN" input field and click on Authenticate. Once it says `Logged in`, you're all good to go.
-    3. Please be careful when using the 'Tweet' and 'Reply' commands. If you see a 429 error (quota exceeded), it means that the default App has reached its limit for the day. This limit only applies to Tweet and Reply. When this happens, you have two choices:
+    3. Please be careful when using the 'Tweet', 'Reply' and 'Create Poll' commands. If you see a 429 error (quota exceeded), it means that the default App has reached its limit for the day. This limit only applies to Tweet and Reply. When this happens, you have two choices:
 
         1. Wait until the next day to post more tweets (recommended)
         2. While I don't officially support or suggest this option, the code is open and can be modified. Because it runs on your own computer, you could adjust it to use your own credentials if you need to tweet beyond the default limit. But remember:
