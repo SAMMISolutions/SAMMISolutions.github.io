@@ -155,6 +155,6 @@ setup: |
 
     This button generates a sample word cloud or participation tree image based on the settings from the Settings button.
 
-    <div class="alert alert-warning mt-2" role="info">This command provides a quick way to test word cloud and participation tree customization settings.</div>
+    <div class="alert alert-info mt-2" role="info">This command provides a quick way to test word cloud and participation tree customization settings.</div>
 privacy_collect: false
 ---
