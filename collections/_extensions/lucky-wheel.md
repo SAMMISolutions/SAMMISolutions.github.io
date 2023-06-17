@@ -54,7 +54,7 @@ setup: |
         - A new Lucky Wheel overlay should be added to your OBS
         - A new 'Example Wheel' should be added to your SAMMI 
     4. You can modify the Example Wheel either directly from Bridge in Lucky Wheel tab or with Lucky Wheel commands in SAMMI. You can also add a new wheel in Bridge or with a Lucky Wheel command in SAMMI. Cycle through all your wheels and activate different wheels directly from SAMMI by using the arrows.
-    6. Press **SHOW WHEE**L button in your SAMMI Deck. 
+    6. Press **SHOW WHEEL** button in your SAMMI Deck. 
     7. Press **SPIN WHEEL** button in your SAMMI Deck. 
 
     Each button has comments explaining how the button works. Please read them and adjust the buttons (such as chat messages) for your own stream.

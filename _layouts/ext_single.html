@@ -139,7 +139,11 @@ layout: ext_single_wrap
 {% if setupMd contains '<img' %}
     {% assign imgNodes = setupMd | split: '<img' %}
     {% for node in imgNodes %}
-        {% if node contains 'src=' and node contains 'alt' %}
+        {% assign doesNotContainLiquidRaw = true %}
+        {% if node contains 'liquidRaw' %}
+          {% assign doesNotContainLiquidRaw = false %}
+        {% endif %}
+        {% if node contains 'src=' and node contains 'alt' and doesNotContainLiquidRaw %}
             {% assign image = node | split: '>' %}
             {% assign current = image[0] %} 
             {% assign src = current | split: '"' %}
