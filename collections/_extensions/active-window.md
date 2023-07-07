@@ -4,52 +4,59 @@ title: Active Window
 slug: active-window
 desc: Get your current active window and its state as a variable in SAMMI. 
 category: utilities
-date: '2022-08-03T00:00:00-05:00'
+date: '2023-07-06T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/sammi-active-window
 developer_name: Christina K.
 developer_url: https://christinak.itch.io
 icon_local: active_window.png
-trailer: https://www.youtube.com/embed/psPiUVRTFnc
-screenshots_local: active_window_ss.png , active_window_ss2.png
+trailer: https://www.youtube.com/embed/6muJS9hh6xo
+screenshots_local: active_window_ss.png
 screenshots_ex: 
-version: 1.0
+version: 2.0
 sammi_version: any
 platform: Any
 overview: |
-    **Simple extension to get your current active window and its state (full screen vs. windowed) as a variable in SAMMI.**
+    *Version 2.0 has been completely reworked. Please uninstall the old version completely if you're updating from version 1.X. Version 2.0 no longer requires running any external scripts and is fully contained within SAMMI.*
 
-    For example, it can be useful for when you want to switch your scenes depending on what game you're playing and whether it's in full screen mode or not. 
+    Easily trigger SAMMI buttons on your window's status, and get details about your active window.
 
-    **Important Note**
-    - Fullscreen state is only detected for apps running on your main monitor/desktop.  
-    - The extension uses AutoIt script to work.  You do not need to install any dependencies as it is already all compiled. 
-    - It has been tested only on Windows 10.
+    #### Features
+    Allows you to trigger buttons based on the following events:
 
-    **Special thanks goes to [MisterK](twitch.tv/misterk_qc) for migrating the extension to SAMMI.** 
+    - **Window Activated**
+    - **Window Deactivated**
+    - **Window Maximized**
+    - **Window FullScreen**
+    - **Window Size Change**
+    - **Window Position Changed**
+
+    You can also grab the following active window information:
+
+    - **Window Title (i.e. SAMMI Core)**
+    - **Process Name (i.e. SAMMI Core.exe)**
+    - **Is Maximized (1 = maximized, 0 = not maximized)**
+    - **Is Full Screen (1 = maximized, 0 = not maximized)**
+    - **Window Width (in pixels)**
+    - **Window Height (in pixels)**
+    - **Position Right Corner (in pixels)**
+    - **Position Left Corner (in pixels)**
+    - **Position Top Corner (in pixels)**
+    - **Position Bottom Corner (in pixels)**
+
+    **Important Note**  
+
+    The extension may not properly work on non Windows devices.
 setup: |
-    1. Place the *inner* Active_Window folder in `SAMMI/SAMMI Receiver(PC)/Ext` folder.
-    2. Install the extension. You can follow the [Extension Install Guide](/install).
-    3. Press **Active Window Start Scanning** button. 
-    4. Press **Example Use** button to see an example of how you can use this exension. Your active window and its state will be displayed as a yellow notification alert in your Receiver.
-    5. Press **Active Window Stop Scanning** button if you wish to terminate the script and stop scanning for active window. 
+    *Version 2.0 has been completely reworked. Please uninstall the old version completely if you're updating from version 1.X. Version 2.0 no longer requires running any external scripts and is fully contained within SAMMI.*
 
-    If your Antivirus doesn't like running the .exe file, you can use the .a3x file instead. Instructions can be found in the **blue button in your premade deck**. 
+    1. Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
+    2. To enable scanning, press 'Active Window Enable Scanning' button.
+    3. To grab currently active window information, use 'Active Window Get Info' button
+    4. To add a trigger for a specific event, e.g. SAMMI Core activated, use 'Active Window Manage Triggers' button 
+    5. Find more details about all the available commands and examples in the premade Active Window Deck 
 
-    Please do NOT rename or move this folder outside of Receiver/Ext folder and do NOT rename of move any of the files within this folder. 
-    They're all important for the extension to correctly function. 
-
-    **Folder Contents**\
-    `LBActiveWindow.exe` - compiled script which scans for active window process name and size\
-    `LBActiveWindow.a3x` - compiled script but without the final exe. Must be run with AutoIt installed. Might work better than the .exe version if your antivirus is too aggressive.\\
-    `LBActiveWindow.au3` - uncompiled script. Can be edited in AutoIt. \
-    `activewindow.txt` - the script saves the active window process name and size into this txt file\
-    `LBActiveWindowKill.bat` - batch file to kill the currently running script \
-    `LBActiveWindowKill.vbs` - visual basic script to run the batch file silently
-
-    *Note: Your antivirus may not like the .exe file included in the zip, which is a compiled AutoIt script to detect your active window.  
-    You can give it a permission to execute it or use its non exe version, just follow the instructions in the blue button in your premade deck!*
-testers: Melonax
+    Note: If there are any issues with detecting your active window, please try running SAMMI as administrator (right click on SAMMI Core.exe - Run as Administrator).
 privacy_collect: false
 ---
 

@@ -43,7 +43,7 @@ setup: |
     - You are responsible for tracking your own token usage
     - As this an early release of the extension, it could potentially lead to higher token usage due to user error or possible bugs. For that reason, please SET YOUR USAGE LIMITS!
 
-    1. Install the extension.
+    1. Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
     2. Setup your INIT button
        - `API Key`: 
             1. Navigate to [https://platform.openai.com/signup](https://platform.openai.com/signup)

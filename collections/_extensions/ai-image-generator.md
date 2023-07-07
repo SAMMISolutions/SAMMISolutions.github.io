@@ -52,7 +52,7 @@ setup: |
     - As this is a beta release of the extension, using it could potentially lead
     to higher API calls usage due to user error or possible bugs. 
 
-    1. Install the extension.
+    1. Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
     2. Setup your INIT button
        - `API Key`: 
             1. Navigate to [https://platform.openai.com/signup](https://platform.openai.com/signup)
