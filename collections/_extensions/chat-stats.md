@@ -2,7 +2,7 @@
 layout: ext_single
 title: Chat Stats
 slug: chat-stats
-desc: Retrieve and search through a chat log from any Twitch VOD.  
+desc: Generate a word cloud, chat summary and viewer tree! 
 category: twitch
 date: '2023-06-16T00:00:00-05:00'
 permalink: extensions/twitch/:slug
