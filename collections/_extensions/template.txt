@@ -31,30 +31,7 @@ privacy_useractivity:
 privacy_website: 
 ---
 
-
-Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
-
-If you would like to support me in creating more extensions for SAMMI, you can navigate to the [Donate section](https://sammi.solutions/donate). 
-
-*Feel free to edit the extension for your own use. You may not distribute, sell or publish it without the author's permission.*
-
-
-
-
-Title: {{ page.title }}
-Icon: {{ page.icon_local }}
-Description: {{ page.desc }}
-Updated: {{ page.date | date: "%B %d, %Y" }}
-Download: {{ page.download_url }}
-Setup url: {{ page.setup_url }}
-Developer: {{ page.developer_url }}
-Version: {{ page.version }}
-SAMMI Version: {{ page.sammi_version }}
-Overview: {{ page.overview }}
-Setup: {{ page.setup }}
-Overview: {{ page.overview }}
-Privacy Policy: {{ page.privacy_policy }}
-
+How to insert images/videos: 
 ![image](img.png)
 [video](https://www.youtube.com/embed/XXX)[/video]
 
