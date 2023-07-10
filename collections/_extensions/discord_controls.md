@@ -323,7 +323,8 @@ setup: |
     <a name="create-message"></a>
     **Create Message** [*[Back to Top]*](#available-commands)        
     Creates a new message and returns a message object. 
-    Your Discord Bot must have `SEND_MESSAGES` permission.
+    Your Discord Bot must have `SEND_MESSAGES` permission.  
+    If you want to tag a specific user or a role, please refer to this [Message Formatting Documentation](https://discord.com/developers/docs/reference#message-formatting).
 
     | Box Name | Explanation | 
     |-------|--------|
