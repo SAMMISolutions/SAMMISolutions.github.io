@@ -2,33 +2,210 @@
 layout: ext_single
 title: Get Folder Files
 slug: folder-files
-desc: Scan a folder to retrieve all the file names and save them into SAMMI
+desc: Scan, search and manage all your files
 category: utilities
-date: '2022-05-05T00:00:00-05:00'
+date: '2023-07-31T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/get-folder-files
 developer_name: Christina K.
 developer_url: https://christinak.itch.io
-icon_local: folder_files.png
-screenshots_local: folder_files.png
-version: 1.0
+icon_local: folder-files.png
+screenshots_local: folder-files-deck.png
+version: 2.0
 sammi_version: Any
 platform: Any
 overview: |
-    This extension allows you scan a folder to retrieve all the file names, optionally filter the file types and save them into a stack and .ini file. Very useful if you need to iterate through a lot of files with different names and file types.  
+    <div class="alert alert-info mt-3" role="alert">Currently available to my <a href="https://www.patreon.com/Christinna">Patrons as an early access perk.</a></div>
 
-    **Important Note:** This extension uses a batch file to get all file names. After downloading and unpacking the .zip file, please make sure your antivirus did not delete the file and check its contents by right clicking on the file and selecting edit.
+    This extension allows you scan a folder and manipulate files with lots of useful features.  
+
+    **Features:**
+    Get all folder files and filter by extension, sort alphabetically/numerically/date modified/size
+    Get a random file in a folder
+    Get the last modified file in a folder
+    Get File Size
+    Rename a file
+    Move a file
+    Delete a file (note: unlike SAMMI's native command, this one actually moves the file only to your trash bin which is IMO a bit safer)
+    Read Last Line of a File
+    Count Lines in a File
+    Create a folder
+    Delete a folder (moves to trash bin)
+    Count files in a folder
+    Find string in files
+    Compress & Uncompress a Folder
+    Get Media length
+
+    **Disclaimer**: *This extension provides optional functionality that can be utilized if you have FFmpeg installed on your system. 
+    Please note that FFmpeg is not distributed with this extension, nor is it required for the extension's primary functionality. 
+    If you choose to use FFmpeg with this extension, you must download it separately from the official source: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip, and     the extension will guide you regarding its usage. 
+    Please familiarize yourself with FFmpeg's licensing terms and potential patent implications before use.*
 setup: |
-    1. Place the whole folder Get_Folder_Files in your SAMMI/Ext folder (create the Ext folder if it doesn't exist yet).
-    2. Install the extension in your SAMMI while connected to Bridge.
-    3. Edit the premade button in your Get Folder Files deck. Read the instructions inside.
-    4. Press the button.
-    5. Your files names will be saved in the .ini file you specified in your SAMMI folder.
 
-    Once the button is executed, all file names are saved in the specified .ini file, including their stringified array. The paths in the .ini file will always contain forward slashes, even if you use backward slashes in your file path value. 
+    {% include alert.html text="This guide is intended for the new overhauled Folder Files extension which is currently in beta for my Patrons." type="info" %} 
 
-    If the contents of your scanned folder change, you can freely rescan the folder, which will automatically override the file names in your .ini file (and delete all non existing ones).  
+    **Important Information**: If you have the old version of this extension, Get Folder Files, installed already, please completely remove the extension first by going to SAMMI Core - Bridge - Uninstall before installing this one. You will need to migrate all your existing buttons, as this extension has been completely overhauled.
 
-    If there are any errors, you should get a yellow notification message in your Receiver.
+    1. Make sure you're on the [latest version of SAMMI](https://sammi.solutions/docs/getting-started/data-backup) and **install the extension**. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
+    2. Make sure SAMMI is connected to Bridge. **Bridge must be running at all times and be connected to SAMMI for Folder Files extension to work.**
+    3. Your basic setup is finished! Please note the premade deck only serves you to review how to use the extension, with some example buttons. I recommend you create separate buttons in a different deck, so you're able to easily update the extension in the future without overriding your custom made buttons or commands (since the premade deck will be completely overriden if there are any updates). 
+
+    ##### How to download and set up FFmpeg
+    If you wish to use Get Media Length command, you will need to download FFmpeg. Please click on 'Set Up FFmpeg' button and follow the instructions. 
+
+    #### Available Commands
+
+    {% include alert.html text="The following commands require you to use Wait Until Variable Exists command, as they do not return the result immediately." type="warning" %} 
+
+    ##### Get Folder Files
+    This command helps you find all files in a certain folder. You can choose to only return  certain types of files and order them in different ways. 
+
+    | Box Name | Description|
+    |--------|-------|
+    |Folder Path | The path to the folder where the files are located |
+    |File Extensions | The types of files you want to return. A comma-separated string with all allowed file extensions. Leave empty to allow all. |
+    |Sort Order | Sort the results alphabetically, by last date modified or by size |
+    |Save As Full Path | Save the results as full path, or just a filename |
+    |Save Variable As | Name of the array to save all the files. Will be left blank (set to an empty string) if something goes wrong |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Get a Random File
+    This command helps you pick a file at random from a certain folder. You can choose to only pick from certain types of files.
+
+    | Box Name | Description|
+    |--------|-------|
+    |Folder Path | The path to the folder where the files are located |
+    |File Extensions | The types of files you want to return. A comma-separated string with all allowed file extensions. Leave empty to allow all. |
+    |Save As Full Path | Save the result as full path, or just a filename |
+    |Save Variable As | Variable name to save the random file name to. Will be left blank (set to an empty string) if something goes wrong |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Get Last Modified File
+    This command finds the most recently changed file in a folder. You can choose to only look at certain types of files.
+
+    | Box Name | Description|
+    |--------|-------|
+    |Folder Path | The path to the folder where the files are located |
+    |File Extensions | The types of files you want to return. A comma-separated string with all allowed file extensions. Leave empty to allow all. |
+    |Save As Full Path | Save the result as full path, or just filename |
+    |Save Variable As | Variable name to save the last modified file name into. Will be left blank (set to an empty string) if something goes wrong|
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Find String in Files
+    This command helps you find certain words in files in a folder.
+
+    | Box Name | Description|
+    |--------|-------|
+    |Folder Path | The path to the folder where the files are located |
+    |File Extensions | The types of files you want to search. A comma-separated string with all allowed file extensions. Leave empty to allow all. |
+    |String to Find | The word or phrase you're looking for |
+    |Recursive Search | Whether to search for the string in all subfolders. This might take a while to return results if set to true. 
+    |Save Variable As (Filename) | The variable name to save the resulting file name into. Will be left blank (set to an empty string) if something goes wrong |
+    |Save Variable As (Line) | The line number where the string occurred in the filename. Will be left blank (set to an empty string) if something goes wrong |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Get File Size
+    This command tells you how big a file is.
+
+    | Box Name | Description|
+    |--------|-------|
+    |File Path | The path where the file is located |
+    |Unit | Do you want the size in KB or MB? |
+    |Save Variable As | The variable name to save result into (will be saved as number). Will be left blank (set to an empty string) if something goes wrong |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Count Files in a Folder
+    This command counts the number of files in a folder. You can choose to only count certain types of files.
+
+    | Box Name | Description|
+    |--------|-------|
+    |Folder Path | The path to the folder where the files are located |
+    |File Extensions | The types of files you want to return. A comma-separated string with all allowed file extensions. Leave empty to allow all. |
+    |Save Variable As | Variable name to save result into (will be saved as number). Will be left blank (set to an empty string) if something goes wrong |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Count Lines in a File
+    This command counts the number of lines in a file.
+
+    | Box Name | Description|
+    |--------|-------|
+    |File Path | The path where the file is located |
+    |Save Variable As | The variable name to save result into (will be saved as number). Will be left blank (set to an empty string) if something goes wrong |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Read Line in a File
+    This command reads a certain line or the last line in a file.
+
+    | Box Name | Description|
+    |--------|-------|
+    |File Path | The path where the file is located|
+    |Line Number | The line number you want to read |
+    |Read Last Line | Check this if you want to read the last line in the file |
+    |Save Variable As | The variable name to save result into. Will be left blank (set to an empty string) if something goes wrong |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Create a Folder
+    Creates a new folder in the specified path.
+
+    | Box Name | Description|
+    |--------|-------|
+    |Folder Path | The path where to create the new folder |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Move a File
+    Moves a file to another location.
+
+    | Box Name | Description|
+    |--------|-------|
+    |Old File Path | The current path where the file is located |
+    |New File Path | The new file path to move the file to. Including the filename and its extension. |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Rename a File
+    Renames a file.
+
+    | Box Name | Description|
+    |--------|-------|
+    |File Path | The file path to rename |
+    |New Name | The new name for the file. Don't forget to include the type of file (like .jpg or .txt) |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Delete a File/Folder
+    This command puts a file or folder in the recycle bin.  
+    It's a safer option than using the built in native command File: Delete File in SAMMI, which permanently deletes it.
+
+    | Box Name | Description|
+    |--------|-------|
+    |File/Folder Path | Path to the file or folder where it's located |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Compress a File/Folder
+    Compresses (zips up) the specified file or folder.
+
+    | Box Name | Description|
+    |--------|-------|
+    |File/Folder Path | Path to the file or folder where it's located|
+    |Compressed File Path | Path to the newly compressed file |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Uncompress a File
+    Uncompresses (unzips) the specified file.
+
+    | Box Name | Description|
+    |--------|-------|
+    |Compressed File Path | Path to the compressed file where it's located |
+    |Uncompressed File Path | New path to the uncompressed file/folder |
+    {:class='table table-secondary w-auto table-hover'}
+
+    ##### Get Media Length
+    This command tells you how long a media file lasts.  
+    You need to have FFmpeg set up to use this. Please press 'Set Up FFmpeg button' if you haven't done so already.
+
+    | Box Name | Description|
+    |--------|-------|
+    |Media File Path | Path to the media file |
+    |Unit | Do you want the length in seconds, minutes, or hours? |
+    |Save Variable As | Variable name to save the result into (will be saved as a number). Will be left blank (set to an empty string) if something goes wrong |
+    {:class='table table-secondary w-auto table-hover'}
 privacy_collect: false
 ---
