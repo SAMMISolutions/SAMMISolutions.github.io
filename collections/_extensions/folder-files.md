@@ -43,14 +43,15 @@ overview: |
     If you choose to use FFmpeg with this extension, you must download it separately from the official source: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip, and     the extension will guide you regarding its usage. 
     Please familiarize yourself with FFmpeg's licensing terms and potential patent implications before use.*
 setup: |
-
     {% include alert.html text="This guide is intended for the new overhauled Folder Files extension which is currently in beta for my Patrons." type="info" %} 
 
-    **Important Information**: If you have the old version of this extension, Get Folder Files, installed already, please completely remove the extension first by going to SAMMI Core - Bridge - Uninstall before installing this one. You will need to migrate all your existing buttons, as this extension has been completely overhauled.
+    **Important Information**:   
+    If you have the old version of this extension, Get Folder Files, installed already, please completely remove the extension first by going to SAMMI Core - Bridge - Uninstall before installing this one. You will need to migrate all your existing buttons, as this extension has been completely overhauled.
 
     1. Make sure you're on the [latest version of SAMMI](https://sammi.solutions/docs/getting-started/data-backup) and **install the extension**. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
     2. Make sure SAMMI is connected to Bridge. **Bridge must be running at all times and be connected to SAMMI for Folder Files extension to work.**
-    3. Your basic setup is finished! Please note the premade deck only serves you to review how to use the extension, with some example buttons. I recommend you create separate buttons in a different deck, so you're able to easily update the extension in the future without overriding your custom made buttons or commands (since the premade deck will be completely overriden if there are any updates). 
+    3. Your basic setup is finished! Please note the premade deck only serves you to review how to use the extension, with some example buttons.   
+    I recommend you create separate buttons in a different deck, so you're able to easily update the extension in the future without overriding your custom made buttons or commands (since the premade deck will be completely overriden if there are any updates). 
 
     ##### How to download and set up FFmpeg
     If you wish to use Get Media Length command, you will need to download FFmpeg. Please click on 'Set Up FFmpeg' button and follow the instructions. 
