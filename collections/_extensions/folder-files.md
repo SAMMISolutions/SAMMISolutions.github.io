@@ -43,8 +43,8 @@ overview: |
     If you choose to use FFmpeg with this extension, you must download it separately from the official source: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip, and     the extension will guide you regarding its usage. 
     Please familiarize yourself with FFmpeg's licensing terms and potential patent implications before use.*
 setup: |
-    {% include alert.html text="This guide is intended for the new overhauled Folder Files extension which is currently in beta for my Patrons." type="info" %} 
-
+    <div class="alert alert-info" role="info">This guide is intended for the new overhauled Folder Files extension which is currently in beta for my Patrons.</div>
+    
     **Important Information**:   
     If you have the old version of this extension, Get Folder Files, installed already, please completely remove the extension first by going to SAMMI Core - Bridge - Uninstall before installing this one. You will need to migrate all your existing buttons, as this extension has been completely overhauled.
 
@@ -53,14 +53,14 @@ setup: |
     3. Your basic setup is finished! Please note the premade deck only serves you to review how to use the extension, with some example buttons.   
     I recommend you create separate buttons in a different deck, so you're able to easily update the extension in the future without overriding your custom made buttons or commands (since the premade deck will be completely overriden if there are any updates). 
 
-    {% include alert.html text="If you notice a command does not work as intended, please try running SAMMI as administrator to avoid permission errors." type="info" %} 
+    <div class="alert alert-info" role="info">If you notice a command does not work as intended, please try running SAMMI as administrator to avoid permission errors.</div>
 
     ##### How to download and set up FFmpeg
     If you wish to use Get Media Length command, you will need to download FFmpeg. Please click on 'Set Up FFmpeg' button and follow the instructions. 
 
     #### Available Commands
 
-    {% include alert.html text="The following commands require you to use Wait Until Variable Exists command, as they do not return the result immediately." type="warning" %} 
+    <div class="alert alert-warning" role="warning">The following commands require you to use <a href="https://sammi.solutions/docs/commands/wait#waituntilvariableexists">Wait Until Variable Exists</a> command, as they do not return the result immediately.</div>
 
     ##### Get Folder Files
     This command helps you find all files in a certain folder. You can choose to only return  certain types of files and order them in different ways. 
