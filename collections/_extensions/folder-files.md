@@ -28,13 +28,13 @@ overview: |
     - Rename, move, or delete a file (moved to the trash bin for safety)
     - Create or delete a folder (moved to the trash bin for safety)  
 
-    **File Content Operations**
+    **File Content Commands**
     - Read the last line of a file
     - Count lines in a file
     - Count files in a folder
     - Find specific strings in files
 
-    **Advanced Operations**
+    **Advanced Commands**
     - Compress and uncompress a folder
     - Get the length of a media file (requires FFmpeg)
 
