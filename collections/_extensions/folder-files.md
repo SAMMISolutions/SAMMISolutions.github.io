@@ -53,6 +53,8 @@ setup: |
     3. Your basic setup is finished! Please note the premade deck only serves you to review how to use the extension, with some example buttons.   
     I recommend you create separate buttons in a different deck, so you're able to easily update the extension in the future without overriding your custom made buttons or commands (since the premade deck will be completely overriden if there are any updates). 
 
+    {% include alert.html text="If you notice a command does not work as intended, please try running SAMMI as administrator to avoid permission errors." type="info" %} 
+
     ##### How to download and set up FFmpeg
     If you wish to use Get Media Length command, you will need to download FFmpeg. Please click on 'Set Up FFmpeg' button and follow the instructions. 
 
