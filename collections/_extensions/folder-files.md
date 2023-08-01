@@ -19,7 +19,7 @@ overview: |
 
     This extension allows you scan a folder and manipulate files with lots of useful features.  
 
-    ####Features
+    #### Features
     **File and Folder Manipulation**
     - Scan all files in a folder and filter by extension, sort alphabetically, numerically, by date modified, or size
     - Retrieve a random file in a folder
