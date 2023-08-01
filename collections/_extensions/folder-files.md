@@ -19,22 +19,24 @@ overview: |
 
     This extension allows you scan a folder and manipulate files with lots of useful features.  
 
-    **Features:**
-    Get all folder files and filter by extension, sort alphabetically/numerically/date modified/size
-    Get a random file in a folder
-    Get the last modified file in a folder
-    Get File Size
-    Rename a file
-    Move a file
-    Delete a file (note: unlike SAMMI's native command, this one actually moves the file only to your trash bin which is IMO a bit safer)
-    Read Last Line of a File
-    Count Lines in a File
-    Create a folder
-    Delete a folder (moves to trash bin)
-    Count files in a folder
-    Find string in files
-    Compress & Uncompress a Folder
-    Get Media length
+    ####Features
+    **File and Folder Manipulation**
+    - Scan all files in a folder and filter by extension, sort alphabetically, numerically, by date modified, or size
+    - Retrieve a random file in a folder
+    - Identify the last modified file in a folder
+    - Get the size of a file
+    - Rename, move, or delete a file (moved to the trash bin for safety)
+    - Create or delete a folder (moved to the trash bin for safety)  
+
+    **File Content Operations**
+    - Read the last line of a file
+    - Count lines in a file
+    - Count files in a folder
+    - Find specific strings in files
+
+    **Advanced Operations**
+    - Compress and uncompress a folder
+    - Get the length of a media file (requires FFmpeg)
 
     **Disclaimer**: *This extension provides optional functionality that can be utilized if you have FFmpeg installed on your system. 
     Please note that FFmpeg is not distributed with this extension, nor is it required for the extension's primary functionality. 
