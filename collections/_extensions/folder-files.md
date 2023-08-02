@@ -56,7 +56,8 @@ setup: |
     <div class="alert alert-info" role="info">If you notice a command does not work as intended, please try running SAMMI as administrator to avoid permission errors.</div>
 
     ##### How to download and set up FFmpeg
-    If you wish to use Get Media Length command, you will need to download FFmpeg. Please click on 'Set Up FFmpeg' button and follow the instructions. 
+    Get Media Length command works with both native Windows method, or with FFmpeg. FFmpeg seems to be more precise for some files, as the native Windows method rounds it down to the nearest second.
+    If you wish to use Get Media Length command with FFmpeg, you will need to download FFmpeg. Please click on 'Set Up FFmpeg' button and follow the instructions. 
 
     #### Available Commands
 
@@ -204,12 +205,13 @@ setup: |
 
     ##### Get Media Length
     This command tells you how long a media file lasts.  
-    You need to have FFmpeg set up to use this. Please press 'Set Up FFmpeg button' if you haven't done so already.
+    You need to have FFmpeg set up to use this if you check 'Use FFmpeg'. Please press 'Set Up FFmpeg button' if you haven't done so already.
 
     | Box Name | Description|
     |--------|-------|
     |Media File Path | Path to the media file |
     |Unit | Do you want the length in seconds, minutes, or hours? |
+    | Use FFmpeg | Whether to use FFmpeg. Native method seems to round it down to the nearest second for some files.
     |Save Variable As | Variable name to save the result into (will be saved as a number). Will be left blank (set to an empty string) if something goes wrong |
     {:class='table table-secondary w-auto table-hover'}
 privacy_collect: false
