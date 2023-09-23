@@ -79,7 +79,7 @@ setup: |
          2. Please use a throwaway password.  
 
       <div class="alert alert-warning mt-2" role="alert"><b>DO NOT USE YOUR BROADCASTING CHANNEL'S LOGIN DETAILS FOR THE BOT.</b> SAMMI operates with an unofficial Kick API and uses a workaround for the login. It's crucial to use a disposable Kick account, in case it gets banned (though the chances are slim).</div> 
-   3. **Press Login**. You should now be Logged in as your bot and be connected to your broadcaster channel. The extension will remember your login details from now on and will automatically log you in.
+   3. **Press Login**. You may get a popup asking you to provide verification code sent to your Kick bot email. Once you provide it and press Ok, you should now be Logged in as your bot and be connected to your broadcaster channel. The extension will remember your login details from now on and will automatically log you in.
       ![Successfull Login](kick_bridge_login2.png)
    3. **You're all set!** You can now go back to SAMMI to the premade Kick deck and explore all the available Kick commands and triggers.
 
