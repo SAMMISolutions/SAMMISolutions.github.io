@@ -15,8 +15,6 @@ version: 2.0
 sammi_version: Any
 platform: Any
 overview: |
-    <div class="alert alert-info mt-3" role="alert">Currently available to my <a href="https://www.patreon.com/Christinna">Patrons as an early access perk.</a></div>
-
     This extension allows you scan a folder and manipulate files with lots of useful features.  
 
     #### Features
