@@ -41,7 +41,7 @@ overview: |
     If you choose to use FFmpeg with this extension, you must download it separately from the official source: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip, and     the extension will guide you regarding its usage. 
     Please familiarize yourself with FFmpeg's licensing terms and potential patent implications before use.*
 setup: |
-    <div class="alert alert-info" role="info">This guide is intended for the new overhauled Folder Files extension which is currently in beta for my Patrons.</div>
+    <div class="alert alert-info" role="info">This guide is intended for the new overhauled Folder Files extension.</div>
     
     **Important Information**:   
     If you have the old version of this extension, Get Folder Files, installed already, please completely remove the extension first by going to SAMMI Core - Bridge - Uninstall before installing this one. You will need to migrate all your existing buttons, as this extension has been completely overhauled.
