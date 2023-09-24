@@ -2,7 +2,7 @@
 layout: ext_single
 title: TTS by K
 slug: tts-k
-desc:  TTS by Christina K. allows you to send text to speech to Web Speech API, Google API and Polly Amazon API.
+desc: TTS by Christina K. allows you to send text to speech to Web Speech API, Google API and Polly Amazon API.
 category: audio
 date: '2022-08-09T00:00:00-05:00'
 permalink: extensions/audio/tts-k
