@@ -1,6 +1,6 @@
 ---
 layout: ext_single
-title: Get Folder Files
+title: Folder Files
 slug: folder-files
 desc: Scan, search and manage all your files
 category: utilities
