@@ -10,7 +10,7 @@ download_url: https://christinak.itch.io/speech-to-text
 developer_name: Christina K.
 developer_url: https://christinak.itch.io
 icon_local: stt_icon.png
-trailer:
+trailer: https://www.youtube.com/embed/v_SMDlsNwBo
 screenshots_local: sttk.png
 version: 1.0
 sammi_version: 2023.2.2
