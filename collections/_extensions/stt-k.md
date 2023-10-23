@@ -16,8 +16,6 @@ version: 1.0
 sammi_version: 2023.2.2
 platform: Any
 overview: |
-    <div class="alert alert-info mt-3" role="alert">Currently available to my <a href="https://www.patreon.com/Christinna">Patrons as an early access perk.</a></div>
-
     **Turn your speech into text effortlessly with SAMMI Speech To Text!** 
 
     #### Supported Engines
