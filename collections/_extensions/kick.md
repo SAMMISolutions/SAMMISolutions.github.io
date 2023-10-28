@@ -85,6 +85,9 @@ setup: |
 
    <div class="alert alert-info" role="info">Due to frequent updates to the extension, it's best not to add your own buttons or commands to the premade Kick deck. Instead, look at the example buttons here and make your own in a different deck.</div>
 
+   ### Getting Around Cloudflare using Proxy
+   If you're unable to log into Kick, or SAMMI gives you a yellow alert 'Cloudflare detected', see [this guide](https://christinak.itch.io/kick-for-sammi/devlog/627147/getting-around-cloudflare-using-proxy).
+
    ### Kick Commands List
 
    <div markdown="1">
