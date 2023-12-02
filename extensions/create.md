@@ -57,7 +57,9 @@ This is an outdated, not recommended way to listen for command payloads coming f
 In this section, you're encouraged to write your own JavaScript code.   
 
 We recommend having one main function that runs as soon as SAMMI connects to Bridge, and which you call from `[insert_command]` section.  
-Inside this function, you can set up listeners for extension commands coming from SAMMI, e.g. when a user actually runs a button containing your extension command you defined in [insert_command] section.
+Inside this function, you can set up listeners for extension commands coming from SAMMI, e.g. when a user actually runs a button containing your extension command you defined in `[insert_command]` section.
+
+Learn more about Listening to Extension Commands in the [SAMMI Bridge documentation](https://github.com/SAMMISolutions/SAMMI-Bridge#listening-to-extension-data-received-from-sammi).
 
 SAMMI Bridge provides premade helper functions for you to use, such as retrieving variables, setting variables, triggering buttons and more. You can find all the helper functions in the [SAMMI Bridge documentation](https://github.com/SAMMISolutions/SAMMI-Bridge#helper-functions)
 
