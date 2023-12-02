@@ -7,7 +7,7 @@ permalink: /extensions/build
 
 ### Overview and Prerequisites
 
-Welcome to the world of creating SAMMI (SEF) extensions! This guide is designed for beginners to understand how to create custom extensions for SAMMI. Basic knowledge of HTML/JavaScript and familiarity with SAMMI itself essential. 
+Welcome to the world of creating SAMMI (SEF) extensions! This guide is designed for beginners to understand how to create custom extensions for SAMMI. Basic knowledge of HTML/JavaScript and familiarity with SAMMI itself are essential. 
 
 SAMMI extensions are specifically structured text files with a `.sef` extension. They're written in a format that SAMMI can understand and use. 
 
@@ -48,25 +48,25 @@ This section appears inside the extension's tab in Bridge, and it provides a vis
 
 #### [insert_command]
 In this section, you can define Extension Commands. These commands will be available to users in SAMMI Core when they install your extension. You can define multiple commands in this section. Refer to the [SAMMI Bridge documentation](https://github.com/SAMMISolutions/SAMMI-Bridge#extension-command) for Extension Command details.   
-In this section, you can also automatically call your main extension function that should run as soon as SAMMI conencts to Bridge. 
+In this section, you can also automatically call your main extension function that should run as soon as SAMMI connects to Bridge. 
 
 #### [insert_hook]
-This is an outdated, not recommend way to listen for command payloads coming from SAMMI Core. We strongly recommend using regular listeners instead. Hooks are supported for backward compatibility only.
+This is an outdated, not recommended way to listen for command payloads coming from SAMMI Core. We strongly recommend using regular listeners instead. Hooks are supported for backward compatibility only.
 
 #### [insert_script]
-In this section you're encouraged to write your own JavaScript code.   
+In this section, you're encouraged to write your own JavaScript code.   
 
-We recommend having one main function that runs as soon as SAMMI connects to Bridge, and which you call from insert_command section.  
-Inside this function, you can set up listeners for extension commands coming from SAMMI, e.g. when a user actually runs a button containing your extension command you defined in insert_command section.
+We recommend having one main function that runs as soon as SAMMI connects to Bridge, and which you call from `[insert_command]` section.  
+Inside this function, you can set up listeners for extension commands coming from SAMMI, e.g. when a user actually runs a button containing your extension command you defined in [insert_command] section.
 
 SAMMI Bridge provides premade helper functions for you to use, such as retrieving variables, setting variables, triggering buttons and more. You can find all the helper functions in the [SAMMI Bridge documentation](https://github.com/SAMMISolutions/SAMMI-Bridge#helper-functions)
 
 #### [insert_over]
-In this section you simply copy and paste your deck from SAMMI Core you wish to distribute with your extension. When users install your extensiosn, the deck will be automatically added to their SAMMI Core. 
+In this section you simply copy and paste your deck from SAMMI Core you wish to distribute with your extension. When users install your extension, the deck will be automatically added to their SAMMI Core. 
 
 You can also add the following extra keys in the JSON object to specify additional properties for your extension: 
 - `"sammi_version": "2.00.0"` - Checks for minimum SAMMI version compatibility. Will refuse to install the extension if the version is lower than specified.
-- `"bridge": true` - CHecks whether SAMMI Bridge is running and connected to SAMMI. Will refuse to install the extension if Bridge is not running.
+- `"bridge": true` - Checks whether SAMMI Bridge is running and connected to SAMMI. Will refuse to install the extension if Bridge is not running.
 - `"obswebsocket": "4.9.1"` - Checks minimum OBS Websocket version compatibility. Will refuse to install the extension if the version is lower than specified.
 - `"extension_triggers": ["TRG1", "TRG", ...]` - Speciicies extension triggers that run in SAMMI Core as soon as the extension is installed. Useful for automatically triggering extension buttons upon installation. 
 - `"required_extension": ["Extension name", "Another extension name", ...]` - Checks for required extensions before installation. If any of the extensions are not installed, the extension will not be installed either.
