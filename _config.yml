@@ -35,7 +35,7 @@ kramdown:
 collections_dir: collections
 collections:
   extensions:
-      # output: true
+      output: true
 defaults:
 - scope:
     path: extensions
