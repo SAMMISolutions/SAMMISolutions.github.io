@@ -1,0 +1,60 @@
+[extension_name]
+Simple Example Extension
+[extension_info]
+This is a basic example extension for SAMMI that demonstrates fundamental functionalities like setting up commands and scripts
+[extension_version]
+1.0.0
+[insert_external]
+<!-- HTML interface for the extension -->
+<div>
+    <h1>Simple Example Extension Interface</h1>
+    <p>This interface can include custom HTML elements for user interaction.</p>
+</div>
+
+[insert_command]
+// Create an example command for the extension
+SAMMI.extCommand('My Example Extension Command', 3355443, 52, {
+    exampleBox: ['Example Text Box', 14, 'Default Text']
+});
+// Call the main function when the extension loads
+main();
+
+[insert_hook]
+// Hooks are outdated, use listeners as recommended
+
+[insert_script]
+// Custom JavaScript for the extension
+// Main function to run when SAMMI connects to the Bridge
+function main() {
+    console.log("Extension connected to SAMMI Bridge");
+    // Use helper functions to communicate with SAMMI
+    // Send alert to Bridge the extension is ready and listening
+    SAMMI.alert('Example Extension is ready and listening.');
+
+    // Set up a listener for an extension command you created earlier
+    // This will run when user presses the button that triggers the command in SAMMI
+    sammiclient.on('My Example Extension Command', (payload) => {
+        console.log("Command triggered", payload);
+        // get the button ID and instance ID from the payload which SAMMI send to the extension
+        const { FromButton }  = payload.Data 
+        // Get the value of the example extension box from the payload we set up earlier
+        const exampleBoxValue = payload.Data.exampleBox
+        // Here we can do something with the value, like append some text to it and send it back to SAMMI
+        const exampleBoxValueModified = exampleBoxValue + " - Modified";
+        // Send the modified value back to SAMMI by setting the variable value in the button that triggered the command
+        SAMMI.setVariable('exampleVariable', exampleBoxValueModified, FromButton)
+        // We can also ask SAMMI to return the value of a variable from a button
+        SAMMI.getVariable('exampleVariable', FromButton).then((data) => {
+            console.log("Variable value returned from SAMMI", data.Value);
+        });
+    });
+
+// Define more scripts and functions here
+}
+
+// In this next section below, copy and paste your deck from SAMMI Core (right click on Deck Thumbnail -> Copy Deck)
+// At the end, you can add more parameters and conditions under which the extension will install
+// Notice we added this particular key to the very end of the deck json: "sammi_version": "2023.3.0" 
+// This means the extension will only install if SAMMI version is 2023.3.0 or higher
+[insert_over]
+{ "deck_data": "{ \"background_color\": 4210752.0, \"on\": true, \"grid_y\": 10.0, \"snap_grid\": true, \"lb_version\": \"2023.3.1\", \"background_image\": \"\", \"sammi_version\": \"2023.3.1\", \"adaptive_resizing\": true, \"unique_id\": \"20231202011115293750791\", \"button_list\": [ { \"color\": 12632256.0, \"persistent\": true, \"text\": \"My Example \\nButton\", \"release_duration\": 0.0, \"queueable\": false, \"command_list\": [ { \"cmd\": 6.0, \"obsid\": \"Main\", \"pos\": 0.0, \"vis\": true, \"ms\": 0.0, \"sel\": false, \"dis\": false, \"xpan\": 39.0, \"b0\": \"This extension command comes from Bridge. \\nThe code to generate this command can be found in [insert_command] section in the .sef file.\\nOnce the button runs, SAMMI relays all the data from this particular command back to Bridge.\", \"v0\": 1.0 }, { \"exampleBox\": \"Default Text\", \"cmd\": 0.0, \"obsid\": \"Main\", \"pos\": 1.0, \"vis\": true, \"ms\": 0.0, \"sel\": false, \"dis\": false, \"xpan\": 0.0, \"extcmd\": \"My Example Extension Command\", \"ext\": \"SAMMI Bridge\" } ], \"press_type\": 0.0, \"x\": 0.20000000000000001110223024625157, \"border\": 2.0, \"image\": \"\", \"triggers\": [ ], \"group_id\": \"\", \"overlappable\": false, \"init_variable\": \"\", \"deck\": 75.0, \"width\": 0.60000000000000008881784197001252, \"button_id\": \"myExampleExtensionButton\", \"button_duration\": 0.0, \"y\": 0.20000000000000001110223024625157, \"switch_deck\": \"\", \"height\": 0.60000000000000008881784197001252, \"release_list\": [ ], \"functions\": 65.0, \"stretch\": false } ], \"deck_name\": \"My Example Deck\", \"grid_x\": 10.0, \"stretch\": false }", "unique_id": "20231202011115293750791", "deck_verification_code": "ddfbfc70160c7f600f42e97ee06d3ae2aeb1fe8a", "include_image": { }, "sammi_version": "2023.3.0" }

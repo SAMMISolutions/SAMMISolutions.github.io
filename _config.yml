@@ -1,7 +1,9 @@
-title: SAMMI Stream Deck
-tagline: SAMMI | Free and powerful Stream Deck for your Twitch and YouTube | Works with OBS
+# bundle exec jekyll serve --config _config_local.yml
+
+title: SAMMI Assistant
+tagline: SAMMI | Free and powerful Stream Assistant for your Twitch and YouTube | Works with OBS
 description: Transform your ordinary stream into interactive experience for your viewers with SAMMI
-name: SAMMI • Free Stream Deck 
+name: SAMMI • Free Stream Assistant
 url: "https://sammi.solutions"
 author:
   twitter: christina_kral
@@ -33,7 +35,7 @@ kramdown:
 collections_dir: collections
 collections:
   extensions:
-      output: true
+      # output: true
 defaults:
 - scope:
     path: extensions
