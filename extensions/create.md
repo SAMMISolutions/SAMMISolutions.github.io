@@ -13,7 +13,7 @@ SAMMI extensions are specifically structured text files with a `.sef` extension.
 
 [SAMMI Bridge](https://sammi.solutions/docs/bridge) is an html file where SAMMI installs extensions based on the `.sef` file. SAMMI takes specific parts of the extension and inserts them at specific parts of the Bridge.   
 
-![](extensions/bridge.png)
+![](/assets/images/extensions/bridge.png)
 
 You can think of SAMMI Bridge as a bridge between SAMMI and the extension itself. The `bridge.html` file is located in your `bridge` folder.  You can download a fresh copy of SAMMI Bridge from [Github](https://github.com/SAMMISolutions/SAMMI-Bridge/releases).
 
