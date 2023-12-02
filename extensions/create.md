@@ -2,12 +2,10 @@
 title: Build Extension
 layout: ext
 collection: extensions
-permalink: /extensions/create
+permalink: /extensions/build
 ---
 
-# Building SAMMI Extensions
-
-## Overview and Prerequisites
+### Overview and Prerequisites
 
 Welcome to the world of creating SAMMI (SEF) extensions! This guide is designed for beginners to understand how to create custom extensions for SAMMI. Basic knowledge of HTML/JavaScript and familiarity with SAMMI itself essential. 
 
@@ -17,32 +15,32 @@ SAMMI Bridge is an html file where SAMMI installs extensions based on the `.sef`
 
 You can think of SAMMI Bridge as a bridge between SAMMI and the extension itself. The bridge.html file is located in your SAMMI folder -> `bridge` folder. You can download a fresh copy of bridge from [Github](https://github.com/SAMMISolutions/SAMMI-Bridge/releases).
 
-## Extension Template File
+### Extension Template File
 
 You can find a blank extension template in the `\bridge\template.sef` file within the main SAMMI folder. 
 
-## Extension File Sections
+### Extension File Sections
 
-### [extension_name]
+#### [extension_name]
 This section names your extension, and is visible in SAMMI Bridge and SAMMI Core. Please use alphanumeric characters and spaces only.
 
-### [extension_info]
+#### [extension_info]
 This section is for descriptive text about the extension, e.g. what the extension does. This information is displayed to the users in SAMMI Bridge-Extensions tab when they hover over the extension name inside the list of installed extensions.
 
-### [extension_version]
+#### [extension_version]
 Specify your extension version here, using numbers and dots (e.g., 2.01). This is crucial for the automatic version checker in Bridge, which can notify users of updates. 
 
-### [insert_external]
+#### [insert_external]
 This section appears inside the extension's tab in Bridge, and it provides a visual interface for the extension if needed. It's written in HTML and CSS. 
 
-### [insert_command]
+#### [insert_command]
 In this section, you can define Extension Commands. These commands will be available to users in SAMMI Core when they install your extension. You can define multiple commands in this section. Refer to the [SAMMI Bridge documentation](https://github.com/SAMMISolutions/SAMMI-Bridge#extension-command) for Extension Command details.   
 In this section, you can also automatically call your main extension function that should run as soon as SAMMI conencts to Bridge. 
 
-### [insert_hook]
+#### [insert_hook]
 This is an outdated, not recommend way to listen for command payloads coming from SAMMI Core. We strongly recommend using regular listeners instead. Hooks are supported for backward compatibility only.
 
-### [insert_script]
+#### [insert_script]
 In this section you're encouraged to write your own JavaScript code.   
 
 We recommend having one main function that runs as soon as SAMMI connects to Bridge, and which you call from insert_command section.  
@@ -51,7 +49,7 @@ Inside this function, you can set up listeners for extension commands coming fro
 SAMMI Bridge provides premade helper functions for you to use, such as retrieving variables, setting variables, triggering buttons and more. You can find all the helper functions in the [SAMMI Bridge documentation](https://github.com/SAMMISolutions/SAMMI-Bridge#helper-functions)
 
 
-### [insert_over]
+#### [insert_over]
 In this section you simply copy and paste your deck from SAMMI Core you wish to distribute with your extension. When users install your extensiosn, the deck will be automatically added to their SAMMI Core. 
 
 You can also add the following extra keys in the JSON object to specify additional properties for your extension: 
@@ -61,7 +59,7 @@ You can also add the following extra keys in the JSON object to specify addition
 - `"extension_triggers": ["TRG1", "TRG", ...]` - Speciicies extension triggers that run in SAMMI Core as soon as the extension is installed. Useful for automatically triggering extension buttons upon installation. 
 - `"required_extension": ["Extension name", "Another extension name", ...]` - Checks for required extensions before installation. If any of the extensions are not installed, the extension will not be installed either.
 
-## Submitting Extensions
+### Submitting Extensions
 Once you've created your extension, you can submit it:
 
 1. On our Discord server in #extension-releases channel.
@@ -71,7 +69,7 @@ Don't forget to also create your own extension json file and submit a PR to http
 Please see this [example](https://github.com/SAMMISolutions/SAMMI-Bridge/blob/main/extensions/sample.json) for details.
 
 
-## Troubleshooting Extensions
+### Troubleshooting Extensions
 You can troubleshoot extensions just as any other JavaScript code: 
 
 1. Install the extension via SAMMI Core - Bridge - Install extension.
@@ -83,7 +81,7 @@ You can troubleshoot extensions just as any other JavaScript code:
 You can also open `bridge.html` in your favorite text editor, find your specific extension code and debug it there. It's often simpler and easier than editing the `.sef` file directly and reinstalling it in SAMMI Core. 
 
 
-## Extension Examples
+### Extension Examples
 [Download the example extension](https://sammi.solutions/extensions/extension_example.sef)
 
 **Watch the video below to see the example extension in action:**
@@ -151,5 +149,11 @@ function main() {
 // Notice we added this particular key to the very end of the deck json: "sammi_version": "2023.3.0" 
 // This means the extension will only install if SAMMI version is 2023.3.0 or higher
 [insert_over]
-{ "deck_data": "{ \"background_color\": 4210752.0, \"on\": true, \"grid_y\": 10.0, \"snap_grid\": true, \"lb_version\": \"2023.3.1\", \"background_image\": \"\", \"sammi_version\": \"2023.3.1\", \"adaptive_resizing\": true, \"unique_id\": \"20231202011115293750791\", \"button_list\": [ { \"color\": 12632256.0, \"persistent\": true, \"text\": \"My Example \\nButton\", \"release_duration\": 0.0, \"queueable\": false, \"command_list\": [ { \"cmd\": 6.0, \"obsid\": \"Main\", \"pos\": 0.0, \"vis\": true, \"ms\": 0.0, \"sel\": false, \"dis\": false, \"xpan\": 39.0, \"b0\": \"This extension command comes from Bridge. \\nThe code to generate this command can be found in [insert_command] section in the .sef file.\\nOnce the button runs, SAMMI relays all the data from this particular command back to Bridge.\", \"v0\": 1.0 }, { \"exampleBox\": \"Default Text\", \"cmd\": 0.0, \"obsid\": \"Main\", \"pos\": 1.0, \"vis\": true, \"ms\": 0.0, \"sel\": false, \"dis\": false, \"xpan\": 0.0, \"extcmd\": \"My Example Extension Command\", \"ext\": \"SAMMI Bridge\" } ], \"press_type\": 0.0, \"x\": 0.20000000000000001110223024625157, \"border\": 2.0, \"image\": \"\", \"triggers\": [ ], \"group_id\": \"\", \"overlappable\": false, \"init_variable\": \"\", \"deck\": 75.0, \"width\": 0.60000000000000008881784197001252, \"button_id\": \"myExampleExtensionButton\", \"button_duration\": 0.0, \"y\": 0.20000000000000001110223024625157, \"switch_deck\": \"\", \"height\": 0.60000000000000008881784197001252, \"release_list\": [ ], \"functions\": 65.0, \"stretch\": false } ], \"deck_name\": \"My Example Deck\", \"grid_x\": 10.0, \"stretch\": false }", "unique_id": "20231202011115293750791", "deck_verification_code": "ddfbfc70160c7f600f42e97ee06d3ae2aeb1fe8a", "include_image": { }, "sammi_version": "2023.3.0" }
+{ 
+    "deck_data": "{ ... }", 
+    "unique_id": "20231202011115293750791", 
+    "deck_verification_code": "ddfbfc70160c7f600f42e97ee06d3ae2aeb1fe8a", 
+    "include_image": { }, 
+    "sammi_version": "2023.3.0"
+}
 ```
