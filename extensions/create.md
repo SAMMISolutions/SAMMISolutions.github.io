@@ -139,7 +139,7 @@ function main() {
     // This will run when user presses the button that triggers the command in SAMMI
     sammiclient.on('My Example Extension Command', (payload) => {
         console.log("Command triggered", payload);
-        // get the button ID and instance ID from the payload which SAMMI send to the extension
+        // get the button ID from the payload which SAMMI sent to the extension
         const { FromButton }  = payload.Data 
         // Get the value of the example extension box from the payload we set up earlier
         const exampleBoxValue = payload.Data.exampleBox
