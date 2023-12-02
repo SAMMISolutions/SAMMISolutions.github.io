@@ -11,11 +11,24 @@ Welcome to the world of creating SAMMI (SEF) extensions! This guide is designed 
 
 SAMMI extensions are specifically structured text files with a `.sef` extension. They're written in a format that SAMMI can understand and use. 
 
-SAMMI Bridge is an html file where SAMMI installs extensions based on the `.sef` file. SAMMI takes specific parts of the extension and inserts them at specific parts of the Bridge.   
+[SAMMI Bridge](https://sammi.solutions/docs/bridge) is an html file where SAMMI installs extensions based on the `.sef` file. SAMMI takes specific parts of the extension and inserts them at specific parts of the Bridge.   
 
-You can think of SAMMI Bridge as a bridge between SAMMI and the extension itself. The bridge.html file is located in your SAMMI folder -> `bridge` folder. You can download a fresh copy of bridge from [Github](https://github.com/SAMMISolutions/SAMMI-Bridge/releases).
+![](bridge.png)
+
+You can think of SAMMI Bridge as a bridge between SAMMI and the extension itself. The `bridge.html` file is located in your `bridge` folder.  You can download a fresh copy of SAMMI Bridge from [Github](https://github.com/SAMMISolutions/SAMMI-Bridge/releases).
 
 ### Extension Template File
+
+```
+[extension_name]
+[extension_info]
+[extension_version]
+[insert_external]
+[insert_command]
+[insert_hook]
+[insert_script]
+[insert_over]
+```
 
 You can find a blank extension template in the `\bridge\template.sef` file within the main SAMMI folder. 
 
@@ -47,7 +60,6 @@ We recommend having one main function that runs as soon as SAMMI connects to Bri
 Inside this function, you can set up listeners for extension commands coming from SAMMI, e.g. when a user actually runs a button containing your extension command you defined in insert_command section.
 
 SAMMI Bridge provides premade helper functions for you to use, such as retrieving variables, setting variables, triggering buttons and more. You can find all the helper functions in the [SAMMI Bridge documentation](https://github.com/SAMMISolutions/SAMMI-Bridge#helper-functions)
-
 
 #### [insert_over]
 In this section you simply copy and paste your deck from SAMMI Core you wish to distribute with your extension. When users install your extensiosn, the deck will be automatically added to their SAMMI Core. 
