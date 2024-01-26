@@ -24,6 +24,9 @@ overview: |
     - Easy integration with your SAMMI.
     - Premade deck with all available commands, including example Twitch Chat triggers
 
+    **Extension is in active development.**
+    Please note this is a completely new extension, and some entries may not be 100% accurate or may be missing.
+
     **Important Notes**  
     Paldeck Palworld utilizes some parts of code from an API under the MIT license, available at [https://github.com/mlg404/palworld-paldex-api](https://github.com/mlg404/palworld-paldex-api), deployed on our server. 
     Access to this server is exclusively reserved for use with the SAMMI extension. Unauthorized use of this server for external queries is strictly prohibited.
