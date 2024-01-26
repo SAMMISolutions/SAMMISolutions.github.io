@@ -22,7 +22,7 @@ overview: |
     - Search for Pals by Name, Paldex Number, Type, Suitability, or Drop.
     - Get detailed stats for each Pal including name, description, types, and more.
     - Easy integration with your SAMMI.
-    - Premade deck with all available commands.
+    - Premade deck with all available commands and example Twitch chat triggers included!
 
     **Important Notes**  
 
