@@ -10,7 +10,7 @@ download_url: https://christinak.itch.io/palworld-paldex
 developer_name: Christina K.
 developer_url: https://christinak.itch.io
 icon_local: palworld-paldex-icon.png
-trailer: https://www.youtube.com/watch?v=RzzlE1tZMWk
+trailer: https://www.youtube.com/embed/RzzlE1tZMWk
 screenshots_local: palworld-paldex-deck.png, palworld-paldex-chat.png
 version: 1.0
 sammi_version: 2023.3.1 and up
@@ -22,10 +22,9 @@ overview: |
     - Search for Pals by Name, Paldex Number, Type, Suitability, or Drop.
     - Get detailed stats for each Pal including name, description, types, and more.
     - Easy integration with your SAMMI.
-    - Premade deck with all available commands and example Twitch chat triggers included!
+    - Premade deck with all available commands, including example Twitch Chat triggers
 
     **Important Notes**  
-
     Paldeck Palworld utilizes some parts of code from an API under the MIT license, available at [https://github.com/mlg404/palworld-paldex-api](https://github.com/mlg404/palworld-paldex-api), deployed on our server. 
     Access to this server is exclusively reserved for use with the SAMMI extension. Unauthorized use of this server for external queries is strictly prohibited.
 
