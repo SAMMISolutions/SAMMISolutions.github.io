@@ -15,8 +15,6 @@ version: 1.0
 sammi_version: 2023.3.1
 platform: Any
 overview: |
-    <div class="alert alert-info mt-3" role="alert">Currently available to my <a href="https://www.patreon.com/Christinna">Patrons as an early access perk.</a></div>
-
     **Capture Your Screen with Ease Using Native Screenshot!**
 
     #### Key Features
