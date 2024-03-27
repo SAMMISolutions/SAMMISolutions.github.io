@@ -76,7 +76,7 @@ setup: |
          3. This account must be made a moderator on your broadcaster channel.
       - `Bot Password`:
          1. This is the password for your alternate/secondary Kick account.
-         2. Please use a throwaway password.  
+         2. Please use a throwaway password with only alphanumeric and special characters ?!@#$%^&*()_+. Do not use escape characters like \ or /.
 
       <div class="alert alert-warning mt-2" role="alert"><b>DO NOT USE YOUR BROADCASTING CHANNEL'S LOGIN DETAILS FOR THE BOT.</b> SAMMI operates with an unofficial Kick API and uses a workaround for the login. It's crucial to use a disposable Kick account, in case it gets banned (though the chances are slim).</div> 
    3. **Press Login**. You may get a popup asking you to provide verification code sent to your Kick bot email. Once you provide it and press Ok, you should now be Logged in as your bot and be connected to your broadcaster channel. The extension will remember your login details from now on and will automatically log you in.

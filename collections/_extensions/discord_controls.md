@@ -12,7 +12,7 @@ developer_url: https://christinak.itch.io
 icon_local: discord_controls.png
 screenshots_local: discord_controls_ss.png
 version: 1.3
-sammi_version: 2023.3.1 and up
+sammi_version: 2024.1.1.2 and up
 platform: Any
 overview: |
     Discord Controls is an extension that gives you and your viewers a super easy way to run your Discord server right from SAMMI.
