@@ -23,6 +23,13 @@ overview: |
     - **Base Invasion Alerts**: Triggered when your base is under attack or being visited by an NPC, providing details like enemy names.
     - **Chat Message Integration**: Captures all in-game chat messages, allowing you to view details like the message sender.
     - **Complete Pal Inventory**: A special feature that retrieves a list of all your owned pals, and information such as their names, levels, skills, and more.
+    - **API Commands for Dedicated Servers:**
+        - Get server info and metrics.
+        - Get list of current players.
+        - Send announcement messages in chat.
+        - Kick, ban, and unban players from the server.
+        - Save & Shut down the server remotely.
+        - And more!
 
     **Beta Version Warning**  
 
@@ -127,5 +134,40 @@ setup: |
     
     If you wish to START listening to Palworld events again, enable the Palworld Triggers deck, press INIT button
     and readd Pal\Binaries\Win64\Mods\SAMMI\enabled.txt. Restart your game.
+
+    #### API Server Setup
+    <div class="alert alert-warning mt-2" role="alert">Only works on Dedicated Servers</div>
+
+    Palworld API Request commands allow you to communicate with your Palworld server. 
+
+    **Requires the following setup:** 
+    1. Navigate to your Palworld Server -> `PalWorldSettings.ini` file
+        - - For example, the path for Steam is `SteamLibrary\steamapps\common\PalServer\Pal\Saved\Config\WindowsServer\PalWorldSettings.ini`
+        - If you use a 3rd party to modify your server settings, open that instead
+    2. Add or modify the following values in OptionSettings:
+        - `RESTAPIEnabled=true`
+        - `RESTAPIPort=8212`
+        - `AdminPassword="YOURPASSWORD"` (must NOT be empty)
+    3. Save the ini file and restart the Palworld server.
+        - In the Server log, you should see: `REST API started on port 8212`
+    4. Fill out the following inside the Setup Server API button in the Palworld Triggers deck: 
+        - Server Address: `127.0.0.1` if hosted locally, else insert the server address
+        - Server Port: `8212` (or whatever you set it to in step 2)
+        - Do Not Include Port: Check this if the port is already a part of the server address
+        - Server Password: `YOURPASSWORD` (whatever you set it to in step 2)
+    5. Reload Bridge.
+
+    #### API Commands
+    Available API commands: 
+    - Get Server Info
+    - Get Currently Connected Players
+    - Get Server Settings
+    - Get Server Metrics
+    - Announce message in chat
+    - Kick, ban and unban players
+    - Save the world
+    - Shutdown and force stop the server
+
+    You can view all the commands and their examples inside Send API Command button in the Palworld Triggers deck. 
 privacy_collect: false
 ---
