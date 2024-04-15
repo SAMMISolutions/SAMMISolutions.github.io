@@ -4,7 +4,7 @@ title: Lucky Wheel
 slug: lucky-wheel
 desc: Create, modify and control Lucky Wheel overlay straight from SAMMI
 category: games
-date: '2022-12-14T00:00:00-05:00'
+date: '2024-04-14T00:00:00-05:00'
 permalink: extensions/games/:slug
 download_url: https://christinak.itch.io/sammi-lucky-wheel
 developer_name: Christina K.
@@ -12,17 +12,23 @@ developer_url: https://christinak.itch.io
 icon_local: lucky_wheel.png
 trailer: https://www.youtube.com/embed/9SVEu6LsKss
 screenshots_local: lucky_wheel_ss.png, lucky_wheel_ss2.png, lucky_wheel_ss3.png, lucky_wheel_ss4.png
-version: 1.0
-sammi_version: 2022.5.0
+version: 2.0
+sammi_version: 2024.1.1
 platform: Any
 overview: |
     **Create, modify and control your Lucky Wheel overlay in OBS straight from SAMMI! Very easy setup and use!**
 
-    Set up your own wheel in a few easy steps!
-    
-    User friendly interface in the Bridge to set up and modify your wheel.   
-    NEWLY You can use commands to modify your wheel and its rewards on the fly as well!   
-    Supports multiple wheels.
+    Set up your own wheel in a few easy steps! Supports multiple wheels.
+
+    #### ​Features at a glance
+    - **Create wheels** via friendly interface in Bridge or via SAMMI commands, including prepulated wheels with equal chances from an array of all possible rewards
+    - **Use plain text or images** for wheel segments
+    - **Show, spin and stop the wheel** and get the winning reward in SAMMI 
+    - **Modify wheels** and their rewards on the fly​
+    - **NEW:** Duplicate an existing wheel 
+    - **NEW:** Shuffle wheel rewards 
+    - **NEW:** Balance wheel reward chances
+       
     
     **Control your wheel directly from SAMMI Deck**  
     You can load, spin and stop spinning the wheel with one press of a button in your SAMMI Deck or add your own chat triggers, so that your mods can control it too! 
@@ -45,10 +51,7 @@ overview: |
 
     [video](https://www.youtube.com/embed/XfrQP3UpJzo)[/video]
 setup: |
-    <div class="alert alert-warning mt-2" role="alert">Quick Setup Guide</div>
-
-    1. Place the Lucky_Wheel folder from the zip file in `SAMMI/Ext` folder (create the `Ext` folder if it doesn't exist yet). The correct path for your extension folder is `SAMMI/Ext/Lucky_Wheel`. See the placement of `Ext` folder in the image below.
-      ![image](wheel_folder.png)
+    1. Ensure you're on the latest version of SAMMI.
     2. Install the extension. 
     3. Press the red **SETUP** button and follow all instructions while connected to OBS. 
         - A new Lucky Wheel overlay should be added to your OBS
@@ -81,6 +84,7 @@ setup: |
         | Box Name | Explanation |
         |-------|--------|
         Wheel Name | Name for your new wheel (avoid duplicates)
+        Reward Array Name | Optional. Provide an array of all rewards (will be equally distributed) to populate your wheel with. Leave empty to add rewards manually.
         Winning Animation | The animation to perform after the wheel stops. 'Blink Text' only works for text segments and 'Image To Mid' only works for image segments.
         Set As Active | Whether to set the newly created wheel as currently active wheel
         Type | Type of action to perform - select Add
@@ -183,11 +187,16 @@ setup: |
     **Channel points redeem message for modifying rewards:**  
     `REWARD NAME +PERCENTAGE` or `REWARD NAME -PERCENTAGE` (i.e. `Sekiro +10` or `Bloodborne -50`) 
 
-    #### Export a wheel
-    Using the **Export a wheel** button you can export an existing wheel to share with other users. Press the button and follow its instructions.
+    #### Balance Reward Chances
+    Use 'Lucky Wheel Balance Rewards' command to balance the wheel reward chances, so that they're all equal.  
+    Press 'Show Wheel' button to update the OBS overlay after you execute the command.
 
-    #### Import a wheel
-    Using the **Import a wheel** button you can import an existing wheel from a fellow user who shared it with you. Press the button and follow its instructions. 
+    #### Shuffle Wheel
+    Use 'Lucky Wheel Shuffle Wheel' command to shuffle the wheel rewards. 
+    Press 'Show Wheel' button to update the OBS overlay after you execute the command.
+
+    #### Duplicate Wheel
+    Use 'Lucky Wheel Duplicate Wheel' command to duplicate an existing wheel. Useful if you want to remove already claimed rewards from the current wheel and keep the original wheel intact.
 testers: Cyanidesugar, feature_creep
 privacy_collect: false
 ---
