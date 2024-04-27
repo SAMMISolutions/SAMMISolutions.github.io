@@ -10,7 +10,7 @@ download_url: https://christinak.itch.io/advanced-buttons
 developer_name: Christina K.
 developer_url: https://christinak.itch.io
 icon_local: advanced_buttons.png
-trailer: https://www.youtube.com/embed/aG4tKNgYaT4
+trailer: https://www.youtube.com/embed/PaB0DtheluM
 screenshots_local: advanced_buttons_ss.png
 version: 1.0
 sammi_version: 2024.1.1
