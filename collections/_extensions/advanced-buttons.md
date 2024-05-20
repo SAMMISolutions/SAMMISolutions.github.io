@@ -16,8 +16,6 @@ version: 1.0
 sammi_version: 2024.1.1
 platform: Any
 overview: |
-    <div class="alert alert-info mt-3" role="alert">Currently available to my <a href="https://www.patreon.com/Christinna">Patrons</a> as an early access perk</div>
-
     **Advanced Button Functions** is an extension that allows you to run a random button, check if a button is running or blocked, and more!
 
     **Features**  
