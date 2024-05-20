@@ -28,7 +28,7 @@ overview: |
     Comes with a premade deck with all available commands and explanations.
 
     **Important Notes**  
-    This extension may stop working if there are any significant updates to SAMMI Core. If that happens, please contact the developer for an update.
+    This extension may stop working if there are any major updates to SAMMI Core. If that happens, please reach out to me, and I'll do my best to help and see if an updated version can be released.
     
 setup: |
     1. Ensure you're on the latest version of SAMMI.
