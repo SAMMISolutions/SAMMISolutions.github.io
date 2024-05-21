@@ -24,19 +24,22 @@ Is your extension ready to be released to public? Have you fully tested its func
 below to submit it!
 
 ##### Rules for submitting a new extension
-1. **The extension and its name is unique**\
+1. **Ensure the extension does not violate our extension policy**\
+Before submitting an extension, read and follow the [Extension Policy](https://sammi.solutions/docs/extension-policy) to ensure that your
+extension is allowed in official public spaces such as this one.
+2. **The extension and its name is unique**\
 Do not release slightly modified existing extensions or extensions with a very similar functionality, but rather
 collaborate with the original author. Do not copy and paste code from other extensions without the explicit approval
 from the original author.
-2. **You've tested the extension extensively**\
+3. **You've tested the extension extensively**\
 The best way to test an extension is to download a clean copy of SAMMI, use a clean Bridge file and use a new
 scene collection in your OBS. Even better way is to share it with a few select beta testers to test it with different
 setups.
-3. **Publicly accessible source code**\
+4. **Publicly accessible source code**\
 If your extension is not publicly accessible, you must provide us a way to verify its source code before having it
 posted on the website. This is to protect users from downloading malicious extensions. Contact one of the SAMMI
 Discord mods before submitting your extension in this case.
-4. **The extension is hosted on a secure server (`https`)**\
+5. **The extension is hosted on a secure server (`https`)**\
 We recommend using [Github](https://github.com/) where you can easily create a new account to upload your creations.
 6. **No obscure external libraries**\
 Unless you're a verified extension developer in our Discord server, do not link to obscure external libraries in the
