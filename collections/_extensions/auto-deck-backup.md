@@ -15,8 +15,6 @@ version: 1.0
 sammi_version: 2024.2.0
 platform: Any
 overview: |
-    <div class="alert alert-info mt-3" role="alert">Currently available to my <a href="https://www.patreon.com/Christinna">Patrons</a> as an early access perk.</div>
-
     **Auto Deck Backup** is an extension that allows you to automatically backup your decks to local and cloud (Github) storage. You can set the interval for backups and choose the storage location.
 
     #### Features
