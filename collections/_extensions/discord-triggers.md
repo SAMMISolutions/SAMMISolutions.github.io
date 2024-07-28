@@ -16,7 +16,7 @@ version: 1.0
 sammi_version: 2024.1.1
 platform: Any
 overview: |
-    <div class="alert alert-info mt-3" role="alert">Soon available to my <a href="https://www.patreon.com/Christinna">Patrons</a> as an early access perk.</div>
+    <div class="alert alert-info mt-3" role="alert">Currently available to my <a href="https://www.patreon.com/Christinna">Patrons</a> as an early access perk.</div>
 
     *Discord Triggers* is an extension that allows you to receive Discord events in SAMMI, such as new messages, reactions, new members, or when someone joins/leaves your voice channel.
 
@@ -43,9 +43,7 @@ overview: |
 setup: |
     1. Ensure you're on the latest version of SAMMI.
     2. Install the extension.
-    3. Open the Settings button and follow the instructions below.   
-  
-    <!-- Separate Lists -->
+    3. Open the Settings button and follow the instructions below.
 
     #### Table of Contents
     1. [Settings](#settings)
@@ -53,7 +51,8 @@ setup: |
     3. [Open/Close Connection](#openclose-connection-buttons)
     4. [Pro Version: Install OBS Overlay](#pro-version-install-obs-overlay)
     5. [Pro Version: Join/Leave Voice Channel](#pro-version-joinleave-voice-channel-buttons)
-    6. [Example Premade Triggers](#example-premade-triggers)
+    6. [Get information about a user, channel, or server by ID.](#get-info-by-id)
+
 
     <a name="settings"></a>
     #### Settings
@@ -154,7 +153,7 @@ setup: |
     ![image](discord_triggers/joinvoicechannel.png)
 
     Use the **Join Voice Channel** button to join or change the current voice channel: 
-    - Follow Me: Whether the bot should follow you when you change channels. 
+    - Follow Me: Whether the bot should follow you when you change channels. The bot may time out if you disconnect from a voice channel for too long. In that case press the button again for the bot to reconnect
     - Voice Channel ID: Voice Channel ID to join initially.  
 
     Once the bot has joined the voice channel, it can start listening for the specified triggers.  
@@ -185,5 +184,12 @@ setup: |
     - **Text Size**: Set the font size in EM units.
     - **BG Color**: Choose the background color.
     - **Opacity**: Set the opacity for the background color.
+
+    <a name="get-info-by-id"></a>
+    #### Get information about a user, channel, or server by ID.
+    Sometimes Discord events only return an ID for entities, such as users, channels, roles, or scheduled events.  
+
+    The "Get Info by ID" command accepts the ID and return the whole entity. Please review the examples of returned data inside the button in your premade deck.
+
 privacy_collect: false
 ---
