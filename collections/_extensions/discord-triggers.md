@@ -10,8 +10,8 @@ download_url: https://christinak.itch.io/discord-triggers
 developer_name: Christina K.
 developer_url: https://christinak.itch.io
 icon_local: discord_triggers.png
-trailer: https://www.youtube.com/embed/XXX
-screenshots_local: discord_triggers_ss.png
+trailer: https://www.youtube.com/embed/sgmr-sQDy2s
+screenshots_local: discord_triggers_ss.png, discord_triggers_ss2.png
 version: 1.0
 sammi_version: 2024.1.1
 platform: Any
@@ -139,14 +139,14 @@ setup: |
 
     **Settings:**
     - **Action**: Select Open Connection to start listening to events.
-    - **Voice Channel ID**: Leave empty. Applies only when Action is 'Join Voice Channel'.
+    - Leave the other boxes as they are.
 
     Use **Close Connection** button to close the connection to Discord, which means your bot will go offline. If your bot is currently connected to a voice chat (Pro version), it will also leave it.
 
     <a name="pro-version-joinleave-voice-channel-buttons"></a>
     #### (Pro Version) Join/Leave Voice Channel Buttons
 
-    <div class="alert alert-warning mt-2" role="alert">The bot CANNOT listen to your conversations, as that requires completely different connection. The bot can only tell who's joined the channel and is speaking.</div>    
+    <div class="alert alert-warning mt-2" role="alert">The bot CANNOT listen to your conversations, as that would need a totally different connection. The bot can only identify who's joined the channel and is currently speaking.</div>    
 
     If you want your bot to monitor and react to certain events in a Discord voice channel, such as when a user connects or disconnects, or when a user starts or stops speaking, the bot must first join the voice channel where these events are taking place.
 
