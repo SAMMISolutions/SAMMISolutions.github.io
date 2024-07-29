@@ -68,10 +68,16 @@ setup: |
 
     **How to Create a Discord App and Retrieve Bot Token**
     1. Create a new application at [Discord Developer Portal](https://discord.com/developers/applications).
-    2. Go to your new application, select Bot -> Reset token -> Copy and paste it into the 'Discord Bot Token' box.
-    3. Go to OAuth2 -> URL Generator -> Select Bot -> Check all permissions you want to listen to events for -> Use the link to invite it to your server.
-        - The permissions must match the intents you selected in the Settings button.
-    4. Ensure your bot can actually see the channels you want to listen for events for (e.g., manually add it to any private channels if needed).
+       ![image](discord_triggers/createbot1.png) 
+    2. Go to your new application, select Bot -> Reset token -> Copy and paste it into the 'Discord Bot Token' box in the Settings button in SAMMI.
+       ![image](discord_triggers/createbot2.png)
+    3. Still in 'Bot' menu, check all 3 intents under 'Privileged Gateway Intents'
+       ![image](discord_triggers/createbot3.png)
+    4. Go to OAuth2 -> URL Generator > Select Bot -> Click 'Copy' button (no need to select any additional permissions).
+       ![image](discord_triggers/createbot4.png)
+    5. Paste the URL into your browser, select the server you want to invite the bot to, and click 'Authorize'. 
+       ![image](discord_triggers/createbot5.png)
+    5. The bot will have default permissions as the 'everyone' role. You can either grant it a role that has the permissions you need or manually set them in the server settings so it can see the channels you want it to monitor for events.
 
     **How to Retrieve Discord Server ID**
     1. Enable developer mode in Discord:
@@ -101,11 +107,6 @@ setup: |
 
     **How to Enable/Disable Intents**  
     - If you wish to modify the intents you're listening to, check/uncheck the boxes inside the Discord Intents Settings commands.
-    - Your Discord bot token must be invited with the same permissions as you have intents.  
-    - To re-invite your Discord bot with different permissions:
-        1. Navigate to [Discord Developer Portal](https://discord.com/developers/applications).
-        2. Select your App, select OAuth2 in the left menu.
-        3. Check all permissions you need, copy the generated URL, and re-invite the bot.
 
     <a name="how-to-listen-to-events"></a>
     #### How to Listen to Events
