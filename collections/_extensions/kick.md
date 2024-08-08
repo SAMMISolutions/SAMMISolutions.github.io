@@ -488,6 +488,7 @@ setup: |
    | Pull Value | Description| 
    |------------|------------|
    id | ID of the message
+   id | ID of the message
    message | The message itself, in plain text, i.e. "hello :sunglasses:"
    message_stripped | The message itself stripped off of all the emojis
    message_raw | The original message containing all the emojis
@@ -498,14 +499,11 @@ setup: |
    user_id | User ID of the viewer who sent the message
    username | Username of the viewer who sent the message
    color | User chat color
-   role | Role of the viewer who sent the message
-   picture_url | Picture URL of the viewer who sent the message
-   verified | Whether the viewer is verified
    badge_list | Follower badges of the viewer who sent the message
+   is_moderator | Whether the viewer is a moderator
    is_subscriber | Whether the viewer is a subscriber
    is_founder | Whether the viewer is a founder
-   months | Amount of months the viewer is a subscriber for
-   amount_gifted | Amount of gifted subscribers by the viewer
+   is_broadcaster | Whether the viewer is a broadcaster
    {:class='table table-secondary table-hover'}
 
    </div>
@@ -655,6 +653,8 @@ setup: |
    |------------|------------|
    user_id | User ID of the user who got timed out/banned
    username | Username of the user who got timed out/banned
+   banned_by_id | User ID of the user who banned the viewer
+   banned_by_username | Username of the user who banned the viewer
    {:class='table table-secondary table-hover'}
 
    </div>
