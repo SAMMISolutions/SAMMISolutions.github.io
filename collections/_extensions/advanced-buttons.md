@@ -1,7 +1,7 @@
 ---
 layout: ext_single
 title: Advanced Button Functions
-slug: advanced-butons
+slug: advanced-buttons
 desc: Run a random button, check if button is running or blocked, and more!
 category: utilities
 date: '2024-04-23T00:00:00-05:00'
