@@ -16,15 +16,13 @@ version: 1.0
 sammi_version: 2024.1.1
 platform: Any
 overview: |
-    <div class="alert alert-info mt-3" role="alert">Currently available to my <a href="https://www.patreon.com/Christinna">Patrons</a> as an early access perk.</div>
-
     *Discord Triggers* is an extension that allows you to receive Discord events in SAMMI, such as new messages, reactions, new members, or when someone joins/leaves your voice channel.
 
     #### Features
 
     - Connect to your Discord server and **listen to all available events**.
-    - (Pro) Connect to the specified voice channel and **listens to users joining, leaving, and their speaking status**.
-    - **OBS Overlay (Pro):** Display the speaking status of users in your voice channel in an OBS overlay. Highly customizable, auto installs.
+    - Connect to the specified voice channel and **listens to users joining, leaving, and their speaking status**.
+    - **OBS Overlay:** Display the speaking status of users in your voice channel in an OBS overlay. Highly customizable, auto installs.
     - **Premade deck with example buttons:** Get started quickly with a premade deck that includes example triggers for the most common events.
 
     #### Available Events:
@@ -34,12 +32,10 @@ overview: |
     - **Messages** - channel and direct message created/modified/deleted, reaction added/removed, etc.
     - **Events** - event created/updated/deleted, user joined event, etc.
     - **Polls** - poll created/updated/deleted, user voted, etc.
-    - **Voice Channel (Pro)** - user joined/left voice channel, user started/stopped speaking.
+    - **Voice Channel** - user joined/left voice channel, user started/stopped speaking.
 
     For all available events, refer to the [Discord Documentation](https://discord.com/developers/docs/topics/gateway-events#receive-events).
 
-    #### Important Note
-    The basic version of this extension offers all the features of the Pro version, except for the Voice Channel Events and OBS Overlay features. 
 setup: |
     1. Ensure you're on the latest version of SAMMI.
     2. Install the extension.
@@ -49,8 +45,8 @@ setup: |
     1. [Settings](#settings)
     2. [How to Listen to Events](#how-to-listen-to-events)
     3. [Open/Close Connection](#openclose-connection-buttons)
-    4. [Pro Version: Install OBS Overlay](#pro-version-install-obs-overlay)
-    5. [Pro Version: Join/Leave Voice Channel](#pro-version-joinleave-voice-channel-buttons)
+    4. [Install OBS Overlay](#install-obs-overlay)
+    5. [Join/Leave Voice Channel](#joinleave-voice-channel-buttons)
     6. [Get information about a user, channel, or server by ID.](#get-info-by-id)
 
 
@@ -142,10 +138,10 @@ setup: |
     - **Action**: Select Open Connection to start listening to events.
     - Leave the other boxes as they are.
 
-    Use **Close Connection** button to close the connection to Discord, which means your bot will go offline. If your bot is currently connected to a voice chat (Pro version), it will also leave it.
+    Use **Close Connection** button to close the connection to Discord, which means your bot will go offline. If your bot is currently connected to a voice chat, it will also leave it.
 
-    <a name="pro-version-joinleave-voice-channel-buttons"></a>
-    #### (Pro Version) Join/Leave Voice Channel Buttons
+    <a name="joinleave-voice-channel-buttons"></a>
+    #### Join/Leave Voice Channel Buttons
 
     <div class="alert alert-warning mt-2" role="alert">The bot CANNOT listen to your conversations, as that would need a totally different connection. The bot can only identify who's joined the channel and is currently speaking.</div>    
 
@@ -166,8 +162,8 @@ setup: |
 
     **Leave Voice Channel** button will make the bot leave the current voice channel. The bot will otherwise remain active, still listening to all non-voice channel events.
 
-    <a name="pro-version-install-obs-overlay"></a>
-    #### (Pro Version) Install OBS Overlay
+    <a name="install-obs-overlay"></a>
+    ####Install OBS Overlay
     Install the OBS overlay by (optionally) editing the Install OBS Overlay button and running it.
 
     ![image](discord_triggers/obsoverlay.png)
