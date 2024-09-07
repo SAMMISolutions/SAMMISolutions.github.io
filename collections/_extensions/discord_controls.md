@@ -21,6 +21,7 @@ overview: |
     - See Everything - Access a list of all channels, members, and emojis in your server.
     - Find Anyone - Easily search for members and see their information.
     - Manage Messages - View, make, change, or delete messages in your channel.
+    - Create Messages with Attachments and Embeds - Send messages with images, files, and embeds.
     - Handle Reactions - Get, create, and remove reactions to messages.
     - Send Direct Messages - Shoot private messages to members of your server.
     - Take Care of Roles - View, add or remove member roles - it's never been easier!
@@ -107,7 +108,9 @@ setup: |
     23. [Create Event](#create-event)
     24. [Delete Event](#delete-event)
     25. [Modify Channel](#modify-channel)
-    26. [Modify Server](#modify-server)   
+    26. [Modify Server](#modify-server) 
+    27. [Encode Emojis](#encode-emojis)  
+    28. [Format Emojis](#format-emojis)
 
     <a name="get-channels"></a>
     **Get Channels** [*[Back to Top]*](#available-commands)             
@@ -332,9 +335,12 @@ setup: |
     Discord Server ID | Your Discord server ID. Leave empty or at `0` to use your default one from INIT Settings button.
     Channel ID | Channel ID to create the message in. You can select it from the dropdown or input it manually.
     Content | Message Text 
-    Embed Object (optional) | Message Embed JSON, you can build it at [https://glitchii.github.io/embedbuilder/](https://glitchii.github.io/embedbuilder/)
+    Embed Json (optional) | Message Embed JSON, you can build it at [https://glitchii.github.io/embedbuilder/](https://glitchii.github.io/embedbuilder/)
+    Attachment File (optional) | Full path to the file you wish to attach, select or insert
     Save Variable | Variable name to save the result into
     {:class='table table-secondary w-auto table-hover text-break'}
+
+    <div class="alert alert-info" role="alert">You can fill out either an embed or a file attachment, not both.</div>
 
     Example payload for a single message object: 
     
@@ -718,7 +724,30 @@ setup: |
     Description | New description for the server
     Icon | New icon from the server - 1024x1024 recommended, png/jpeg/gif
     Save Variable | Variable name to save the response (optional). Will contain the whole updated server object
-    {:class='table table-secondary w-auto table-hover text-break'}    
+    {:class='table table-secondary w-auto table-hover text-break'}   
+    
+    
+    <a name="encode-emojis"></a>
+    **Encode Emojis** [*[Back to Top]*](#available-commands)  
+    Encodes unicode Discord emoji to be used in other Discord commands, such as 'Get Reactions' command.  
+    Find full example inside the 'Get Reactions' command.
+
+    | Box Name | Explanation |
+    |-------|--------|
+    Emoji | Unicode emoji to encode
+    Save Variable | Variable name to save the encoded emoji into
+    {:class='table table-secondary w-auto table-hover text-break'}
+
+    <a name="format-emojis"></a>
+    **Format Emojis** [*[Back to Top]*](#available-commands)  
+    Formats input containing Discord unicode emojis to be used outside of Discord, e.g. Twitch chat, instead of displaying the raw unicode.  
+    Find full example inside the 'Get Messages' command.
+
+    | Box Name | Explanation |
+    |-------|--------|
+    Message | Input containing Discord unicode emojis
+    Save Variable | Variable name to save the formatted input into
+    {:class='table table-secondary w-auto table-hover text-break'}
 
 privacy_collect: false
 ---
