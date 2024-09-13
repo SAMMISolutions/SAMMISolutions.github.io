@@ -15,38 +15,36 @@ version: 1.0
 sammi_version: 2022.4.4
 platform: Any
 overview: |
+    **Access and manipulate data in your Google Sheets straight from SAMMI!**  
+    For instance, you can set up your own leaderboard and easily share it with others.
 
-    **Read and manipulate data in your Google Sheets directly from SAMMI!**\
-    For example, you could create your own leaderboard sheet and easily share it with others.
+    **Important Reminder**  
+    This extension only works with public Google Spreadsheets that were created using it. It won’t be able to access or edit any of your other files.  
+    There are some limits on the number of read and write actions you can perform per minute (more details in the documentation).
 
-    **Important Note**\
-    This extension only works with public Google Spreadsheets that have been previously created with it. It cannot read or modify any of your other files.    
-    Some read and write quotas per minute apply (more in documentation). 
+    **Available commands**  
+    - Get Data, Find Data  
+    - Append Data, Update Data, Batch Update, Copy Paste, Clear Data  
+    - Auto Fill, Auto Sort, Randomize, Find and Replace, Delete Duplicates, Split Text  
+    - Merge Cells, Unmerge Cells, Insert Range, Delete Range  
+    - Create Spreadsheet, Duplicate Sheet, Add Sheet  
 
-    **Available commands**
-    - Get Data, Find Data
-    - Append Data, Update Data, Batch Update, Copy Paste, Clear Data
-    - Auto Fill, Auto Sort, Randomize, Find and replace, Delete Duplicates, Split Text
-    - Merge Cells, Unmerge Cells, Insert Range, Delete range
-    - Create Spreadsheet, Duplicate Sheet, Add Sheet
-
-    **Who is it for?**\
-    This extension expects you to have some basic to advanced Google Spreadsheets knowledge. You will also need to have some basic understanding of SAMMI (such as understanding of how objects and arrays work).
-    With this knowledge you can easily add new data, modify them, sort them, retrieve them and much more  directly from SAMMI! 
+    **Who is this for?**  
+    This extension is ideal for users with a basic to advanced knowledge of Google Spreadsheets. You should also be somewhat familiar with SAMMI (like understanding how objects and arrays work).  
+    With these skills, you can quickly add, edit, sort, and retrieve data directly within SAMMI!
 setup: |
-    **Important to know**\
-    The extension only works with **public spreadsheets** specifically created with it (see [how to make a spreadsheet public](https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop)). It cannot read or modify any of your other files.     
+    **Important to know**  
+    The extension only works with **public spreadsheets** created specifically with it (see [how to make a spreadsheet public](https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop)). It cannot access or modify any other files.
 
+    Your **read quota** is 60 requests per minute, and it's exclusive to you (not shared with other users). There is no daily limit.  
+    Your **write quota** is 30 requests per minute (you can send batch requests that count as one), but it is shared with other extension users.  
+    The total quota is 300 requests per minute. The extension assumes no more than 10 users making 30 write requests per minute at the same time, though this might change in the future. No daily limit applies.
 
-    Your **read quota** is 60 requests/minute and you do not share it with other extension users. There is no daily limit.\
-    Your **write quota** is 30 requests/minute (you can send batch requests that count as 1 request) and you share it with other extension users.\
-    Total quota is 300 requests/minute. The extension assumes there will be no more 10 users making 30 write requests per minute at the same time, but this might be a subject to change later. There is no daily limit.   
+    **How it works**  
+    The extension uses Google Sheets API endpoints to read and write data.  
+    Reading data only requires an API key, while writing data is more complex. The extension uses a custom API to retrieve your refresh token, as this can only be done server-side and cannot be handled by your Bridge.
 
-    **How it works**\
-    The extension utilizes Google Sheets API endpoints to read and write data.\
-    While reading data is easy, as it only requires an API key, writing data is more complex. The extension ulitizes a custom made API to retrieve your refresh token, as this is only possible server-side and cannot be done from your Bridge.\
-
-     <nav>
+    <nav>
     <div class="nav nav-tabs" id="nav-tab" role="tablist">
         <button class="nav-link active" id="initsetup-tab" data-bs-toggle="tab" data-bs-target="#initsetup" type="button" role="tab" aria-controls="initsetup" aria-selected="true">Initial Setup</button>
         <button class="nav-link" id="genparams-tab" data-bs-toggle="tab" data-bs-target="#genparams" type="button" role="tab" aria-controls="genparams" aria-selected="false">General Parameters</button>
@@ -56,280 +54,282 @@ setup: |
 
     <div class="tab-content" id="nav-tabContent">
     <div class="tab-pane fade show active mt-3" id="initsetup" role="tabpanel" aria-labelledby="initsetup-tab" markdown=1>
- 
-    
+
     1. **Install the extension**  
     You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
     2. **Configure INIT Settings button**  
-    You should see a new premade deck in your SAMMI. Right click on the red INIT Settings button - edit commands.
-        - `Refresh Token` - you need to allow the extension to access your Google Sheets and retrieve the refresh token. Please follow [this link and all its instructions after you get redirected](https://accounts.google.com/o/oauth2/v2/auth?client_id=772733629610-952dp5qu1gm9802ka1t6f73o6u8m7drn.apps.googleusercontent.com&redirect_uri=https://christinna9031.github.io/LioranBoard-Files/sheetsauth.html&response_type=code&scope=https://www.googleapis.com/auth/drive.file&access_type=offline&prompt=consent).\
-        Note: This will allow the extension to read and modify only files that have been previously created with it. It does not have permissions to do anything else.
-        - `Api Key` - you will need your own Google API Key.
-        Follow the [video guide](https://www.youtube.com/watch?v=JFtBLf44ONs) showing all the steps below: 
+    You should see a new premade deck in your SAMMI. Right-click on the red INIT Settings button - edit commands.
+
+
+        - `Refresh Token` - allows the extension to access your Google Sheets and retrieve the refresh token. Please use [this link](https://accounts.google.com/o/oauth2/v2/auth?client_id=772733629610-952dp5qu1gm9802ka1t6f73o6u8m7drn.apps.googleusercontent.com&redirect_uri=https://christinna9031.github.io/LioranBoard-Files/sheetsauth.html&response_type=code&scope=https://www.googleapis.com/auth/drive.file&access_type=offline&prompt=consent) to authorize the extension, and follow the instructions after you get redirected.  
+            <div class="alert alert-warning mt-2" role="alert">If you get the 'Something went wrong' error, try opening the link in a different browser or incognito window. Firefox has been known to have issues at times.</div>
+            <div class="alert alert-info mt-2" role="alert">This only grants access to files created with the extension, with no permissions for other files.</div>
+        - `API Key` - you will need your own Google API Key.  
+        Follow the [video guide](https://www.youtube.com/watch?v=JFtBLf44ONs) showing the steps below:
             1. Go to the Google Cloud Console.
-            2. Click the project drop-down and select or create the project for which you want to add an API key.
-            3. Click the menu button and select APIs & Services.
-            4. Click on the + Enable APIs and services. Search for Google Sheets, click on the search result - Enable. Repeat the same process for Google Drive API (search and enable it as well).
-            5. Click the menu button again and select APIs & Services > Credentials.
-            6. On the Credentials page, click + Create Credentials > API key. You can optionally restrict it to Google Sheets API.
-            7. Copy the newly created key and paste it in the apiKey field in your INIT button.
+            2. Select or create a project for the API key.
+            3. In the menu, choose APIs & Services.
+            4. Enable the Google Sheets and Google Drive APIs.
+            5. Create an API key under APIs & Services > Credentials.
+            6. Optionally restrict the key to the Google Sheets API.
+            7. Copy the key and paste it into the `apiKey` field of the INIT button.
 
-        - `Itch Key` - key which was provided to you on the Itch.io purchase page. You can click on the purchase confirmation link that was sent to your email to retrieve it again. If you have any issues retrieving your key, please join our Discord server and ask for assistance.
-        - `Show Alerts` - whether you want to show yellow notification messages for successful requests. If you set it to false, only errors are shown.
-        - Configure `Google Sheets OPTIONS` commands. Check which Google Sheets commands you wish to use and display in your commands list to prevent clutter.
-        Default commands which are always available: Get Data, Append Data, Update Data, Batch Update, Find Data, Sort Range.
-    3. Use **Create Spreadsheet** button to create your first Spreadsheet, as this extension can only modify Spreadsheets specifically created with it (you can create as many as you want). 
-        - Once the Spreadsheet is created, navigate to it in your [browser](https://docs.google.com/spreadsheets/u/0/) and manually [make it public](https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop), as the extension cannot otherwise read it. 
-        - (optionally) Go back to your INIT Settings button and fill out the `spreadsheetID` in Set String Variable command if you're going to use the extension only with one specific SpreadSheet. Your Spreadsheet ID can be retrieved by going to your spreadsheet in the browser and copying it from the URL: `https://docs.google.com/spreadsheets/d/YOURSPREADSHEETID/edit?usp=sharing`
-    4. Your basic set up is now done and you're ready to start using the extension! Please review the **General Parameters** and **Buttons** tabs on this page as well, as they contain important information regarding each Google Sheet extension command. 
-
+        - `Itch Key` - this key was provided on the Itch.io purchase page. Retrieve it via the purchase confirmation email. For issues, join our Discord server for assistance.
+        - `Show Alerts` - choose whether to show yellow notifications for successful requests (only errors are shown if set to false).
+        - Configure `Google Sheets OPTIONS` commands. Select which Google Sheets commands to display in your command list to avoid clutter.  
+        Default commands: Get Data, Append Data, Update Data, Batch Update, Find Data, Sort Range.
+    3. Use the **Create Spreadsheet** button to generate your first spreadsheet. The extension can only modify spreadsheets it created.  
+    - After creating the spreadsheet, go to [Google Sheets](https://docs.google.com/spreadsheets/u/0/) and manually [make it public](https://support.google.com/docs/answer/183965?hl=en&co=GENIE.Platform%3DDesktop) so the extension can read it.
+    - (Optional) Return to the INIT Settings button and set the `spreadsheetID` if you plan to use a single spreadsheet. The ID can be found in the URL: `https://docs.google.com/spreadsheets/d/YOURSPREADSHEETID/edit?usp=sharing`.
+    4. Setup is now complete, and you can start using the extension! Review the [**General Parameters**](#genparams) and [**Buttons**](#extbuttons) tabs for more information on each command.
     </div>
 
     <div class="tab-pane fade mt-3" id="genparams" role="tabpanel" aria-labelledby="genparams-tab" markdown=1>
 
-    A lot of buttons share the same parameters, which are going to be skipped in the Buttons section.
+    Many buttons share the same parameters, so they will be omitted in the Buttons section.
 
     **SpreadsheetID**  
-    
-    You can either fill it out manually for each button or set up `spreadsheetID` variable in your INIT button if you intend to use a single Spreadsheet.   
 
-    Spreadsheet ID can be retrieved by going to your spreadsheet in the browser and copying it from the URL: `https://docs.google.com/spreadsheets/d/YOURSPREADSHEETID/edit?usp=sharing`
+    You can either enter it manually for each button or set the `spreadsheetID` variable in your INIT button if you're using a single Spreadsheet.
+
+    The Spreadsheet ID can be found by going to your spreadsheet in the browser and copying it from the URL: `https://docs.google.com/spreadsheets/d/YOURSPREADSHEETID/edit?usp=sharing`.
 
     **SheetName**  
 
-    Name of the particular Sheet you want to Get or Edit data in.
-    <div class="alert alert-warning" role="alert">The extension automatically converts your sheet name to your sheet ID to make it easier to work with. If you rename a sheet to another sheet's name that previously existed in your SpreadSheet (i.e. Sheet1 becomes Sheet2 and Sheet2 becomes Sheet1), you must completely close and reopen Bridge to reset your session. Otherwise it will still assign the old sheet ID to the name.</div> 
+    Name of the specific Sheet you want to Get or Edit data in.
+    <div class="alert alert-warning" role="alert">The extension automatically converts the sheet name to a sheet ID. If you rename a sheet to a previously used name (e.g., Sheet1 to Sheet2 and vice versa), you must fully close and reopen Bridge to reset your session. Otherwise, the old sheet ID will still be used.</div>
 
     **Range**  
-    Range you wish to Get or Edit data in, such as `A1:B10`.  
+    The data range you wish to Get or Edit, such as `A1:B10`.
 
     **Dimension**  
-    Major dimension to Get or Edit data in.  
+    The major dimension to Get or Edit data in.
 
-    For example, if you use the Get Data command and set the range to `A1:B10` and your dimension to ROWS, it will return 10 stacks, each containing one row (first stack will be `A1-B1` values, second one `A2-B2` values, etc.).  
+    For example, if you're using the Get Data command with the range `A1:B10` and the dimension set to ROWS, it will return 10 stacks, each containing one row (e.g., `A1-B1`, `A2-B2`, etc.).
 
-    If you change your dimension to COLUMNS, it will return 2 stacks, each containing 1 column (first stack will be `A1-A10` values and second stack will have `B1-B10` values).  
+    If the dimension is set to COLUMNS, it will return 2 stacks, each containing 1 column (e.g., `A1-A10`, `B1-B10`).
 
-    **Values** (applies to Append Data, Update Data and Batch Update commands)  
+    **Values** (applies to Append Data, Update Data, and Batch Update commands)  
 
-    You can send values to the extension in two different ways:  
+    You can send values to the extension in two ways:
 
-    1. A string of values separated by `|` marking individual cells. For example, if you want to insert values in A1:A7 range (make sure dimension is COLUMNS), you can enter them like this: `Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday`.
-    2. A stringified array. All values from the array will be inserted into the selected range, starting from position 0 and ending with the last position.
+    1. A string of values separated by `|`, representing individual cells. For example, if you want to insert values in the A1:A7 range (with the dimension set to COLUMNS), you can format them like this: `Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday`.
+    2. A stringified array, where values will be inserted into the selected range starting from the first position.
         1. Create an array with some entries.
-        2. Use Stringify Array command.
+        2. Use the Stringify Array command.
         3. Insert the stringified array variable in the Values field.
 
     </div>
 
+
     <div class="tab-pane fade mt-3" id="extbuttons" role="tabpanel" aria-labelledby="extbuttons-tab" markdown=1>
-     
+
     **Append by value/array**  
-    Appends values to a spreadsheet, either by a single variable or an array. Must be either a single column or single row.
+    Appends values to a spreadsheet using either a single variable or an array. The values must be arranged in either a single column or a single row.
 
     | Input box | Description | 
     |-------|--------|
-    | inputType | How the data should be interpreted. Default is [User Entered](https://developers.google.com/sheets/api/reference/rest/v4/ValueInputOption).
-    |InsertTypeHow | How the input data should be [inserted](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/append#InsertDataOption).
+    | inputType | Specifies how the data should be interpreted. The default is [User Entered](https://developers.google.com/sheets/api/reference/rest/v4/ValueInputOption). |
+    | insertType | Determines how the input data should be [inserted](https://developers.google.com/sheets/api/reference/rest/v4/spreadsheets.values/append#InsertDataOption). |
     {:class='table table-secondary table-hover' }
-
 
     **Update Data**  
-    Same as Append Data command, except it will update (=overwrite) data in the selected range instead of appending them.  
+    Functions similarly to the Append Data command, but instead of adding new data, it updates (overwrites) data in the specified range.
 
     **Batch Update**  
-    This is a very important button to understand if you want to perform update data batch requests. Instead of sending multiple single requests, use Batch Update command instead.  
+    Use the Batch Update command to perform multiple update data requests in one batch. Instead of sending each request separately, Batch Update groups them together to reduce API calls.
 
-    Please remember that you share write request quota with all other users using the extension, so try your best to group up your `Update Data` requests.  
+    Remember, the write request quota is shared with other users of the extension, so it's best to group as many `Update Data` requests as possible.
 
     | Input box | Description |
     |-------|--------|
-    |Amount | amount of Update Data requests you're sending|
+    | Amount | The number of Update Data requests you're sending. |
     {:class='table table-secondary table-hover' }
 
-    1. Send 'Google Sheets Batch Update' command and specify the amount of requests.
-    2. Send all your following Update Data requests as you normally would.
-    3. The extension will queue up the requests and wait for the last request to send them all at once. If you fail to supply all requests within the next 10 seconds, the queue will be deleted and resetted. Simply said, either all requests are sent or none.  
+    1. Use the 'Google Sheets Batch Update' command and specify the number of requests.
+    2. Send your Update Data requests as usual.
+    3. The extension will queue all the requests and send them together once the last request is received. If you don't send all requests within 10 seconds, the queue is cleared and reset. Simply put, either all requests are sent at once, or none are sent.
+
 
     **Get Data**  
-    Retrieves data based on the range and dimension, and saves them into an object.
+    Retrieves data based on the specified range and dimension, and stores the results in an object.
 
-    <div class="alert alert-warning mt-2" role="alert">Please note the returned data is indeed an object with 1, 2, 3 etc. keys, and not an array.</div>
+    <div class="alert alert-warning mt-2" role="alert">Note: The returned data is stored as an object with numeric keys (1, 2, 3, etc.), not as an array.</div>
 
     | Input box | Description |
     |-------|--------|
-    | Render | How values should be represented in the output. Default is [formatted value](https://developers.google.com/sheets/api/reference/rest/v4/ValueRenderOption). |
-    |Delete Empty | Whether to delete empty values before putting them into the stack.|
-    |saveVariable| Name of the object for the retrieved data. 
+    | Render | Determines how values are represented in the output. The default is [formatted value](https://developers.google.com/sheets/api/reference/rest/v4/ValueRenderOption). |
+    | Delete Empty | Specifies whether to remove empty values before adding them to the stack. |
+    | saveVariable | The name of the object in which the retrieved data will be saved. |
     {:class='table table-secondary table-hover'}
 
     **Find Data**  
-    Matches a string/value to a cell in a single column or row and returns its coordinates + related values. Must be an exact match. Finds the first occurence only.  
+    Searches for a string/value in a single column or row and returns its coordinates along with related values. The search must be an exact match and only finds the first occurrence.
 
-    <div class="alert alert-warning mt-2" role="alert">This command uses a custom formula and works only if you're using Google Sheets in English or have added English as 'Other language I understand'. See <a href="https://www.bettercloud.com/monitor/the-academy/using-formulas-in-different-languages-in-google-sheets/">Using formulas in different languages.</a></div>
-
-   
-    | Input box | Description |
-    |-------|--------|
-    |Range|Range to search. Must be exactly one column or one row, i.e. `A1:A10` or `A1:K1`.|
-    |Find | string to find (must exactly match the cell contents, case sensitive). <br/> There are some exceptions. For example for a date you need to use the following format: `DATE(YYYY,MM,DD)` (i.e. `DATE(2012,1,1)` ), see [MATCH function](https://support.google.com/docs/answer/3093378?hl=en). |
-    |Dimension | select COLUMNS or ROWS depending on whether your range is a column or row.|
-    |Span| The span of the rows/columns to retrieve. If set to `0`, the whole column/row is returned. If Span is set to `1:5`, it will return row 1-5 if you search by column and column A-E if you search by row.|
-    |saveVariable| variable to save the cell's coordinates. Returns an object containing the "cell" key which contains our cell coordinates and the "values" key which is an array containing all the values in the dimension and range specified. If the value is not found, returns an empty string `""`. | 
-    {:class='table table-secondary table-hover' }
-
-    **Create SpreadSheet**  
-    Creates a new SpreadSheet. The extension can only modify spreadsheets specifically created with this command.
+    <div class="alert alert-warning mt-2" role="alert">This command relies on a custom formula and works only if Google Sheets is set to English or if English is added as an additional language. See <a href="https://www.youtube.com/watch?v=jgqZYC0ZJHk">Using formulas in different languages</a> for more details.</div>
 
     | Input box | Description |
     |-------|--------|
-    |Title | Name for your new SpreadSheet|
-    |saveVariable | variable to save your new SpreadSheet ID into|
-    {:class='table table-secondary table-hover' }
+    | Range | The range to search within, must be a single column or row, e.g., `A1:A10` or `A1:K1`. |
+    | Find | The string to match, must exactly match the cell contents (case sensitive). For dates, use the format: `DATE(YYYY,MM,DD)` (e.g., `DATE(2012,1,1)`), see the [MATCH function](https://support.google.com/docs/answer/3093378?hl=en). |
+    | Dimension | Select whether the search range is in COLUMNS or ROWS. |
+    | Span | The number of rows/columns to return. Set to `0` for the whole column/row, or specify a range like `1:5` to retrieve rows 1-5 if searching by column, or columns A-E if searching by row. |
+    | saveVariable | The variable to store the cell's coordinates. The returned object contains a "cell" key with the coordinates and a "values" key with the values in the specified dimension and range. If no match is found, an empty string `""` is returned. |
+    {:class='table table-secondary table-hover'}
 
-    <div class="alert alert-warning" role="alert">You need to manually make the newly created spreadsheet public.</div>
 
-    There will be a hidden sheet added to every spreadsheet you create. This sheet serves as sort of a look up sheet for Find Data command. Please don't delete or rename it.  
+    **Create Spreadsheet**  
+    Creates a new spreadsheet. The extension can only modify spreadsheets created specifically with this command.
 
+    | Input box | Description |
+    |-------|--------|
+    | Title | The name for your new spreadsheet. |
+    | saveVariable | The variable to store the newly created spreadsheet ID. |
+    {:class='table table-secondary table-hover'}
+
+    <div class="alert alert-warning" role="alert">You must manually make the newly created spreadsheet public.</div>
+
+    Each created spreadsheet will have a hidden sheet added, which serves as a lookup for the Find Data command. Do not delete or rename this sheet.
 
     **Duplicate Sheet**  
-    Duplicates an existing sheet.
+    Duplicates an existing sheet within the spreadsheet.
 
     | Input box | Description |
     |-------|--------|
-    |SourceSheetName | name of the sheet you wish to duplicate |
-    |newSheetName | name of the new duplicated sheet |
-    |insertSheetIndex | where in your SpreadSheet you want to insert the duplicated sheet |
-    {:class='table table-secondary table-hover' }
+    | SourceSheetName | The name of the sheet you want to duplicate. |
+    | newSheetName | The name for the duplicated sheet. |
+    | insertSheetIndex | The position in the spreadsheet where the duplicated sheet should be inserted. |
+    {:class='table table-secondary table-hover'}
 
     **Add Sheet**  
-    Adds a new sheet to the selected SfalsedSheet
+    Adds a new sheet to the selected spreadsheet.
 
     | Input box | Description |
     |-------|--------|
-    |Name | name for your new sheet|
-    |Index | where in your SpreadSheet you want to insert the new sheet|
-    |Hidden | whether you want to make the sheet hidden|
-    {:class='table table-secondary table-hover' }
+    | Name | The name of your new sheet. |
+    | Index | The position where the new sheet should be inserted in the spreadsheet. |
+    | Hidden | Whether or not to hide the new sheet. |
+    {:class='table table-secondary table-hover'}
 
 
-    **Copy Paste**    
-    Copies data from the source to the destination
-
-    | Input box | Description |
-    |-------|--------|
-    |Range | source range to copy |
-    |TargetSheet | sheet name to paste the data to |
-    |TargetRange | range to paste the data to |
-    |PasteType | what kind of data to paste |
-    |PasteOrientation | how the pasted data should be oriented. Transpose = all rows become columns.|
-    {:class='table table-secondary table-hover' }
-
-
-    **Auto Fill**    
-    Fills in more data based on existing data.
+    **Copy Paste**  
+    Copies data from a source range and pastes it into a specified target range.
 
     | Input box | Description |
     |-------|--------|
-    |Range | range to autofill.|
-    | useAlternateSeries | generate data with the "alternate" series. Differs based on the type and amount of data.|
-    {:class='table table-secondary table-hover' }
+    | Range | The source range to copy. |
+    | TargetSheet | The name of the sheet to paste the data into. |
+    | TargetRange | The range to paste the data into. |
+    | PasteType | Specifies what kind of data to paste. |
+    | PasteOrientation | Determines how the pasted data should be oriented. Setting to Transpose swaps rows and columns. |
+    {:class='table table-secondary table-hover'}
 
-    **Find Replace**   
-    Finds and replaces data in cells over a selected rfalse.
-
-    | Input box | Description |
-    |-------|--------|
-    |Range | range to find/replace over
-    |Find | value to search (string). If you want to use regex, prefix the expression with `regex`. Example: find `regex o.* (.*)`, replace `$1 Hello` Your formatting must follow Java regex rules.|
-    |Replace | value to use as the replacement|
-    |matchCase | true if the search is case sensitive|
-    |matchEntireCell | true if the find value should match the entire cell|
-    {:class='table table-secondary table-hover' }
-
-
-    **Split Text**   
-    Splits a column of text into multiple columns, based on a delimiter in each cell.
+    **Auto Fill**  
+    Automatically fills in additional data based on the existing data in the specified range.
 
     | Input box | Description |
     |-------|--------|
-    |Range | the source data range. This must span exactly one column. |
-    |Delimiter | the delimiter to use. For example :> or ,>. |
-    {:class='table table-secondary table-hover' }
+    | Range | The range to autofill. |
+    | useAlternateSeries | Whether to generate data with the "alternate" series. This varies depending on the type and amount of data. |
+    {:class='table table-secondary table-hover'}
 
+    **Find Replace**  
+    Finds and replaces data within the specified range.
+
+    | Input box | Description |
+    |-------|--------|
+    | Range | The range to search and replace values in. |
+    | Find | The value to search for (string). To use regex, prefix the expression with `regex`. For example: `regex o.* (.*)`, replace with `$1 Hello`. Must follow Java regex rules. |
+    | Replace | The value to use as a replacement. |
+    | matchCase | Set to true if the search should be case sensitive. |
+    | matchEntireCell | Set to true if the find value should match the entire cell. |
+    {:class='table table-secondary table-hover'}
+
+
+    **Split Text**  
+    Splits the text in a single column into multiple columns based on a specified delimiter.
+
+    | Input box | Description |
+    |-------|--------|
+    | Range | The source data range. It must span exactly one column. |
+    | Delimiter | The delimiter used to split the text. For example, `:>` or `,>`. |
+    {:class='table table-secondary table-hover'}
 
     **Sort Range**  
-    Sorts data in rows based on a sort order per column.
+    Sorts rows of data based on the sort order for a specific column.
 
     | Input box | Description |
     |-------|--------|
-    |range | the range to sort|
-    |sortOrder | the order the data should be sorted.|
-    |dimIndex | the dimension index the sort should be applied to, for example B or 1 (which is the same as B).|
-    {:class='table table-secondary table-hover' }
+    | Range | The range of data to sort. |
+    | sortOrder | The order in which the data should be sorted. |
+    | dimIndex | The dimension index the sort should apply to, such as B or 1 (B is equivalent to 1). |
+    {:class='table table-secondary table-hover'}
 
     **Randomize**  
-    Randomizes the order of the rows in a selected rfalse.
+    Randomizes the order of the rows in the selected range.
 
     | Input box | Description |
     |-------|--------|
-    |Range | the range to randomize |
-    {:class='table table-secondary table-hover' }
+    | Range | The range of rows to randomize. |
+    {:class='table table-secondary table-hover'}
 
 
-    **Merge Cells**    
-    Merges cells for row or column.
 
-    | Input box | Description |
-    |-------|--------|
-    |Range | the range of cells to merge |
-    |mergeType | how the cells should be merged. `MERGE_ALL` creates a single merge from the range. `MERGE_COLUMNS` will create a merge for each column in the range. `MERGE_ROWS` will create a merge for each row in the range.
-    {:class='table table-secondary table-hover' }
-
-    **Unmerge Cells**    
-    Unmerges previously merged cells.
+        **Merge Cells**  
+    Merges a range of cells either by row or column.
 
     | Input box | Description |
     |-------|--------|
-    | Range | The range within which all cells should be unmerged. If the range spans multiple merges, all will be unmerged. The range must not partially span any merge.|
-    {:class='table table-secondary table-hover' }
+    | Range | The range of cells to merge. |
+    | mergeType | Specifies how the cells should be merged. `MERGE_ALL` creates a single merge from the range, `MERGE_COLUMNS` merges each column, and `MERGE_ROWS` merges each row. |
+    {:class='table table-secondary table-hover'}
 
-    **Clear Data**    
-    Clears all data in the selected rfalse.
-
-    | Input box | Description |
-    |-------|--------|
-    Range | range to clear the data from. Example: `A1:A10`.|
-    {:class='table table-secondary table-hover' }
-
-    **Insert Range**   
-    Inserts cells into a range, shifting the existing cells over or down.
+    **Unmerge Cells**  
+    Unmerges cells that were previously merged.
 
     | Input box | Description |
     |-------|--------|
-    |Range | range to insert new cells into |
-    | Shift | dimension to be shifted when inserting cells. ROWS = shifted down. COLUMNS = shifted right.|
-    {:class='table table-secondary table-hover' }
+    | Range | The range within which all cells will be unmerged. If the range spans multiple merged areas, all will be unmerged. The range must not partially span any merge. |
+    {:class='table table-secondary table-hover'}
+
+    **Clear Data**  
+    Clears all data in the selected range.
+
+    | Input box | Description |
+    |-------|--------|
+    | Range | The range to clear data from. Example: `A1:A10`. |
+    {:class='table table-secondary table-hover'}
+
+
+    **Insert Range**  
+    Inserts new cells into a specified range, shifting existing cells either down or to the right.
+
+    | Input box | Description |
+    |-------|--------|
+    | Range | The range where new cells will be inserted. |
+    | Shift | Specifies the dimension to shift. `ROWS` shifts cells down, and `COLUMNS` shifts cells to the right. |
+    {:class='table table-secondary table-hover'}
 
     **Delete Range**  
-    Deletes a range.
+    Deletes a range of cells.
 
     | Input box | Description |
     |-------|--------|
-    |Range | the range of cells to delete |
-    |Shift | ROWS = existing cells will be shifted upward, COLUMNS = cells will be shifted left |
-    {:class='table table-secondary table-hover' }
+    | Range | The range of cells to delete. |
+    | Shift | Specifies the direction to shift existing cells after deletion. `ROWS` shifts cells upward, and `COLUMNS` shifts cells to the left. |
+    {:class='table table-secondary table-hover'}
 
     **Delete Duplicates**  
-    Removes rows within this range that contain values in the specified columns that are duplicates of values in any previous row. Removes duplicates with different letter cases, formatting, or formulas.
+    Removes rows in the specified range that contain duplicate values in the specified columns. This includes duplicates with variations in letter case, formatting, or formulas.
 
     | Input box | Description |
     |-------|--------|
-    |Range | the range to remove duplicates rows from.|
-    |Dimension | dimension to analyze for duplicate values|
-    |StartIndex | The start (inclusive) of the span. The columns in the range to analyze for duplicate values.|
-    |EndIndex | The end (exclusive) of the span. The columns in the range to analyze for duplicate values.|
-    {:class='table table-secondary table-hover' }
+    | Range | The range from which duplicate rows will be removed. |
+    | Dimension | The dimension to analyze for duplicate values. |
+    | StartIndex | The starting column (inclusive) of the range to check for duplicates. |
+    | EndIndex | The ending column (exclusive) of the range to check for duplicates. |
+    {:class='table table-secondary table-hover'}
+
 
     </div>
     </div>
