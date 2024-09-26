@@ -25,8 +25,6 @@ overview: |
     - HSL
     - HSV
     - random  
-setup: |
-    1. Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
-    2. Go to the premade deck to see all 6 button color format examples. 
+setup_url: https://docs.christinak.ca/docs/extensions/color-converter#setup
 privacy_collect: false
 ---

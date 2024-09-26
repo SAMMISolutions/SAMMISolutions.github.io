@@ -12,7 +12,7 @@ developer_url: https://christinak.itch.io
 icon_local: input_validator.png
 screenshots_local: input_validator_ss.png
 trailer: https://www.youtube.com/embed/zo-PAYc0yRs
-version: 1.0
+version: 1.3
 sammi_version: 2022.5.3 and up
 platform: Any
 overview: |
@@ -32,25 +32,6 @@ overview: |
     - Replace, Search, Match and Test
 
     *Safe Image Validator requires a Google Cloud Account and an API key. Free quota of 1000 validations/month.*
-
-setup: |
-    1. Make sure you're on the latest version of SAMMI and install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
-    2. In the Settings button, fill it your Google API key if you wish to use Safe Image Validator (see instructions below) and any custom words you wish to filter out in Profanity Validator. 
-    2. In each button you will find a comment explaining how to use the commands and one or two examples.
-
-    ##### Safe Image Validator
-    This validator requires you to have Google Clount Account which gives you 1000 free units each month (so you can validate 1000 images for free). See pricing info at [https://cloud.google.com/vision/pricing](https://cloud.google.com/vision/pricing).     
-
-    **How to get an API key:**
-    [video](https://www.youtube.com/embed/CfSN1OsebBs)[/video]
-
-    1. Go to your [Google Cloud Console](https://console.cloud.google.com/)
-    2. Create a new project or use an existing one
-    3. Click on `+ Enable APIs` and Servicse
-    4. Type 'Cloud Vision API' in the search bar and enable it 
-    5. Click on `Credentials -> + Create Credentials -> API key`
-    6. Copy paste the API key below
-    7. Click on the three dots on the `API key - Edit API Key`
-    8. Restrict the key to 'Cloud Vision API'
+setup_url: https://docs.christinak.ca/docs/extensions/input-validator#setup
 privacy_collect: false
 ---

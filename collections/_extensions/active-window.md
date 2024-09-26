@@ -47,16 +47,7 @@ overview: |
     **Important Note**  
 
     The extension may not properly work on non Windows devices.
-setup: |
-    *Version 2.0 has been completely reworked. Please uninstall the old version completely if you're updating from version 1.X. Version 2.0 no longer requires running any external scripts and is fully contained within SAMMI.*
-
-    1. Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
-    2. To enable scanning, press 'Active Window Enable Scanning' button.
-    3. To grab currently active window information, use 'Active Window Get Info' button
-    4. To add a trigger for a specific event, e.g. SAMMI Core activated, use 'Active Window Manage Triggers' button 
-    5. Find more details about all the available commands and examples in the premade Active Window Deck 
-
-    Note: If there are any issues with detecting your active window, please try running SAMMI as administrator (right click on SAMMI Core.exe - Run as Administrator).
+setup_url: 'https://docs.christinak.ca/docs/extensions/active-window#setup'
 privacy_collect: false
 ---
 

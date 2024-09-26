@@ -24,9 +24,6 @@ overview: |
     - View all timers in Bridge 
 
     Example deck with buttons included. 
-setup: |
-    1. Install the extension. You can follow the [Extension Install Guide](https://sammi.solutions/extensions/install).
-    2. Premade deck will be created with example buttons. Double click on each button to read the instructions on how to use it. 
-
+setup_url: https://docs.christinak.ca/docs/extensions/timer#setup
 privacy_collect: false
 ---
