@@ -34,7 +34,7 @@ overview: |
     - Open and close the connection to listen to IFTTT triggers on demand
     - Set a specific extension trigger (that you can attach to a button in your SAMMI) for each IFTTT applet
     - Choose what IFTTT fields will be passed to your SAMMI (in a JSON formatted string - examples provided)
-setup_url: https://docs.christinak.ca/docs/extensions/ifttt-events#setup
+setup_url: https://docs.christinak.ca/docs/extensions/ifttt-sammi#setup
 privacy_collect: true
 privacy_policy: All your IFTTT triggers are sent to a secure server hosted with DigitalOcean that relays them to your SAMMI. The server logs all webhook activity by your unique Itch Key identifier that cannot be linked back to a specific user (unless you willingly share it if you need me to troubleshoot it for you). It logs a timestamp and whether it was successfully received. It does NOT log any personal information or the content of your IFTTT triggers. 
 privacy_personal: false

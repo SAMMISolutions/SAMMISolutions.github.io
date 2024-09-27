@@ -1,23 +1,29 @@
 ---
 layout: ext_single
-title: IFTTT
+title: IFTTT Event
 slug: ifttt
-desc: Trigger any IFTTT event directly from your Stream Deck
+desc: Trigger any IFTTT event directly from your SAMMI
 category: productivity
-date: '2022-05-13T00:00:00-05:00'
+date: '2024-09-26T00:00:00-05:00'
 permalink: extensions/productivity/:slug
-download_url: https://github.com/christinna9031/SAMMI-IFTTT-Events/releases
-setup_url: https://github.com/christinna9031/SAMMI-IFTTT-Events#readme
+download_url: https://christinak.itch.io/ifttt-event
 developer_name: Christina K.
 developer_url: https://christinak.itch.io
-version: 1.2
+icon_local: ifttt_event_icon.png
+screenshots_local: ifttt_event.png
+version: 2.0
 sammi_version: Any
 platform: Any
 overview: |
-    **Extension for SAMMI which lets you fire IFTTT events.**\
-    IFTTT is a very powerful app that connects to a lot of different services, such as your phone apps, smart devices, email, social media etc. Full list can be found at [https://ifttt.com/services](https://ifttt.com/services). You can create 5 applets for free.
+    **Extension for SAMMI which lets you trigger IFTTT events.**  
 
-    **Special thanks goes to [MisterK](https://twitch.tv/misterk_qc) for migrating the extension to SAMMI.** 
-setup_url: https://docs.christinak.ca/docs/extensions/ifttt#setup
+    You can control any service that IFTTT supports directly through SAMMI!  
+
+    IFTTT is a versatile app that connects with a wide range of services, including phone apps, smart devices, email, social media, and more.  
+
+    You can find the complete list of supported services at [https://ifttt.com/services](https://ifttt.com/services).
+
+    *To use this extension, you'll need the IFTTT Pro plan, which gives you access to features like creating up to 20 applets, using webhooks, and managing Twitter applets, among other benefits.*
+setup_url: https://docs.christinak.ca/docs/extensions/ifttt-event#setup
 privacy_collect: false
 ---
