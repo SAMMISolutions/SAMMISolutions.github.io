@@ -4,7 +4,7 @@ title: Advanced Button Functions
 slug: advanced-buttons
 desc: Run a random button, check if button is running or blocked, and more!
 category: utilities
-date: '2024-04-23T00:00:00-05:00'
+date: '2024-10-02T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/advanced-buttons
 developer_name: Christina K.
@@ -23,6 +23,7 @@ overview: |
     - Check if a button is currently running, in queue (and how many are in queue), or blocked.
     - Get all running and blocked buttons 
     - Get all buttons by triggers
+    - Stop all buttons in a selected deck
     - Get button information (deck name, group id, image name, init variables, etc.)
 
     Comes with a premade deck with all available commands and explanations.
