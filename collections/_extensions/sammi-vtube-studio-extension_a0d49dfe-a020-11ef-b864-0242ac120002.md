@@ -12,7 +12,7 @@ trailer_ex: ''
 screenshots_ex: 'https://i.imgur.com/28hRlov.png, https://i.imgur.com/JCALBAn.png, https://i.imgur.com/2CIIBr6.png, https://i.imgur.com/daS2dSc.png'
 sammi_version: 2024.4.0
 platform: Any
-version: 1.0.2
+version: 1.7.0.0-beta
 download_url: 'https://github.com/HueVirtualCreature/SAMMIVtubeStudioExtension/releases'
 overview: |
   This is an extension/plugin for SAMMI that allows one to control Denchisoft's VTubeStudio using their API.
