@@ -1,6 +1,5 @@
 ---
 _id: a0d49dfe-a020-11ef-b864-0242ac120002
-hidden: true
 permalink: extensions/miscellaneous/sammi-vtube-studio-extension
 developer_name: HueVirtualCreature
 developer_url: 'https://github.com/HueVirtualCreature'
@@ -15,13 +14,13 @@ platform: Any
 version: 1.7.0.0-beta
 download_url: 'https://github.com/HueVirtualCreature/SAMMIVtubeStudioExtension/releases'
 overview: |
-  This is an extension/plugin for SAMMI that allows one to control Denchisoft's VTubeStudio using their API.
+  This is an extension/plugin for SAMMI that allows one to control Denchisoft’s VTubeStudio using their API.
 
-  The source code is available for viewing; feel free to look through it, get a third party consultation, or reach out to myself about any security or other concerns regarding this extension's operation. Furthermore, I am not responsible for any end-user's actions regarding the use of this extension.
+  It allows automating behavior in VTubeStudio, such as triggering macros (without hotkeys), spawn and control items, and to automate control of a model based on a variety of events (such as Twitch redeems).
 
-  Please feel free to submit a issue report (preferred) or to DM me directly on Twitter if you need help or have questions. 
+  Please feel free to submit a issue report (preferred) or to DM me directly on Twitter if you need help or have questions.
   Twitter/@Hue_SwordDevil
-  Discord: _hue_
+  Discord: \_hue\_
 setup: |
   This extension requires the following:
 
