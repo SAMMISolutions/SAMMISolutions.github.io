@@ -1,6 +1,5 @@
 ---
 _id: 11028f22-a0b8-11ef-b864-0242ac120002
-hidden: true
 permalink: extensions/games/rpg-levelling-system
 developer_name: mxpuffin
 developer_url: 'https://mxpuff.in'
