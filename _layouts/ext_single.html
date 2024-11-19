@@ -240,7 +240,7 @@ layout: ext_single_wrap
           {% for screenshot in screenshots %}
           <div class="carousel-item {% if screenshot == screenshots[0] and page.trailer == nil %}active{% endif %}">
             <div class="d-flex imgwrapper">
-            <img src='{{ screenshot }}' class="d-block w-100" alt="{{ page.title}} screenshot">
+            <img src='{{ screenshot }}' class="d-block w-100" style="object-fit: contain !important;" alt="{{ page.title}} screenshot">
             </div>
           </div>
           {% endfor %}

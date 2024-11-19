@@ -21,6 +21,7 @@ css: extensions.css
 {% assign src = "assets/images/extensions/empty.png" | relative_url %}
 {% assign srcempty = true %}
 {% endif %}
+{% if post.hidden != true %}
     <div class="col extension-col mb-2">
         <div class="row mb-1">
           <div class="extension">
@@ -45,5 +46,6 @@ css: extensions.css
        <a href="{{ posturl }}" >{{ post.title }}</a>
         </div>
     </div>
+{% endif %}
 {% endfor %}
 </div>
