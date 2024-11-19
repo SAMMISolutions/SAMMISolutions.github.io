@@ -1,6 +1,6 @@
 ---
 layout: ext_single
-title: Discord-Twitch-YouTube Relay
+title: Discord to Twitch & YouTube Relay
 slug: discord-relay
 desc:  Relay messages between Twitch/YT and Discord
 category: social
