@@ -1,8 +1,8 @@
 ---
 layout: ext_single
-title: Discord-Twitch Relay
+title: Discord-Twitch-YouTube Relay
 slug: discord-relay
-desc:  Relay messages between Twitch and Discord and send trigger from Discord to SAMMI
+desc:  Relay messages between Twitch/YT and Discord
 category: social
 date: '2024-08-30T00:00:00-05:00'
 permalink: extensions/social/:slug
@@ -38,7 +38,7 @@ overview: |
     - Limit the bot to listen to specific Discord channels.
     - Convert Discord user mentions to Twitch user mentions.
     - If a Discord message is empty but contains attachments, the attachment URL will be relayed instead.
-setup_url: https://docs.christinak.ca/docs/extensions/discord-controls#setup
+setup_url: https://docs.christinak.ca/docs/extensions/discord-relay#setup
 privacy_collect: false
 privacy_website: false
 privacy_policy:
