@@ -16,14 +16,14 @@ version: 1.0
 sammi_version: '2024.4.0^'
 platform: Any
 overview: |
- 
+
     Connect Four Minigame for Twitch & Youtube in SAMMI
-	
+    
     ##### Features
     Play a game of connect four vs your viewers or let them fight each other with this extension.
     Simple and classic rules (get four stones in a row, column or diagonally and you win).
-
-
+    
+    
     ##### Available commands
     - !c4-init (Reinitializes the game)
     - !connectfour (Challenges everyone to a round of connect four)
