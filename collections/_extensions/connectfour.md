@@ -26,10 +26,10 @@ overview: |
 
     ##### Available commands
     - !c4-init (Reinitializes the game)
-	- !connectfour (Challenges everyone to a round of connect four)
-	- !connectfour @username (Challenges a user to a round of connect four)
-	- !accept (Accepts the challenge)
-	- 1 / 2 / 3 / 4 / 5 / 6 / 7 (Play a stone in that column)
+    - !connectfour (Challenges everyone to a round of connect four)
+    - !connectfour @username (Challenges a user to a round of connect four)
+    - !accept (Accepts the challenge)
+    - 1 / 2 / 3 / 4 / 5 / 6 / 7 (Play a stone in that column)
 setup_url: https://sammi.solutions/extensions/install
 privacy_collect: false
 ---
