@@ -9,7 +9,7 @@ permalink: extensions/games/:slug
 download_url: https://ko-fi.com/s/34f45785c5
 developer_name: Chrizzz
 developer_url: https://linktr.ee/chrizzz_1508
-icon_local: connect-four.png
+icon_local: connect-four-icon.png
 screenshots_local: connect-four.png
 trailer: https://sammi.solutions/assets/videos/extensions/connect-four.mp4
 version: 1.0
