@@ -11,7 +11,6 @@ developer_name: Chrizzz
 developer_url: https://linktr.ee/chrizzz_1508
 icon_local: memory_icon.png
 screenshots_local: memory_ss1.png, memory_ss2.png
-trailer: https://sammi.solutions/assets/videos/extensions/memory.mp4
 version: 1.0
 sammi_version: '2024.4.0^'
 platform: Twitch
