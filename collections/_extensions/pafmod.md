@@ -9,7 +9,7 @@ permalink: extensions/games/:slug
 download_url: https://ko-fi.com/s/aa74935ab0
 developer_name: Chrizzz
 developer_url: https://linktr.ee/chrizzz_1508
-icon_local: memory_icon.png
+icon_local: pafmod_icon.png
 screenshots_local: pafmod_ss1.png, pafmod_ss2.png, pafmod_ss3.png, pafmod_ss4.png, pafmod_ss5.png, pafmod_ss6.png, pafmod_ss7.png
 version: 1.3.2
 sammi_version: '2024.4.0^'
@@ -25,8 +25,10 @@ overview: |
     - Viewers can use Channel Point Rewards to summon new Pokemon
     - Features over 1000 different and their shiny forms as well as regional forms, mega Pokemon and even custom Pokemons
     - Viewer can keep track of their caught Pokemon on discord
+    - Multi Language support (currently english, german, french, italian, spanish and portuguese) 
     
-    #### Broadcaster Commands
+    #### Broadcaster / Mod Commands
+    - !poke-commands (shows a list of available commands)
     - !addpokemontoall <Pokemon> / !addshinytoall <Pokemon> (Adds a Pokemon to all users)
     - !addpokemon "<User>" <Pokemon> / !addshiny "<User>" <Pokemon> (Adds a Pokemon to a specific user)
     - !addrandompokemon "<User>" (Adds a random Pokemon to a user which he doesn't own yet)
