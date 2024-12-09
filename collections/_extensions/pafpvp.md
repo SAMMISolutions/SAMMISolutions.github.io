@@ -50,4 +50,6 @@ overview: |
     - !bonuscatchrate (checks your current bonus catchrate)
     - !mygyms (posts a list of your gym progress to discord)
 privacy_collect: false
+setup_url: https://www.youtube.com/watch?v=Ta_VgE-DO1o
+
 ---

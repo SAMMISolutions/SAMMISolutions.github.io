@@ -61,6 +61,6 @@ overview: |
     - <a href="https://ko-fi.com/s/20991c9069">Evolution Add On</a> (Adds evolutions to the game, viewers collect XP by watching & supporting your stream)
     - <a href="https://ko-fi.com/s/ee46724040">Pokebox Add On</a> (Adds a virtual box that displays images of all Pokemon your viewers have caught to discord)
     - <a href="https://ko-fi.com/s/4b9b1635bf">Custom Pokemon Add On</a> (This Add On lets you create your own Pokemon)
-setup_url: https://sammi.solutions/extensions/install
+setup_url: https://youtu.be/LFhNXw0FNVk
 privacy_collect: false
 ---
