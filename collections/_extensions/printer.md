@@ -17,7 +17,7 @@ platform: Twitch
 overview: |
     #### Description
     - Print physical receipts on a thermal printer when someone supports you with subs or bits
-	- Allows people to redeem a channel point reward to print something on your thermal printer
+    - Allows people to redeem a channel point reward to print something on your thermal printer
 setup_url: https://sammi.solutions/extensions/install
 privacy_collect: false
 ---
