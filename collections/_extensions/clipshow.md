@@ -3,9 +3,9 @@ layout: ext_single
 title: Clipshow
 slug: clipshow
 desc: Plays random clips of your channel in your choosen scenes until you leave them
-category: games
+category: twitch
 date: '2024-12-09T00:00:00-00:00'
-permalink: extensions/games/clipshow
+permalink: extensions/twitch/clipshow
 download_url: https://ko-fi.com/s/657a802fb7
 developer_name: Chrizzz
 developer_url: https://linktr.ee/chrizzz_1508
