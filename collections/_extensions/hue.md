@@ -5,7 +5,7 @@ slug: hue
 desc: This extension lets you control your Philips Hue Lights
 category: utilities
 date: '2024-12-09T00:00:00-00:00'
-permalink: extensions/games/:slug
+permalink: extensions/utilities/:slug
 download_url: https://ko-fi.com/s/b18530f796
 developer_name: Chrizzz
 developer_url: https://linktr.ee/chrizzz_1508
