@@ -67,6 +67,17 @@ overview: |
     - !title - Check your current title
     - !top10 - Check the top 10 leaderboard
     
+    #### Available extension commands
+    - LS: Modify Points - Add / Remove / Set the points a specific user has
+    - LS: Check Points - Check the amount of Points a user has
+    - LS: Pay Points - Check if a user has enough points to redeem something. If yes, it will substract this amount of points and return true in the variable. Otherwise it will return false.
+    - LS: Modify Watchtime - Add / Remove / Set watchtime for a user (amount is in minutes)
+    - LS: Check Watchtime - Check the watchtime of a specific user
+    - LS: Check Follow Duration - Check the follow duration of a specific user (returns false if they are not following)
+    - LS: Modify Values - Add / remove / set the amount of subs / bits / raids / etc a specific user has
+    - LS: Check Values - Check the amount of subs / bits / raids / etc a specific user has
+    - LS: Check Title - Check the current title of the user, returns undefined if titles are deactivated
+    
     #### Disclaimer
     - This extension can not track what users have used before the installation, so the amount of messages, bits, subs, etc will be counted from the start of this extension installation and will only count up, as long as SAMMI is running
 setup_url: https://sammi.solutions/extensions/install
