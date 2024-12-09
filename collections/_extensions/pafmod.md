@@ -53,6 +53,12 @@ overview: |
     - !settrainer <Number> (Changes your trainer avatar)
     - !top10 / !top10shiny / top10likeability (Shows the leaderboard for that category), !trainers (Shows the available trainer avatars)
     - !spawn (Shows the time of the next Pokemon spawn)
+
+    #### Available Add Ons
+    - <a href="https://ko-fi.com/s/094864fb0a">PvP Add On</a> (Adds PvP battles to the game as well as gym leaders which you can fight)
+    - <a href="https://ko-fi.com/s/20991c9069">Evolution Add On</a> (Adds evolutions to the game, viewers collect XP by watching & supporting your stream)
+    - <a href="https://ko-fi.com/s/ee46724040">Pokebox Add On</a> (Adds a virtual box that displays images of all Pokemon your viewers have caught to discord)
+    - <a href="https://ko-fi.com/s/4b9b1635bf">Custom Pokemon Add On</a> (This Add On lets you create your own Pokemon)
 setup_url: https://sammi.solutions/extensions/install
 privacy_collect: false
 ---
