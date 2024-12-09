@@ -1,7 +1,7 @@
 ---
 layout: ext_single
 title: Pokemon and Friends - Evolution Add On
-slug: pafmod
+slug: pafevo
 desc: This extension adds evolutions to the Pokemon and Friends game
 category: games
 date: '2024-12-09T00:00:00-00:00'
