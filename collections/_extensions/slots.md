@@ -16,13 +16,13 @@ version: 1.0
 sammi_version: '2024.4.0^'
 platform: Any
 overview: |
-
-    A slot machine for SAMMI which is easily customizable
-    
     ##### Features
+    
     Create your own slot machine with this SAMMI extension and customize it however you want.
     
+    
     ##### Available extension commands
+    
     - Slots: Play - Spins all 3 slots and automatically stops them
     - Slots: Spin - Spins only specific slots
     - Slots: Stop - Stops the slot

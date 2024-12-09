@@ -18,11 +18,14 @@ overview: |
 
     The famous big key guessing game which is used by a lot of ALTTP randomizer players comes to SAMMI
     ##### Features
+    
     In the randomizer of Zelda - A link to the Past the Big Key can be in 22 different locations inside Ganons Tower. 
     With this extension your viewers can guess when you will find the big key. 
     If they are successful, they get awarded with 1 point.
     
+    
     ##### Available extension commands
+    
     - !start (starts the game)
     - !close (closes the game)
     - !reopen (reopens the game)
