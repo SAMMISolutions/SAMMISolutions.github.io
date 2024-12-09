@@ -16,9 +16,7 @@ sammi_version: '2024.4.0^'
 platform: Twitch
 overview: |
     ##### Description
-    - In the randomizer of Zelda - A link to the Past the Big Key can be in 22 different locations inside Ganons Tower. 
-    With this extension your viewers can guess when you will find the big key. 
-    If they are successful, they get awarded with 1 point.
+    - In the randomizer of Zelda - A link to the Past the Big Key can be in 22 different locations inside Ganons Tower. With this extension your viewers can guess when you will find the big key. If they are successful, they get awarded with 1 point.
     
     ##### Available extension commands
     - !start (starts the game)
