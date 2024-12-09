@@ -3,9 +3,9 @@ layout: ext_single
 title: Pretzel Music Infos
 slug: pretzel
 desc: This Extension lets you easily grab the infos about the current song beeing played
-category: utilities
+category: audio
 date: '2024-12-09T00:00:00-00:00'
-permalink: extensions/utilities/:slug
+permalink: extensions/audio/:slug
 download_url: https://ko-fi.com/s/d893ae4265
 developer_name: Chrizzz
 developer_url: https://linktr.ee/chrizzz_1508
@@ -17,7 +17,7 @@ platform: Any
 overview: |
     #### Description
     - This extension lets you easily grab the infos about the current song beeing played on Pretzel
-	
+    
     #### Available Information
     - Song
     - Interpret
