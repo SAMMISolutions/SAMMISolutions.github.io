@@ -13,7 +13,7 @@ screenshots_ex: ''
 sammi_version: v2.03.0
 platform: Twitch
 version: v2.2
-download_url: 'https://flipstream.org/stream-tech/lioranboard-2-x-extensions/lifx-controls'
+download_url: 'https://flipstream.org/stream-tech/sammi-extensions/lifx-controls'
 setup_url: ''
 overview: >-
   This extension requires a bearer token value provided in the LIFX Cloud

@@ -14,7 +14,7 @@ sammi_version: v2.03.0
 platform: Twitch
 version: '2.0'
 download_url: >-
-  https://flipstream.org/stream-tech/lioranboard-2-x-extensions/twitch-emotes-to-urls
+  https://flipstream.org/stream-tech/sammi-extensions/twitch-emotes-to-urls 
 setup_url: ''
 overview: >-
   This extension is used to convert all Twitch emotes in a chat message the user
