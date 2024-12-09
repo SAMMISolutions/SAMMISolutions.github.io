@@ -1,7 +1,7 @@
 ---
 layout: ext_single
 title: Pokemon and Friends - PvP Add On
-slug: pafmod
+slug: pafpvp
 desc: This Add On adds PvP to the Pokemon and Friends game
 category: games
 date: '2024-12-09T00:00:00-00:00'
