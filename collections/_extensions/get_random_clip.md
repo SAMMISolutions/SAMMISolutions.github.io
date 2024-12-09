@@ -19,7 +19,7 @@ overview: |
     - This extension pulls a random clip from a user of your choice and plays it live on stream 
     - Now supports clips that were created after august 2024
     - Adds a "!so <user> command
-	- Automatically does a shoutout when you get raided which plays a clip
+    - Automatically does a shoutout when you get raided which plays a clip
 setup_url: https://sammi.solutions/extensions/install
 privacy_collect: false
 ---
