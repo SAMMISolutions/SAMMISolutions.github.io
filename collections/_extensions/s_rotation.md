@@ -16,44 +16,7 @@ version: 1.1
 sammi_version: '2024.4.0^'
 platform: Any
 overview: |
-    #### Description
-    - This extension displays your socials live on stream
-    - Automatically rotates through them to save space
-    
-    #### Supported Platforms
-    - Activision
-    - Blizzard
-    - Bluesky
-    - Cashapp
-    - Discord
-    - Epic
-    - Facebook
-    - Hive
-    - Instagram
-    - Itch.io
-    - Kick
-    - Ko-Fi
-    - LoL
-    - Onlyfans
-    - Patreon
-    - Paypal
-    - PSN
-    - Reddit
-    - Snapchat
-    - Steam
-    - Streamelements
-    - Streamlabs
-    - Switch
-    - Throne
-    - TikTok
-    - Tipeestream
-    - Twitch
-    - Twitter
-    - Venmo
-    - Wechat
-    - Whatnot
-    - Xbox
-    - Youtube
+test
 setup_url: https://sammi.solutions/extensions/install
 privacy_collect: false
 ---
