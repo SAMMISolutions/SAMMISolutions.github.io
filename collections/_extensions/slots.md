@@ -12,17 +12,13 @@ developer_url: https://linktr.ee/chrizzz_1508
 icon_local: slots_icon.png
 screenshots_local: slots.png
 trailer: https://sammi.solutions/assets/videos/extensions/slots.mp4
-version: 1.0
+version: 1.2
 sammi_version: '2024.4.0^'
 platform: Any
 overview: |
     ##### Features
-    
-    Create your own slot machine with this SAMMI extension and customize it however you want.
-    
-    
+    - Create your own slot machine with this SAMMI extension and customize it however you want.
     ##### Available extension commands
-    
     - Slots: Play - Spins all 3 slots and automatically stops them
     - Slots: Spin - Spins only specific slots
     - Slots: Stop - Stops the slot

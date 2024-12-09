@@ -17,20 +17,13 @@ sammi_version: '2024.4.0^'
 platform: Any
 overview: |
     #### Description:
-    
-    This extension let's your viewers play battleship
-    
-    
+    - This extension let's your viewers play battleship
     #### Features:
-    
     - Adjustable amount of max turns
     - Adjustable amount of ships (length 1 - 6 and at most 10 ships)
     - Random placement of the ships or manual placement
     - Adjustable graphics and sounds (by default this has no sounds)
-    
-    
     #### Available commands:
-    
     - !battleship (starts a new game)
     - A1, C3, ... (shoots that coordinate)
     - !forfeit (gives up the current game)
