@@ -16,10 +16,10 @@ version: 1.0
 sammi_version: '2024.4.0^'
 platform: Twitch
 overview: |
-    #### Description:
+    #### Description
     - This memory game comes with default images, but viewers can register their profile image as memory cards. The game comes with a leader board for time and turns.
     
-    #### Available commands:
+    #### Available commands
     - !memreg (add your user image to the memory cards)
     - !memunreg (remove your user image from the memory cards)
     - !memstart (start a new game)
