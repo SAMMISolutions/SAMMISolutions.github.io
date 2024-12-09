@@ -5,7 +5,7 @@ slug: audio_monitoring
 desc: Monitor OBS Audio Levels with SAMMI
 category: audio
 date: '2024-12-09T00:00:00-00:00'
-permalink: extensions/audio/:slug
+permalink: extensions/audio/audio_monitoring
 download_url: https://ko-fi.com/s/9e20de0f8a
 developer_name: Chrizzz
 developer_url: https://linktr.ee/chrizzz_1508
