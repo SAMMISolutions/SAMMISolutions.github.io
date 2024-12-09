@@ -17,7 +17,7 @@ platform: Any
 overview: |
     #### Description
     - Animated Pokemon Shoutout that pulls a random clip, the profile picture and the bio of the Twitch user you want to shoutout
-	- Also works automatically with raids
+    - Also works automatically with raids
     
     #### Disclaimer
     - This currently only works with clips created before september 2024 (will be updated soon)
