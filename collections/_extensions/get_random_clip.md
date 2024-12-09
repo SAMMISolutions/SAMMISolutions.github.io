@@ -1,6 +1,6 @@
 ---
 layout: ext_single
-title: Get Random Clip Extension
+title: Get Random Clip
 slug: get_random_clip
 desc: Extension to pull a random clip and play it in OBS
 category: twitch
