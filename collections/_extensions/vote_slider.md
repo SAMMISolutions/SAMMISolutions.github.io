@@ -1,6 +1,6 @@
 ---
 layout: ext_single
-title: vote_slider
+title: Vote Slider
 slug: vote_slider
 desc: Simple Vote Slider
 category: utilities
