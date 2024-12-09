@@ -1,6 +1,6 @@
 ---
 layout: ext_single
-title: The Legend of Zelda - A Link to the Past - Big Key Guessing Game -
+title: The Legend of Zelda - A Link to the Past - Big Key Guessing Game
 slug: bkkg
 desc: The big key guessing game for the ALTTP Randomizer
 category: games
