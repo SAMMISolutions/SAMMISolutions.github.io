@@ -17,7 +17,7 @@ sammi_version: '2024.4.0^'
 platform: Any
 overview: |
     #### Description
-    - This extension allows you to create a QR code inside OBS out of any text you want.
+    - This extension allows you to create a QR code inside OBS out of any text you want
 setup_url: https://sammi.solutions/extensions/install
 privacy_collect: false
 ---
