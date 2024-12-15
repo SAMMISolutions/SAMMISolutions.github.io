@@ -43,5 +43,5 @@ defaults:
     css: extensions.css
     nav: Extensions
 algolia:
-  application_id: 'T1W4YLUXZS'
+  application_id: '6DVM1AL24Y'
   index_name:  main
