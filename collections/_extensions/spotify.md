@@ -4,35 +4,34 @@ title: Spotify
 slug: spotify
 desc: Spotify overlay and full control from your Stream Deck
 category: audio
-date: '2022-02-18T00:00:00-05:00'
+date: '2024-12-23T00:00:00-05:00'
 permalink: extensions/audio/spotify
 download_url: https://christinak.itch.io/sammi-spotify
 developer_name: Christina K.
 developer_url: https://christinak.itch.io
 icon_local: spotify.png 
-trailer: https://www.youtube.com/embed/biO0ffqMn5Q
-screenshots_local: spotify_ss.png
-version: 1.0
+trailer: https://www.youtube.com/embed/7SUouQavOd8
+screenshots_local: spotify3_ss.png, spotify3_obs.png, spotify3_trigger_track.png
+version: 3.1
 sammi_version: 2022.5.0
 platform: OBS
 overview: |
-    <div class="alert alert-success mt-2" role="alert">Spotify is compatible for both OBSWS 4.1 and OBSWS 5.0 (and OBS 25). It requires SAMMI version 2022.4.4 and newer.
-    </div>
-
-
     **This Spotify extension for SAMMI allows you to display and fully control your Spotify playback directly from your SAMMI.**
-
 
     It comes with a full Spotify player for SAMMI, OBS overlay (including viewer song requests overlay), and it's very easy to set up. 
 
     <div class="alert alert-warning" role="alert">The extension requires Spotify premium account. Without a premium account, you can still display your currently playing track in your OBS overlay, but cannot control playback from within SAMMI.
     </div>
 
+    #### Pro version
+    The basic version of the Spotify extension is missing some features and has protected buttons. You can purchase the Pro version to unlock all buttons and features.
+
+    #### Features
 
     ##### Overlay for your stream
     Display your current track in your OBS overlay and SAMMI Deck, updated automatically as you listen to Spotify.
 
-    ![Spotify OBS Overlay For Current Track](spotify_ss2.png)
+    ![Spotify OBS Overlay For Current Track](spotify3_obs.png)
 
     <hr>
 
@@ -52,7 +51,16 @@ overview: |
     - Like and Unlike tracks
     - Toggle Shuffle
 
-    [video](https://www.youtube.com/embed/DkDonkUnV6U)[/video]
+    ![Spotify Playback Controls](spotify3_playback.png)
+
+    <hr>
+
+    ##### Spotify Triggers (Pro version)
+    - Trigger a button when the track changes.
+    - Trigger a button when playback is paused or resumed.
+    - Trigger a button when volume is changed.
+
+    ![Spotify Triggers](spotify3_trigger_track.png)
 
     <hr>
 
@@ -62,38 +70,35 @@ overview: |
     - Remove a currently playing track from your playlist by pressing **-**
     - Create a new playlist
 
-    [video](https://www.youtube.com/embed/2FRUJwLb9DU)[/video]
-
-    <hr>
-
-    ##### Search function
-    - Search for tracks by their name and (optionally) their artist 
-    - Display search results, cycle through them and select one to start playing it
-
-    [video](https://www.youtube.com/embed/bZiqPZgHdAs)[/video]
+    ![Spotify Playlists](spotify3_playlists.png)
 
     <hr>
 
     ##### Song Requests 
-    - allow your viewers request songs by their Spotify link, or just their name and (optionally) their artist  
-    - all requested tracks are added to your track queue and displayed in SAMMI  Deck and your OBS overlay, updated automatically as you progress through them
-    - customize your song request tracks overlay (such as maximum amount of displayed tracks or their order)
+    - Let viewers request songs by name or Spotify link.
+    - Add requested tracks to your queue, and display them in your OBS overlay.
+    - Pause and unpause song requests.
+    - Enable user cooldowns. (Pro version)
+    - Disallow explicit tracks. (Pro version)
+    - Disallow repeat tracks. (Pro version)
+    - Disallow tracks longer than a set duration. (Pro version)
 
-    [video](https://www.youtube.com/embed/hlS3NAQelbE)[/video]
+    ![Spotify Song Requests](spotify3_sr.png)
 
     <hr>
 
     ##### Randomize it 
     - Get a random track, album or playlist and start playing it 
 
-    [video](https://www.youtube.com/embed/pcK_h60AsNg)[/video]
+    ![Spotify Randomize](spotify3_random.png)
 
     <hr>
 
     ##### Lyrics
     - Get a link to lyrics of your currently playing track
 
-    [video](https://www.youtube.com/embed/ruip07tST2g)[/video]
+    ##### Advanced Commands (Pro version)
+    The basic version offers premade buttons for some commands, but with the Pro version, you can easily add them to your command list, use them anywhere in SAMMI, and unlock other advanced commands for even greater control.
 setup_url: https://docs.christinak.ca/docs/extensions/spotify#setup
 privacy_collect: false
 ---
