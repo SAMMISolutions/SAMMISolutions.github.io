@@ -4,14 +4,14 @@ title: Ko-fi Triggers
 slug: kofi
 desc: Ko-fi events delivered straight to your SAMMI
 category: social
-date: '2022-07-09T00:00:00-05:00'
+date: '2025-01-12T00:00:00-05:00'
 permalink: extensions/social/:slug
 download_url: https://christinak.itch.io/ko-fi-triggers
 developer_name: Christina K.
 developer_url: https://christinak.itch.io
 icon_local: kofi_icon.png
 screenshots_local: kofi_deck.png
-version: 1.0
+version: 1.1
 sammi_version: 2022.3.1
 platform: Any
 overview: |
