@@ -8,7 +8,7 @@ date: '2023-03-11T00:00:00-05:00'
 permalink: extensions/twitch/:slug
 download_url: https://christinak.itch.io/twitch-chat-logs
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: twitch_chat_logs_ico.png
 trailer: https://www.youtube.com/embed/FHqYyUdgilo
 screenshots_local: twitch_chat_logs_screenshot.png

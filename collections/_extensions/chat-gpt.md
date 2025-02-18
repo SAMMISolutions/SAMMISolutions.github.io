@@ -8,7 +8,7 @@ date: '2023-03-11T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/chatgpt
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: chatgpt_ico.png
 trailer: https://www.youtube.com/embed/6k28_ehxyAk
 screenshots_local: chatgpt_deck.png

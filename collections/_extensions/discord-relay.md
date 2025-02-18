@@ -8,7 +8,7 @@ date: '2024-08-30T00:00:00-05:00'
 permalink: extensions/social/:slug
 download_url: https://christinak.itch.io/sammi-discord-relay
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: discord_relay.png
 trailer: https://www.youtube.com/embed/zKUCkjm8FiA
 screenshots_local: discord_relay_ss.png, discord_deck.png

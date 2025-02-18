@@ -7,7 +7,7 @@ permalink: extensions/XXX/:slug
 download_url: 
 setup_url: 
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: 
 icon_ex:
 trailer: 

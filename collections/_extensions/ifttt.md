@@ -8,7 +8,7 @@ date: '2024-09-26T00:00:00-05:00'
 permalink: extensions/productivity/:slug
 download_url: https://christinak.itch.io/ifttt-event
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: ifttt_event_icon.png
 screenshots_local: ifttt_event.png
 version: 2.0

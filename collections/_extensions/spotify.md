@@ -8,7 +8,7 @@ date: '2024-12-23T00:00:00-05:00'
 permalink: extensions/audio/spotify
 download_url: https://christinak.itch.io/sammi-spotify
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: spotify.png 
 trailer: https://www.youtube.com/embed/7SUouQavOd8
 screenshots_local: spotify3_ss.png, spotify3_obs.png, spotify3_trigger_track.png

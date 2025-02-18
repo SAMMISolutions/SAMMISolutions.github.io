@@ -10,7 +10,7 @@ download_url: https://christinak.itch.io/sammi-twitter
 icon_local: twitter.png
 screenshots_local: twitter_deck.png
 developer_name: Christina K. 
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 version: 2.0
 sammi_version: 2023.2.1
 platform: Any

@@ -8,7 +8,7 @@ date: '2020-10-22T11:56:00-04:00'
 permalink: extensions/youtube/:slug
 download_url: https://github.com/christinna9031/LB-YouTube-Duration/releases
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 version: 1.1
 sammi_version: 1.40, 2.05
 platform: YouTube

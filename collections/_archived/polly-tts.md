@@ -9,7 +9,7 @@ permalink: extensions/audio/:slug
 download_url: https://christinak.itch.io/lioranboard-polly-text-to-speech
 setup_url: https://christinna9031.github.io/LBDocumentation/externalext.html#pollyTTS
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: tts.png
 trailer: https://www.youtube.com/embed/wazxdYa8XN8
 screenshots_local: tts.png

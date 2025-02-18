@@ -8,7 +8,7 @@ date: '2022-06-08T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/sammi-obs-resizer
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: obs_resizer.png
 trailer: https://www.youtube.com/embed/D4rCh8BMXOs
 version: 1.0

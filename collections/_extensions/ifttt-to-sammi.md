@@ -8,7 +8,7 @@ date: '2022-04-17T00:00:00-05:00'
 permalink: extensions/productivity/:slug
 download_url: https://christinak.itch.io/ifttt-to-sammi
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: ifttt_sammi_icon.png
 screenshots_local: ifttt_lb.png
 trailer: https://www.youtube.com/embed/1gwlV_PxA9s

@@ -8,7 +8,7 @@ date: '2024-10-20T00:00:00-05:00'
 permalink: extensions/games/:slug
 download_url: https://christinak.itch.io/minesweeper
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: minesweeper_icon.png
 trailer: https://www.youtube.com/embed/PQl2KBc0k9Y
 screenshots_local: minesweeper_ss1.png, minesweeper_ss2.png, minesweeper_ss.png

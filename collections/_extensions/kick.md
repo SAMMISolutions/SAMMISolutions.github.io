@@ -8,7 +8,7 @@ date: '2023-05-12T00:00:00-05:00'
 permalink: extensions/social/:slug
 download_url: https://christinak.itch.io/kick-for-sammi
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: kick_icon.png
 screenshots_local: kick_deck.png
 version: 1.1

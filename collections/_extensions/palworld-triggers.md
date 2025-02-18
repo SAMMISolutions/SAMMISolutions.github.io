@@ -8,7 +8,7 @@ date: '2024-02-28T00:00:00-05:00'
 permalink: extensions/games/:slug
 download_url: https://christinak.itch.io/palworld-triggers
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: palworld-triggers-icon.png
 trailer: https://www.youtube.com/embed/3mi_1K1PV2U
 screenshots_local: palworld-triggers-deck.png, palworld-triggers-pull.png, palworld-triggers-pull2.png

@@ -8,7 +8,7 @@ date: '2024-04-14T00:00:00-05:00'
 permalink: extensions/games/:slug
 download_url: https://christinak.itch.io/sammi-lucky-wheel
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: lucky_wheel.png
 trailer: https://www.youtube.com/embed/9SVEu6LsKss
 screenshots_local: lucky_wheel_ss.png, lucky_wheel_ss2.png, lucky_wheel_ss3.png, lucky_wheel_ss4.png

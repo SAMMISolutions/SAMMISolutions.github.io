@@ -7,7 +7,7 @@ date: '2022-06-07T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/translate-by-k
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: translate_icon.png
 trailer: https://www.youtube.com/embed/up1X6OaXu7I
 screenshots_local: translateK.png

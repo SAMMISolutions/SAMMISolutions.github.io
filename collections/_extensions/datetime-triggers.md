@@ -8,7 +8,7 @@ date: '2024-08-30T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/datetime-triggers
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: datetime-triggers-icon.png
 screenshots_local: datetime_triggers_ss.png, datetime_triggers_ss2.png
 version: 1.0

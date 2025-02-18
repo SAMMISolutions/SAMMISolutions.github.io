@@ -8,7 +8,7 @@ date: '2023-04-20T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/ai-image-generator
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: image_generator_ico.png
 trailer: https://www.youtube.com/embed/7XYyDKLiqA8
 screenshots_local: image_generator_deck.png

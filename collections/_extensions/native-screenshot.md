@@ -8,7 +8,7 @@ date: '2023-12-22T00:00:00-05:00'
 permalink: extensions/utilities/native-screenshot
 download_url: https://christinak.itch.io/native-screenshot
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: native_screenshot_icon.png
 screenshots_local: native_screenshot_ss3.png, native_screenshot_ss2.png, native_screenshot_ss.png, native_screenshot_ss4.png 
 version: 1.0

@@ -8,7 +8,7 @@ date: '2024-07-15T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/dynamic-triggers
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: dynamic_triggers.png
 trailer: https://www.youtube.com/embed/LW99bDilbLU
 screenshots_local: dynamic-triggers_ss.png

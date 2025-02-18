@@ -8,7 +8,7 @@ date: '2022-10-15T00:00:00-05:00'
 permalink: extensions/productivity/:slug
 download_url: https://christinak.itch.io/sammi-google-sheets
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: gsheets.png
 screenshots_local: g_sheets_deck.png
 version: 1.0

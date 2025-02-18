@@ -9,7 +9,7 @@ permalink: extensions/social/:slug
 download_url: https://github.com/christinna9031/LioranBoard-Imgur/releases
 setup_url: https://github.com/christinna9031/LioranBoard-Imgur#readme
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: 
 trailer: 
 screenshots_local:

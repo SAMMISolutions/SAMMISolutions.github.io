@@ -8,7 +8,7 @@ date: '2024-12-19T00:00:00-05:00'
 permalink: extensions/social/:slug
 download_url: https://christinak.itch.io/discord-triggers
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: discord_triggers.png
 trailer: https://www.youtube.com/embed/sgmr-sQDy2s
 screenshots_local: discord_triggers_ss.png
