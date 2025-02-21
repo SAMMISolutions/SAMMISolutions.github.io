@@ -12,7 +12,7 @@ developer_url: https://docs.christinak.ca/
 icon_local: chatgpt_ico.png
 trailer: https://www.youtube.com/embed/6k28_ehxyAk
 screenshots_local: chatgpt_deck.png
-version: 1.0
+version: 2.0
 sammi_version: '2023.1.1^'
 platform: Any
 overview: |

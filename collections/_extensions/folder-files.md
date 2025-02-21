@@ -4,7 +4,7 @@ title: Folder Files
 slug: folder-files
 desc: Scan, search and manage all your files
 category: utilities
-date: '2023-07-31T00:00:00-05:00'
+date: '2023-08-02T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/folder-files
 developer_name: Christina K.

@@ -4,7 +4,7 @@ title: IFTTT Event
 slug: ifttt
 desc: Trigger any IFTTT event directly from your SAMMI
 category: productivity
-date: '2024-09-26T00:00:00-05:00'
+date: '2024-09-27T00:00:00-05:00'
 permalink: extensions/productivity/:slug
 download_url: https://christinak.itch.io/ifttt-event
 developer_name: Christina K.

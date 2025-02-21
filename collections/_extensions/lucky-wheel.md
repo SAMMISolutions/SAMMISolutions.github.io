@@ -4,7 +4,7 @@ title: Lucky Wheel
 slug: lucky-wheel
 desc: Create, modify and control Lucky Wheel overlay straight from SAMMI
 category: games
-date: '2024-04-14T00:00:00-05:00'
+date: '2024-10-24T00:00:00-05:00'
 permalink: extensions/games/:slug
 download_url: https://christinak.itch.io/sammi-lucky-wheel
 developer_name: Christina K.

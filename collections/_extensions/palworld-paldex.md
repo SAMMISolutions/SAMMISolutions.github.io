@@ -12,7 +12,7 @@ developer_url: https://docs.christinak.ca/
 icon_local: palworld-paldex-icon.png
 trailer: https://www.youtube.com/embed/RzzlE1tZMWk
 screenshots_local: palworld-paldex-deck.png, palworld-paldex-chat.png
-version: 1.0
+version: 1.1
 sammi_version: 2023.3.1 and up
 platform: Any
 overview: |

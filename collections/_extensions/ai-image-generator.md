@@ -4,7 +4,7 @@ title: AI Image Generator
 slug: ai-image-generator
 desc: Integrate DALL-E in your streams.
 category: utilities
-date: '2023-04-20T00:00:00-05:00'
+date: '2024-04-27T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/ai-image-generator
 developer_name: Christina K.
@@ -12,7 +12,7 @@ developer_url: https://docs.christinak.ca/
 icon_local: image_generator_ico.png
 trailer: https://www.youtube.com/embed/7XYyDKLiqA8
 screenshots_local: image_generator_deck.png
-version: 1.0
+version: 1.2
 sammi_version: '2023.1.1^'
 platform: Any
 overview: |

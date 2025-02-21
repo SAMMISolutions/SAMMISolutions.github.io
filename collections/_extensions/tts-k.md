@@ -4,7 +4,7 @@ title: TTS by K
 slug: tts-k
 desc: TTS by Christina K. allows you to send text to speech to Web Speech API, Google API and Polly Amazon API.
 category: audio
-date: '2022-08-09T00:00:00-05:00'
+date: '2024-08-08T00:00:00-05:00'
 permalink: extensions/audio/tts-k
 download_url: https://christinak.itch.io/sammi-text-to-speech
 developer_name: Christina K.
@@ -12,7 +12,7 @@ developer_url: https://docs.christinak.ca/
 icon_local: ttsk_icon.png
 trailer: https://www.youtube.com/embed/AdynYGy5j3s
 screenshots_local: ttsK.png
-version: 1.0
+version: 1.5
 sammi_version: Any
 platform: Any
 overview: |

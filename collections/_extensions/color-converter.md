@@ -4,7 +4,7 @@ title: Color Converter
 slug: color-converter
 desc: Convert various color formats to an OBS accepted color format
 category: utilities
-date: '2022-08-03T00:00:00-05:00'
+date: '2022-10-02T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/sammi-color-converter
 developer_name: Christina K.

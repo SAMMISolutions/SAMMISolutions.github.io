@@ -12,7 +12,7 @@ developer_url: https://docs.christinak.ca/
 icon_local: advanced_buttons.png
 trailer: https://www.youtube.com/embed/PaB0DtheluM
 screenshots_local: advanced_buttons_ss.png
-version: 1.0
+version: 1.2
 sammi_version: 2024.1.1
 platform: Any
 overview: |

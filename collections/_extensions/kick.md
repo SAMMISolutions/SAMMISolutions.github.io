@@ -4,14 +4,14 @@ title: Kick Streaming
 slug: kick
 desc: Kick streaming events and commands in SAMMI
 category: social
-date: '2023-05-12T00:00:00-05:00'
+date: '2024-07-19T00:00:00-05:00'
 permalink: extensions/social/:slug
 download_url: https://christinak.itch.io/kick-for-sammi
 developer_name: Christina K.
 developer_url: https://docs.christinak.ca/
 icon_local: kick_icon.png
 screenshots_local: kick_deck.png
-version: 1.1
+version: 1.4
 sammi_version: 2023.2.1
 platform: Kick
 overview: |
