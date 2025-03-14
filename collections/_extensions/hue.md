@@ -11,7 +11,7 @@ developer_name: Chrizzz
 developer_url: https://linktr.ee/chrizzz_1508
 icon_local: hue_icon.png
 screenshots_local: hue_ss1.png
-version: 1.0
+version: 1.1
 sammi_version: '2024.4.0^'
 platform: Any
 overview: |
