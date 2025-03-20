@@ -4,7 +4,7 @@ title: Deck Hopper Advanced
 slug: deck-hopper-advanced
 desc: Get access to all the advanced features in Deck Hopper 
 category: utilities
-date: '2025-02-17T00:00:00-05:00'
+date: '2025-03-20T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/deck-hopper-advanced
 developer_name: Christina K.
@@ -12,7 +12,7 @@ developer_url: https://docs.christinak.ca/
 icon_local: dh_thumbnail.png
 screenshots_local: dh_embed-buttons.png, dh_block-buttons.png, dh_customize-buttons.png
 trailer: https://www.youtube.com/embed/OHmTuyZcnzw
-version: 1.5
+version: 1.6
 sammi_version: 2025.1.1 and up
 platform: Any
 overview: |
@@ -28,7 +28,9 @@ overview: |
         - This way, you can create a deck of your favorite buttons without needing to move them.  
     - **Twitch Embed buttons** (Pro)
         - You can embed a Twitch video or chat as a button in your deck. This feature also supports login. Open the 'Create Twitch Embed Button' inside Deck Hopper Advanced deck in SAMMI , edit the channel name and run the button. 
-    - **Vibrate device command** (Pro)
+    - **Vibrate device command**
+    - **Open and Close Popup Message command** (Pro)
+    - **Open and Close URL command** (Pro)
     - **Customize button** (Pro)
         - Automatically creates button text customization JSON, such as changing color, shadow, alignment and more, which you can use inside your button to display in Deck Hopper
     - **See blocked buttons** inside a deck in Deck Hopper
