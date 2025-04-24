@@ -4,7 +4,7 @@ title: Welcome Messages
 slug: welcome
 desc: Welcome Messages
 category: utilities
-date: '2025-03-04T00:00:00-00:00'
+date: '2025-04-24T00:00:00-00:00'
 permalink: extensions/utilities/welcome
 download_url: https://ko-fi.com/s/eb008de324
 developer_name: Chrizzz
