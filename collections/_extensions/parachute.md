@@ -9,8 +9,8 @@ permalink: extensions/games/:slug
 download_url: https://ko-fi.com/s/b165c9077d
 developer_name: Chrizzz
 developer_url: https://linktr.ee/chrizzz_1508
-icon_local: hangman_icon.png
-screenshots_local: hangman_ss1.png
+icon_local: parachute_icon.png
+screenshots_local: parachute_ss1.png
 trailer: https://sammi.solutions/assets/videos/extensions/parachute.mp4
 version: 1.0
 sammi_version: '2025.1.1^'
