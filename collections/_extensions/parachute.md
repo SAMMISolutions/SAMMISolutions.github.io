@@ -4,7 +4,7 @@ title: Parachute Game
 slug: parachute
 desc: This extension let's your viewers jump out of a plane while trying to land on a moving platform
 category: games
-date: '2024-12-09T00:00:00-00:00'
+date: '2025-05-12T00:00:00-00:00'
 permalink: extensions/games/:slug
 download_url: https://ko-fi.com/s/b165c9077d
 developer_name: Chrizzz
