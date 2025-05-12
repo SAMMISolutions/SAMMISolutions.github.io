@@ -21,19 +21,19 @@ overview: |
     The closer they land to the center 🎯, the more points they earn. 
     That way they can compete with others and climb the leaderboard!
     
-    ####🛫 HOW IT WORKS 
+    #### 🛫 HOW IT WORKS 
     
     Viewers type !jump in chat to skydive from a plane.
     Their profile image floats down with gravity 🌍 and wind 💨 affecting their fall.
     There’s a moving platform to land on — bonus points for landing dead center 💥
     
-    ####🧑‍🚀 VIEWER COMMANDS
+    #### 🧑‍🚀 VIEWER COMMANDS
     
     !jump → Jump from the plane with your profile pic
     !pg-rank → See your personal rank & number of jumps
     !pg-top10 / !pg-leaderboard → View the top 10 players 🏆
     
-    ####🔧 MOD/ADMIN COMMANDS 
+    #### 🔧 MOD/ADMIN COMMANDS 
     
     !pg-start → Start the game
     !pg-stop / !pg-end → End the game
@@ -42,7 +42,7 @@ overview: |
     !plane+ / !plane- → Control plane speed
     !platform+ / !platform- → Control platform speed
     
-    ####⚙️ CUSTOMIZABLE GAME SETTINGS
+    #### ⚙️ CUSTOMIZABLE GAME SETTINGS
     
     All values are fully tweakable to match your stream’s vibe:
     
@@ -52,7 +52,7 @@ overview: |
     platform_speed → Speed of the landing platform
     keep_data → true to keep leaderboard between games, false to reset each time
     
-    ####🧩 EXTENSION COMMANDS
+    #### 🧩 EXTENSION COMMANDS
     
     🪂 PG: Jump
     
