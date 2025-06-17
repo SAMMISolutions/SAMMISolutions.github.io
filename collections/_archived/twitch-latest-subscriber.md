@@ -7,7 +7,7 @@ date: '2020-09-11T00:00:00-04:00'
 permalink: extensions/twitch/:slug
 download_url: https://discord.com/channels/699319482442711072/712274509389889618/753949869323845653
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 version: 1.0
 sammi_version: 1.40 
 platform: Twitch

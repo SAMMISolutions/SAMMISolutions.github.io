@@ -8,7 +8,7 @@ date: '2022-02-08T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/sammi-timer
 developer_name: Christina K., Chrizzz
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 version: 1.0
 icon_local: timer.png
 screenshots_local: timer_deck.png

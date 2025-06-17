@@ -9,7 +9,7 @@ permalink: extensions/miscellaneous/:slug
 download_url: https://christinak.itch.io/lioranboard-lifx
 setup_url: https://christinna9031.github.io/LBDocumentation/externalext.html#Lifx
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: lifx.png
 trailer: https://clips.twitch.tv/embed?clip=NeighborlyExcitedBeefCurseLit-sYuoeGcY-_7Tka_m
 version: 1.0

@@ -4,11 +4,11 @@ title: Puzzle Game
 slug: puzzle-game
 desc: Transform any OBS source into a puzzle game for your viewers.
 category: games 
-date: '2024-01-12T00:00:00-05:00'
+date: '2025-01-12T00:00:00-05:00'
 permalink: extensions/games/:slug
 download_url: https://christinak.itch.io/sammi-puzzle-game
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: puzzle_game.png
 trailer: https://www.youtube.com/embed/fL8GVWe1bv8
 screenshots_local: puzzle_game_ss0.png, puzzle_game_ss.png, puzzle_game_ss2.png, puzzle_game_ss3.png

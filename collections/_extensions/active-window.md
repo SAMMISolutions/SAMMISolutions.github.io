@@ -8,7 +8,7 @@ date: '2023-07-06T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/sammi-active-window
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: active_window.png
 trailer: https://www.youtube.com/embed/6muJS9hh6xo
 screenshots_local: active_window_ss.png

@@ -4,15 +4,15 @@ title: ChatGPT
 slug: chat-gpt
 desc: Integrate ChatGPT in your Twitch and YouTube chat.  
 category: utilities
-date: '2023-03-11T00:00:00-05:00'
+date: '2025-02-17T00:00:00-05:00'
 permalink: extensions/utilities/:slug
-download_url: https://christinak.itch.io/chatgpt
+download_url: https://docs.christinak.ca/docs/extensions/chatgpt
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: chatgpt_ico.png
 trailer: https://www.youtube.com/embed/6k28_ehxyAk
 screenshots_local: chatgpt_deck.png
-version: 1.0
+version: 2.0
 sammi_version: '2023.1.1^'
 platform: Any
 overview: |

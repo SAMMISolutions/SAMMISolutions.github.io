@@ -4,14 +4,14 @@ title: Google Sheets
 slug: google-sheets
 desc: Read and manipulate data in your Google Sheets directly from SAMMI
 category: productivity
-date: '2022-10-15T00:00:00-05:00'
+date: '2023-06-05T00:00:00-05:00'
 permalink: extensions/productivity/:slug
 download_url: https://christinak.itch.io/sammi-google-sheets
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: gsheets.png
 screenshots_local: g_sheets_deck.png
-version: 1.0
+version: 1.3
 sammi_version: 2022.4.4
 platform: Any
 overview: |

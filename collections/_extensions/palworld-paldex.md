@@ -8,11 +8,11 @@ date: '2024-01-25T00:00:00-05:00'
 permalink: extensions/games/:slug
 download_url: https://christinak.itch.io/palworld-paldex
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: palworld-paldex-icon.png
 trailer: https://www.youtube.com/embed/RzzlE1tZMWk
 screenshots_local: palworld-paldex-deck.png, palworld-paldex-chat.png
-version: 1.0
+version: 1.1
 sammi_version: 2023.3.1 and up
 platform: Any
 overview: |

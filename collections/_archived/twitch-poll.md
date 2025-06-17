@@ -7,7 +7,7 @@ date: '2021-07-22T00:00:00-05:00'
 permalink: extensions/twitch/:slug
 download_url: https://christinak.itch.io/lioranboard-create-twitch-poll
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: create_poll.png 
 version: 1.0
 sammi_version: 1.42 

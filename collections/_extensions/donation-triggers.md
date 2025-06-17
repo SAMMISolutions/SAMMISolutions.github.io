@@ -8,7 +8,7 @@ date: '2024-09-18T00:00:00-05:00'
 permalink: extensions/alerts/:slug
 download_url: https://christinak.itch.io/donation-triggers
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: donation_triggers_icon.png
 screenshots_local: donation_triggers.png
 version: 1.0

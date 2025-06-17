@@ -8,7 +8,7 @@ date: '2025-01-12T00:00:00-05:00'
 permalink: extensions/social/:slug
 download_url: https://christinak.itch.io/ko-fi-triggers
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: kofi_icon.png
 screenshots_local: kofi_deck.png
 version: 1.1

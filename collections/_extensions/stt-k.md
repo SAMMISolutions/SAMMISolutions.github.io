@@ -4,15 +4,15 @@ title: Speech to Text
 slug: stt-k
 desc: Transcribe speech in real time. Multiple engines supported.
 category: audio
-date: '2023-09-20T00:00:00-05:00'
+date: '2024-10-05T00:00:00-05:00'
 permalink: extensions/audio/stt-k
 download_url: https://christinak.itch.io/speech-to-text
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: stt_icon.png
 trailer: https://www.youtube.com/embed/mnBkmQNGU0k
 screenshots_local: sttk.png
-version: 1.0
+version: 1.1
 sammi_version: 2023.2.2
 platform: Any
 overview: |

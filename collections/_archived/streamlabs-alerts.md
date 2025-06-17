@@ -7,7 +7,7 @@ date: '2020-11-01T21:00:00-05:00'
 permalink: extensions/alerts/:slug
 download_url: https://github.com/christinna9031/LB-Streamlabs-Alerts/releases
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 version: 1.2a
 sammi_version: 1.42 
 platform: Twitch, YouTube

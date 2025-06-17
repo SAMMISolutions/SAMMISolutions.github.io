@@ -7,7 +7,7 @@ date: '2021-07-28T00:00:00-05:00'
 permalink: extensions/twitch/:slug
 download_url: https://christinak.itch.io/lb-eventsub-webhook
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: eventsub.png
 trailer: https://clips.twitch.tv/embed?clip=MoralEntertainingHippoGOWSkull-WDNHwfVhJ1Bq9zr_&parent=sammi.solutions
 screenshots_local: eventsub_ss.png, eventsub_ss2.png

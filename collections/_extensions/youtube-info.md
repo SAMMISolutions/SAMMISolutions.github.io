@@ -4,11 +4,11 @@ title: Youtube Info
 slug: youtube-info
 desc: Get YouTube video info, duration, captions and more.
 category: utilities
-date: '2024-09-28T00:00:00-05:00'
+date: '2024-09-30T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/youtube-info
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: youtube_info.png
 screenshots_local: youtube_info_ss.png, youtube_info_captions.png, youtube_info_video-info.png, youtube_info_search.png
 version: 1.0

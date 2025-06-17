@@ -4,11 +4,11 @@ title: Input Validator
 slug: input-validator
 desc: Validate your viewers input, such as checking for valid URLs, safe images or using regex.
 category: utilities
-date: '2023-01-07T00:00:00-05:00'
+date: '2024-09-09T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/input-validator
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: input_validator.png
 screenshots_local: input_validator_ss.png
 trailer: https://www.youtube.com/embed/zo-PAYc0yRs

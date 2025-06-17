@@ -4,11 +4,11 @@ title: Click Map
 slug: click-map
 desc: Let your viewers interact with your stream by clicking on your live video
 category: miscellaneous
-date: '2022-09-28T00:00:00-05:00'
+date: '2024-01-05T00:00:00-05:00'
 permalink: extensions/miscellaneous/:slug
 download_url: https://christinak.itch.io/sammi-click-map
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: click_map.png
 trailer: https://www.youtube.com/embed/hr9Ho1MVjiw
 screenshots_local: click_map_ex.png

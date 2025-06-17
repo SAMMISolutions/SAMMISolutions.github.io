@@ -4,15 +4,15 @@ title: Dynamic Triggers
 slug: dynamic-triggers
 desc: Attach triggers to buttons dynamically via SAMMI commands
 category: utilities
-date: '2024-07-15T00:00:00-05:00'
+date: '2024-08-26T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/dynamic-triggers
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: dynamic_triggers.png
 trailer: https://www.youtube.com/embed/LW99bDilbLU
 screenshots_local: dynamic-triggers_ss.png
-version: 1.1
+version: 1.2
 sammi_version: 2024.1.1
 platform: Any
 overview: |

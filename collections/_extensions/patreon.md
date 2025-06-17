@@ -8,7 +8,7 @@ date: '2022-08-21T00:00:00-05:00'
 permalink: extensions/social/:slug
 download_url: https://christinak.itch.io/patreon-triggers
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: patreon.png
 trailer: https://www.youtube.com/embed/t4HbQWAniMA
 screenshots_local: patreon_ss.png

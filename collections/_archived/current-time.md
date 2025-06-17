@@ -8,7 +8,7 @@ date: '2022-05-03T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://github.com/christinna9031/LB-Current-Time-and-Date/releases
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 version: 1.2
 sammi_version: any
 platform: Any

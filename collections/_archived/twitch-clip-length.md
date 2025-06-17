@@ -7,7 +7,7 @@ date: '2020-10-22T17:12:00-04:00'
 permalink: extensions/twitch/:slug
 download_url: https://github.com/christinna9031/LB-Twitch-Clip-Length/releases
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 version: 1.3
 sammi_version: 1.40
 platform: Twitch

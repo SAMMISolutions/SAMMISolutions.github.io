@@ -8,7 +8,7 @@ date: '2024-05-25T00:00:00-05:00'
 permalink: extensions/utilities/:slug
 download_url: https://christinak.itch.io/auto-deck-backup
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: auto_deck_backup.png
 screenshots_local: auto_deck_backup_ss.png, auto_deck_backup_ss2.png, auto_deck_backup_ss3.png
 version: 1.0

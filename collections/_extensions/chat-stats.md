@@ -4,15 +4,15 @@ title: Chat Stats
 slug: chat-stats
 desc: Generate a word cloud, chat summary and viewer tree! 
 category: twitch
-date: '2023-06-16T00:00:00-05:00'
+date: '2024-09-13T00:00:00-05:00'
 permalink: extensions/twitch/:slug
 download_url: https://christinak.itch.io/chat-stats
 developer_name: Christina K.
-developer_url: https://christinak.itch.io
+developer_url: https://docs.christinak.ca/
 icon_local: chat_stats_ico.png
 trailer: https://www.youtube.com/embed/BNRxS6fz4O0
 screenshots_local: chat_stats_screenshot.png, chat_logs_ex.png, chat_logs_ex2.png, chat_logs_ex3.png, chat_logs_ex4.png, chat_logs_ex5.png, chat_logs_ex6.png
-version: 1.0
+version: 1.4
 sammi_version: '2023.2.1^'
 platform: Twitch
 overview: |
