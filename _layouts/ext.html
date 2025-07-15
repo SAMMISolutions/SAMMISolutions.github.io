@@ -79,6 +79,13 @@ layout: barebone
             </a>
           </li>
           <li class="lb-extbutton nav-item">
+            <a href="{{ 'extensions/policy' | relative_url }}"
+              class="nav-link text-white {% if page.title == 'Submit Extension' %} active {% endif %}">
+              <i class="fas fa-file-contract pe-2"></i>
+              Extension Policy
+            </a>
+          </li>
+          <li class="lb-extbutton nav-item">
             <a href="{{ 'extensions/submit' | relative_url }}"
               class="nav-link text-white {% if page.title == 'Submit Extension' %} active {% endif %}">
               <i class="fas fa-edit pe-2"></i>
