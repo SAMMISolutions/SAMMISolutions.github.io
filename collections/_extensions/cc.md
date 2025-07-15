@@ -5,7 +5,7 @@ slug: cc
 desc: Control your game experience through crowd interaction using Crowd Control and SAMMI
 category: utilities
 date: '2025-07-15T00:00:00-00:00'
-permalink: extensions/utilities/:slug
+permalink: extensions/utilities/cc
 download_url: https://ko-fi.com/s/56084d80e5
 developer_name: Chrizzz
 developer_url: https://linktr.ee/chrizzz_1508
