@@ -15,7 +15,7 @@ version: 3.0
 sammi_version: '2025.1.0^'
 platform: Any
 overview: |
-    ####Description
+    #### Description
     This SAMMI extension let's you control Voicemod, allowing you to dynamically change your voice in real time.
     It adds an interactive, fun layer to your streams or content creation.
     

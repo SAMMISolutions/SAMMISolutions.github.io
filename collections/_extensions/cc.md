@@ -15,7 +15,7 @@ version: 1.1
 sammi_version: '2025.1.0^'
 platform: Any
 overview: |
-    ####Description
+    #### Description
     Control your game experience through crowd interaction using Crowd Control and SAMMI
 
     #### Crowd Control Commands
