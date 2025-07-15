@@ -18,7 +18,7 @@ overview: |
     #### Overview
     
     This SAMMI extension lets you read and react to your heartbeat within SAMMI using any Pulsoid heart rate monitor.
-    For more details about Pulsoid, check out their site. :contentReference[oaicite:1]{index=1}
+    For more details about Pulsoid, check out their site.
 setup_url: https://sammi.solutions/extensions/install
 privacy_collect: false
 ---

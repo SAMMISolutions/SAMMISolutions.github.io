@@ -4,7 +4,7 @@ title: Hi-Lo Cardgame
 slug: hilo
 desc: A guessing game where you need to guess if the next card is gonna be higher or lower
 category: games
-date: '2024-12-09T00:00:00-00:00'
+date: '2025-07-15T00:00:00-00:00'
 permalink: extensions/games/:slug
 download_url: https://ko-fi.com/s/7f2aa8dd20
 developer_name: Chrizzz
