@@ -11,7 +11,7 @@ developer_name: Chrizzz
 developer_url: https://linktr.ee/chrizzz_1508
 icon_local: voicemod_icon.png
 screenshots_local: voicemod_ss1.png, voicemod_ss2.png
-version: 1.1
+version: 3.0
 sammi_version: '2025.1.0^'
 platform: Any
 overview: |
