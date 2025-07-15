@@ -17,11 +17,7 @@ platform: Any
 overview: |
     ####Description
     Control your game experience through crowd interaction using Crowd Control and SAMMI
-    #### Setup
-    
-    1. Inside SAMMI go to **SAMMI Bridge**, select **Install an Extension** and then the `Crowd Control.sef` file  
-    2. Select the platform, username, game, and pack in the Bridge.
-    
+
     #### Crowd Control Commands
     
     SAMMI offers several commands for Crowd Control. These commands may take a short time to execute. It is recommended to use **Wait Until Variable Exists** for handling results.
