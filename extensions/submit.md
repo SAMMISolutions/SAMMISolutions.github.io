@@ -21,42 +21,9 @@ server](https://discord.gg/dXez8Zh) where you can post it for testing!
 
 #### Release an extension
 Is your extension ready to be released to public? Have you fully tested its functionality? Great! You can use the form
-below to submit it!
-
-##### Rules for submitting a new extension
-1. **Ensure the extension does not violate our extension policy**\
-Before submitting an extension, read and follow the [Extension Policy](https://sammi.solutions/docs/extension-policy) to ensure that your
+below to submit it!\
+Before submitting an extension, read and follow the [Extension Policy](/extensions/policy) to ensure that your
 extension is allowed in official public spaces such as this one.
-2. **The extension and its name is unique**\
-Do not release slightly modified existing extensions or extensions with a very similar functionality, but rather
-collaborate with the original author. Do not copy and paste code from other extensions without the explicit approval
-from the original author.
-3. **You've tested the extension extensively**\
-The best way to test an extension is to download a clean copy of SAMMI, use a clean Bridge file and use a new
-scene collection in your OBS. Even better way is to share it with a few select beta testers to test it with different
-setups.
-4. **Publicly accessible source code**\
-If your extension is not publicly accessible, you must provide us a way to verify its source code before having it
-posted on the website. This is to protect users from downloading malicious extensions. Contact one of the SAMMI
-Discord mods before submitting your extension in this case.
-5. **The extension is hosted on a secure server (`https`)**\
-We recommend using [Github](https://github.com/) where you can easily create a new account to upload your creations.
-6. **No obscure external libraries**\
-Unless you're a verified extension developer in our Discord server, do not link to obscure external libraries in the
-extension file.
-7. **Follow best coding practices**
-- do not pollute global namespace\
-*Users can have dozens of different extensions installed. Try to avoid using global variables both in SAMMI and
-Bridge.*
-- optimize loops in Bridge
-- beware of memory leaks in Bridge\
-*For example, calling an api every second might cause a memory leak and subsequent crash as some streamers run
-Bridge for 5+ hours without refreshing it.*
-- do not overwrite global event handlers in Bridge\
-*For example, instead of `window.onload` use `addEventListener()`method.*
-- leave comments where needed
-8. **We reserve the right to reject or delete an existing extension for any reason or no reason, and without notice to
-you.**
 
 <!-- 
 
