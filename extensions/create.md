@@ -63,6 +63,43 @@ Learn more about Listening to Extension Commands in the [SAMMI Bridge documentat
 
 SAMMI Bridge provides premade helper functions for you to use, such as retrieving variables, setting variables, triggering buttons and more. You can find all the helper functions in the [SAMMI Bridge documentation](https://github.com/SAMMISolutions/SAMMI-Bridge#helper-functions)
 
+⚠️ **Data Size Limitation**  
+
+When using commands like `SAMMI.setVariable` to send data back to SAMMI, be aware there's a limit to how much data you can send in a single message. SAMMI uses WebSockets, which can drop data if it's too large.  
+
+If you're working with large payloads (e.g. JSON objects, arrays, or long strings), you must split (chunk) the data into smaller parts and send them sequentially, and then reassemble them in SAMMI.  
+
+```javascript
+// Utility to chunk large data and send it to SAMMI as an array of variables
+export default function chunkSender(data, variableName, chunkSize, FromButton, instanceId) {
+    return new Promise((resolve, reject) => {
+      const totalChunks = Math.ceil(data.length / chunkSize);
+      let chunksSent = 0;
+      const arrPlaceholder = new Array(totalChunks).fill('');
+      SAMMI.setVariable(variableName, arrPlaceholder, FromButton, instanceId);
+
+      for (let i = 0; i < data.length; i += chunkSize) {
+        const chunk = data.slice(i, i + chunkSize);
+        const variableIndex = i !== 0 ? i / chunkSize : i;
+
+        SAMMI.setVariable(`${variableName}[${variableIndex}]`, chunk, FromButton, instanceId)
+          .then(() => {
+            chunksSent++;
+            if (chunksSent === totalChunks) {
+              resolve();
+            }
+          })
+          .catch(reject);
+      }
+    });
+}
+
+// Example usage:
+chunkSender(largeDataString, 'myLargeData', 1000, FromButton)
+  .then(() => console.log('All chunks sent!'))
+  .catch(console.error);
+```
+
 #### [insert_over]
 In this section you simply copy and paste your deck from SAMMI Core you wish to distribute with your extension. When users install your extension, the deck will be automatically added to their SAMMI Core. 
 
