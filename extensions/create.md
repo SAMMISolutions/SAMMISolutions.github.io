@@ -69,7 +69,7 @@ When using commands like `SAMMI.setVariable` to send data back to SAMMI, be awar
 
 If you're working with large payloads (e.g. JSON objects, arrays, or long strings), you must split (chunk) the data into smaller parts and send them sequentially, and then reassemble them in SAMMI.  
 
-```javascript
+```js
 // Utility to chunk large data and send it to SAMMI as an array of variables
 export default function chunkSender(data, variableName, chunkSize, FromButton, instanceId) {
     return new Promise((resolve, reject) => {
