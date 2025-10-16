@@ -5,7 +5,7 @@ slug: bday
 desc: Celebrate the birthdays of your viewers on stream
 category: utilities
 date: '2025-10-17T00:00:00-00:00'
-permalink: extensions/utilities/:slug
+permalink: extensions/utilities/bday
 download_url: https://ko-fi.com/s/2c1c505a08
 developer_name: Chrizzz
 developer_url: https://linktr.ee/chrizzz_1508
