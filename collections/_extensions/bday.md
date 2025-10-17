@@ -16,16 +16,16 @@ version: 1.0
 sammi_version: '2025.2.1^'
 platform: Any
 overview: |
-    #### 📅 How it works
+    #### How it works
     
     Viewers can register their birthday with a simple chat command with !setbday <day>.<month> (you can also change this to <month>.<day>. in the settings.
     Once they’ve set their birthday, on the first message they send on their special day, a celebration will automatically trigger on stream:
     
-    - 🍰 A birthday cake appears
-    - 🏷️ A banner with their username shows up
-    - 🎶 A Happy Birthday song plays
+    - A birthday cake appears
+    - A banner with their username shows up
+    - A Happy Birthday song plays
     
-    #### 💡 Notes:
+    #### Notes:
     
     - The celebration only triggers once per user per birthday (on their first message).
     - Only the day and month are required (no year).

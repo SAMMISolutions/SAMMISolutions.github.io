@@ -19,14 +19,14 @@ overview: |
 
     This extension automatically downloads all clips generated on your Twitch channel
     
-    #### 🔧 Features
+    #### Features
 
     - Automatically fetches all new Twitch clips created while SAMMI is open
     - Saves them straight into your SAMMI folder
     - Organizes clips into daily subfolders
     - Filenames include the time, username and the clip ID for easy tracking   
 
-    #### 📝 Notes
+    #### Notes
 
     - Runs completely in the background – no more manual downloads or messy folders
 setup_url: https://sammi.solutions/extensions/install
