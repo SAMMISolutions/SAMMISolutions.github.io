@@ -18,9 +18,9 @@ Going against this policy will mark your extension as **"restricted"** and canno
 
 ## Policy rules
 
-- Make sure your extension is not a slightly modified version of an existing one or copied from other extensions without the explicit approval from the original author, which we will reach out to in order to verify. It is encouraged to collaborate with existing extensions already listed, but not required.
+- Make sure your extension idea is unique and not a modified version of an existing extension. It is encouraged to collaborate with existing extensions already listed, but not required.
+- Don't copy code from other extensions without the explicit approval from the original author, which we will reach out to in order to verify.
 - Avoid releasing extensions that, by direct use, pose a potential risk of physical harm or other hazardous condition to yourself or others.
-- Refrain from using generative AI imagery in your extension's presentation, such as in its thumbnail or preview imagery. Note, this does not account for the content or purpose of your extension.
 - Take time to test your extension thoroughly. The best way to test an extension is to download a clean copy of SAMMI, use a clean Bridge file and use a new scene collection in your OBS. Even better way is to share it with a few select beta testers to test it with different setups. There are plenty of people available in our discord eager to help!
 - Be prepared to provide a way for the team to verify the source code of your extension. If your extension is not publicly accessible, you must provide us a way to verify its source code before having it posted on the website. This is to protect users from downloading malicious extensions. Contact one of the SAMMI Discord mods before submitting your extension in this case.
 - Use a secure server (https) to host your extension. Since we do not store the extension ourselves, you are in charge of hosting your extension and providing us a link. We recommend using Github where you can easily create a new account to upload your creations. If you're looking to accept donations or host a paid extension, some top recommendations are ko-fi, and itch.
