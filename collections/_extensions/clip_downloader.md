@@ -1,6 +1,6 @@
 ---
 layout: ext_single
-title: Birthday Notifications
+title: Clip Downloader
 slug: clip_downloader
 desc: Automatically download all clips generated on your Twitch channel
 category: utilities
