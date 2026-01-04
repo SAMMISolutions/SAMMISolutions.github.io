@@ -10,7 +10,7 @@ download_url: https://christinak.itch.io/kick-for-sammi
 developer_name: Christina K.
 developer_url: https://docs.christinak.ca/
 icon_local: kick_icon.png
-screenshots_local: kick_deck.png, kick_status.png, kick_replay_png, kick_logging.png
+screenshots_local: kick_deck.png, kick_status.png, kick_replay.png, kick_logging.png
 version: 2.2
 sammi_version: 2025.4.0
 platform: Kick
