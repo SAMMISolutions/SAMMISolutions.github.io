@@ -4,7 +4,7 @@ title: Spotify
 slug: spotify
 desc: Spotify overlay and full control from your Stream Deck
 category: audio
-date: '2024-12-23T00:00:00-05:00'
+date: '2025-03-05T00:00:00-05:00'
 permalink: extensions/audio/spotify
 download_url: https://christinak.itch.io/sammi-spotify
 developer_name: Christina K.
@@ -12,7 +12,7 @@ developer_url: https://docs.christinak.ca/
 icon_local: spotify.png 
 trailer: https://www.youtube.com/embed/7SUouQavOd8
 screenshots_local: spotify3_ss.png, spotify3_obs.png, spotify3_trigger_track.png
-version: 3.1
+version: 3.3
 sammi_version: 2022.5.0
 platform: OBS
 overview: |
@@ -88,9 +88,7 @@ overview: |
     <hr>
 
     ##### Randomize it 
-    - Get a random track, album or playlist and start playing it 
-
-    ![Spotify Randomize](spotify3_random.png)
+    - Get a random track or playlist, and start playing it 
 
     <hr>
 
