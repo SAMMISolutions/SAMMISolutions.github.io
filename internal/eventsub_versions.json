@@ -29,8 +29,5 @@
     "channel.prediction.end": "1",
     "channel.poll.begin": "1",
     "channel.poll.progress": "1",
-    "channel.poll.end": "1",
-    "channel.hype_train.begin": "1",
-    "channel.hype_train.progress": "1",
-    "channel.hype_train.end": "1"
+    "channel.poll.end": "1"
   }
