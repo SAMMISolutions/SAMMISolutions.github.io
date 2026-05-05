@@ -158,6 +158,20 @@
     this.classList.toggle('bi-x')
   })
 
+  window.addEventListener('resize', () => {
+    if (window.innerWidth >= 992) {
+      let navbar = select('#navbar')
+      let navbarToggle = select('.mobile-nav-toggle')
+      if (navbar && navbar.classList.contains('navbar-mobile')) {
+        navbar.classList.remove('navbar-mobile')
+      }
+      if (navbarToggle && navbarToggle.classList.contains('bi-x')) {
+        navbarToggle.classList.remove('bi-x')
+        navbarToggle.classList.add('bi-list')
+      }
+    }
+  })
+
   /**
    * Mobile nav dropdowns activate
    */
