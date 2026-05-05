@@ -116,9 +116,9 @@ code {
 }
 
 .btn-lb-download:last-of-type {
-  background: linear-gradient(135deg, var(--sammi-blue), var(--sammi-violet));
+  background: linear-gradient(135deg, #1d75ad, #6c4bd6);
   border-color: rgba(147, 197, 253, 0.24);
-  box-shadow: 0 14px 34px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 14px 34px rgba(29, 117, 173, 0.2);
 }
 
 .btn-lb-download:hover {
@@ -467,10 +467,10 @@ body > header h1,
 .lb-content .btn-primary {
   color: white !important;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--sammi-blue), var(--sammi-violet)) !important;
+  background: linear-gradient(135deg, #1d75ad, #6c4bd6) !important;
   border: 0;
   border-radius: 999px;
-  box-shadow: 0 14px 34px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 14px 34px rgba(29, 117, 173, 0.2);
 }
 
 main.lb-content {
@@ -494,9 +494,9 @@ main.lb-content > .container {
 
 .feature-icon {
   color: white;
-  background: linear-gradient(135deg, var(--sammi-blue), var(--sammi-violet)) !important;
+  background: linear-gradient(135deg, #1d75ad, #6c4bd6) !important;
   border-radius: 8px;
-  box-shadow: 0 14px 34px rgba(56, 189, 248, 0.18);
+  box-shadow: 0 14px 34px rgba(29, 117, 173, 0.18);
 }
 
 .feature h2 {

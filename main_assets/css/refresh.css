@@ -107,10 +107,10 @@ a {
   padding: 9px 15px;
   color: white;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--sammi-blue), var(--sammi-violet));
+  background: linear-gradient(135deg, #1d75ad, #6c4bd6);
   border: 0;
   border-radius: 999px;
-  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.24);
+  box-shadow: 0 12px 30px rgba(29, 117, 173, 0.24);
 }
 
 .header-social-links a,
@@ -244,10 +244,10 @@ a {
   font-weight: 850;
   letter-spacing: 0;
   text-transform: none;
-  background: linear-gradient(135deg, var(--sammi-blue), var(--sammi-violet));
+  background: linear-gradient(135deg, #1d75ad, #6c4bd6);
   border: 1px solid rgba(147, 197, 253, 0.24);
   border-radius: 999px;
-  box-shadow: 0 16px 38px rgba(56, 189, 248, 0.22);
+  box-shadow: 0 16px 38px rgba(29, 117, 173, 0.22);
   transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 
@@ -259,7 +259,7 @@ a {
   color: white;
   text-decoration: none;
   transform: translateY(-2px);
-  background: linear-gradient(135deg, #0ea5e9, #7c3aed);
+  background: linear-gradient(135deg, #16689d, #6042c2);
 }
 
 .btn-secondary-action {
@@ -778,11 +778,11 @@ section {
 }
 
 #footer .footer-top .social-links a:hover {
-  background: linear-gradient(135deg, var(--sammi-blue), var(--sammi-violet));
+  background: linear-gradient(135deg, #1d75ad, #6c4bd6);
 }
 
 .back-to-top {
-  background: linear-gradient(135deg, var(--sammi-blue), var(--sammi-violet));
+  background: linear-gradient(135deg, #1d75ad, #6c4bd6);
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 14px 36px rgba(0, 0, 0, 0.28);
 }
