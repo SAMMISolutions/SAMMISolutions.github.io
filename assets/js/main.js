@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
 /// maintain scroll position
 function maintainScroll() {
   const sidebar = document.querySelector('.sidebar');
+  if (!sidebar) return;
+
   const top = localStorage.getItem('sidebar-scroll');
   if (top !== null) {
     sidebar.scrollTop = parseInt(top, 10);

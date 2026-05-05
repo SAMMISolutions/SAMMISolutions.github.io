@@ -12,6 +12,7 @@
 {% if page.css %}
 <link href="{{ 'assets/css/' | append: page.css | append: '.css' | relative_url }}" rel="stylesheet">
 {% endif %}
+<link href="{{ 'assets/css/refresh.css' | relative_url }}" rel="stylesheet">
 <link rel="apple-touch-icon" sizes="180x180" href="{{ 'assets/favicon/apple-touch-icon.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="32x32" href="{{ 'assets/favicon/favicon-32x32.png' | relative_url }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ 'assets/favicon/favicon-16x16.png' | relative_url }}">
@@ -52,7 +53,7 @@
         <a class="nav-link p-2" target="_blank" href="https://feedback.sammi.solutions/" alt="We want your feedback and suggestions!">Feedback</a>
       </li>
       <li class="nav-item col-6 col-lg-auto">
-        <a class="nav-link p-2 {% if page.title == 'Donate' %} active {% endif %}" href="https://sammi.solutions/donate">Support Us</a>
+        <a class="nav-link p-2 {% if page.title == 'Donate' or page.title == 'Support Us' %} active {% endif %}" href="https://sammi.solutions/donate">Support Us</a>
       </li>
     </ul>
     <!-- menu items end -->
@@ -71,7 +72,12 @@
       darkSwitch.setAttribute('class', 'form-check-input');
       darkSwitch.setAttribute('id', 'DarkModeSwitch');
       darkSwitch.setAttribute('type', 'checkbox');
-      if (window.schemeChecked) darkSwitch.checked = true;
+      darkSwitch.checked = true;
+      document.documentElement.setAttribute('data-theme', 'dark');
+      document.body?.setAttribute('data-theme', 'dark');
+      const schemeStyle = document.getElementById('scheme');
+      if (schemeStyle) schemeStyle.textContent = ':root{color-scheme:dark}';
+      try { localStorage.setItem('scheme', 'dark'); } catch (error) {}
       if (darkSwitchDiv) darkSwitchDiv.prepend(darkSwitch);
     </script>
     <a class="btn btn-lb-download d-lg-inline-block my-2 my-lg-0 ms-lg-3" href="https://discord.gg/dXez8Zh">Join Discord</a>
