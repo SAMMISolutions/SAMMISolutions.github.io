@@ -5,13 +5,13 @@ slug: twitch-chat-logs
 desc: Retrieve and search through a chat log from any Twitch VOD.  
 category: twitch
 date: '2023-06-04T00:00:00-05:00'
-permalink: extensions/twitch/:slug
+permalink: /extensions/twitch/twitch-chat-logs/
 download_url: https://christinak.itch.io/twitch-chat-logs
 developer_name: Christina K.
 developer_url: https://docs.christinak.ca/
-icon_local: twitch_chat_logs_ico.png
+icon_ex: 'https://sammi.solutions/assets/images/extensions/twitch_chat_logs_ico.png'
 trailer: https://www.youtube.com/embed/FHqYyUdgilo
-screenshots_local: twitch_chat_logs_screenshot.png
+screenshots_ex: 'https://sammi.solutions/assets/images/extensions/twitch_chat_logs_screenshot.png'
 version: 1.3
 sammi_version: '2023.1.1^'
 platform: Any
