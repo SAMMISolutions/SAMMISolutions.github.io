@@ -9,8 +9,8 @@ permalink: /extensions/twitch/twitch-event-feed/
 download_url: https://ko-fi.com/s/74dbd41469
 developer_name: KevinPorKevin
 developer_url: https://kevinporkevin.carrd.co/
-icon_ex: 'https://sammi.solutions/assets/images/extensions/TwitchEventFeedIcon.png'
-screenshots_ex: 'https://sammi.solutions/assets/images/extensions/TwitchEventFeedIcon.png'
+icon_local: TwitchEventFeedIcon.png
+screenshots_local: TwitchEventFeedIcon.png
 trailer: https://www.youtube.com/watch?v=z33oaRhiOns
 version: 1.0
 sammi_version: '2026.5.0^'
