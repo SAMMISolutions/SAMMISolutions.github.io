@@ -11,7 +11,7 @@ developer_name: KevinPorKevin
 developer_url: https://kevinporkevin.carrd.co/
 icon_local: TwitchEventFeedIcon.png
 screenshots_local: TwitchEventFeedIcon.png
-trailer: https://www.youtube.com/watch?v=z33oaRhiOns
+trailer: https://www.youtube.com/embed/z33oaRhiOns
 version: 1.0
 sammi_version: '2026.5.0^'
 platform: Twitch
