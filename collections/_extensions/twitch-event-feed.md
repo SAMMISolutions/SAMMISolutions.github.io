@@ -2,7 +2,7 @@
 layout: ext_single
 title: Twitch Event Feed
 slug: twitch-event-feed
-desc: Creates a customizable Twitch event overlay for OBS using an HTML file as a browser source displays the latest Twitch events.
+desc: Customizable Twitch event overlay for OBS that displays the latest Twitch events.
 category: twitch
 date: '2026-06-21T00:00:00-00:00'
 permalink: /extensions/twitch/twitch-event-feed/
