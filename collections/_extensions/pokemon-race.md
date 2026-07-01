@@ -11,7 +11,7 @@ developer_name: KevinPorKevin
 developer_url: https://kevinporkevin.carrd.co/
 icon_local: PokemonRaceIcon.png
 screenshots_local: PokemonRaceIcon.png
-trailer: https://www.youtube.com/watch?v=TzFw1R8_VZU
+trailer: https://www.youtube.com/embed/TzFw1R8_VZU
 version: 1.0
 sammi_version: '2026.5.0^'
 platform: Twitch
