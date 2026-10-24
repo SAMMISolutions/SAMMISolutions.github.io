@@ -12,7 +12,7 @@ developer_url: https://imperialinfusions.com
 icon_local: rearsilver-avatar-suite-icon.png
 screenshots_local: rearsilver-avatar-suite-sammi.png
 version: 0.4.0
-sammi_version: '2026.6.0^'
+sammi_version: 2026.6.0
 platform: Windows
 overview: |
     Connect SAMMI to RearSilver Avatar Suite and control your avatar through SAMMI buttons, triggers, and actions.
@@ -42,6 +42,7 @@ setup: |
 
     Avatar Suite must be running when a SAMMI action is triggered. Full installation and command details are available in the [integration repository](https://github.com/rearsilvergaming/RearSilver-Avatar-Suite-SAMMI).
 privacy_collect: false
-privacy_website: https://imperialinfusions.com/pages/rearsilver-software-policy
+privacy_policy: '[RearSilver software privacy policy](https://imperialinfusions.com/pages/rearsilver-software-policy)'
+privacy_website: false
 policy_declare: 'on'
 ---
