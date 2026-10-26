@@ -6,7 +6,7 @@ desc: Control RearSilver Avatar Suite from SAMMI using its local WebSocket integ
 category: miscellaneous
 date: '2026-10-23T00:00:00-00:00'
 permalink: extensions/miscellaneous/:slug
-download_url: https://raw.githubusercontent.com/rearsilvergaming/RearSilver-Avatar-Suite-SAMMI/main/RearSilver%20Avatar%20Suite.sef
+download_url: https://raw.githubusercontent.com/rearsilvergaming/RearSilver-Avatar-Suite-SAMMI/main/RearSilver%20Avatar%20Suite%20SAMMI.zip
 developer_name: RearSilver
 developer_url: https://imperialinfusions.com
 icon_local: rearsilver-avatar-suite-icon.png
@@ -32,13 +32,14 @@ overview: |
 setup: |
     This extension requires RearSilver Avatar Suite, SAMMI, and SAMMI Bridge to be running on the same Windows computer.
 
-    1. Download the `.sef` file.
-    2. Start RearSilver Avatar Suite.
-    3. In SAMMI Core, choose **Bridge**, then **Install an Extension**.
-    4. Select the downloaded `RearSilver Avatar Suite.sef` file.
-    5. Open the **RearSilver Avatar Suite** tab in SAMMI Bridge.
-    6. Confirm that the extension reports **Connected and verified**.
-    7. Accept the included **Avatar Suite Examples** deck when SAMMI offers to install it.
+    1. Download the ZIP file.
+    2. Extract `RearSilver Avatar Suite.sef` from the ZIP file.
+    3. Start RearSilver Avatar Suite.
+    4. In SAMMI Core, choose **Bridge**, then **Install an Extension**.
+    5. Select the extracted `RearSilver Avatar Suite.sef` file.
+    6. Open the **RearSilver Avatar Suite** tab in SAMMI Bridge.
+    7. Confirm that the extension reports **Connected and verified**.
+    8. Accept the included **Avatar Suite Examples** deck when SAMMI offers to install it.
 
     Avatar Suite must be running when a SAMMI action is triggered. Full installation and command details are available in the [integration repository](https://github.com/rearsilvergaming/RearSilver-Avatar-Suite-SAMMI).
 privacy_collect: false
